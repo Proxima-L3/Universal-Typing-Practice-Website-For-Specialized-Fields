@@ -39,21 +39,18 @@ function TypingPracticeField() {
       }
       setCounter(counter + 1)
     }
+    else {
+      console.log('something went wrong')
+    }
   }
   
-  // const displayTextArray = userTextArray.concat(typingPracTextArray.slice(userTextArray.length))
+  const displayTextArray = userTextArray.concat(typingPracTextArray.slice(userTextArray.length))
 
-  // 
-  let displayText = function() {
-    let displayTextArray = []
-    displayTextArray = displayTextArray.concat(userTextArray).concat(typingPracTextArray.slice(userTextArray.length))
-    return displayTextArray
-  }
   
   return (
     <div className='typing_practice_field'>
       {/* google bind keydown react webpage */}
-      <p>{displayText()}</p>
+      <p>{displayTextArray}</p>
       <input type="text" value={""} onKeyDown={onType}/>
     </div>
   )
