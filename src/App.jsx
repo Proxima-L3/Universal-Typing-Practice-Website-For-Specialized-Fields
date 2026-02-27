@@ -30,25 +30,14 @@ function TypingPracticeField() {
       }
     }
     else if (isAlphNumSym(currentInputText)) {
-    // else if (isAlphNumSym(currentInputEvent.key)) {
-      // userTextArray.push(currentInputText)
 
       if (currentInputText === typingPracTextArray[counter]) {
-        // userTextArray.push(<span className='green'>{currentInputText}</span>)
         setUserTextArray([...userTextArray, <span className='green' key={'userTextArray' + counter}>{currentInputText}</span>])
-        console.log(userTextArray)
-        // return <span className="green">{userTextArray[counter]}</span>
       }
       else {
-        // userTextArray.push(<span className="red">{currentInputText}</span>)
         setUserTextArray([...userTextArray, <span className="red" key={'userTextArray' + counter}>{currentInputText}</span>])
-        // setUserTextArray(userTextArray.push(currentInputText))
-        // return <span className="red">{userTextArray[counter]}</span>
       }
-      // console.log(userTextArray)
-      // console.log(counter)
       setCounter(counter + 1)
-      // console.log(counter)
     }
   }
   
@@ -58,16 +47,6 @@ function TypingPracticeField() {
   let displayText = function() {
     let displayTextArray = []
     displayTextArray = displayTextArray.concat(userTextArray).concat(typingPracTextArray.slice(userTextArray.length))
-    
-
-    // for (let i in userTextArray) {
-
-    //   return i
-    // }
-    // for (let i = (userTextArray.length); i < typingPracTextArray.length; i++) {
-    //   return typingPracTextArray[i]
-    // }
-
     return displayTextArray
   }
   
