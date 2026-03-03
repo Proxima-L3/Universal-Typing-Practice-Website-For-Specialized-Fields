@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 // import AutosizeInput from 'react-input-autosize';
 import './App.css'
 import * as CONSTANTS from './misc/constants.jsx'
@@ -46,12 +46,20 @@ function TypingPracticeField() {
   
   const displayTextArray = userTextArray.concat(typingPracTextArray.slice(userTextArray.length))
 
-  
+  // A useEffect/useRef block of code to autofocus the typing field
+  const autoFocusElement = useRef(null);
+
+  useEffect(() => {
+      autoFocusElement.current.focus();
+  }, []);
+
+  // An alternative to the above ..(i believe this can be moved to an export module)
+  // const autoFocus = (element) => element?.focus();
+
   return (
-    <div className='typing_practice_field'>
-      {/* google bind keydown react webpage */}
-      <p>{displayTextArray}</p>
-      <input type="text" value={""} onKeyDown={onType}/>
+    <div>
+      {/* google bind keydown react webpage.. or maybe look for react components that act as text input boxes/areas?? or something similar?...*/}
+      <p className='typing_practice_field'  tabIndex='1' onKeyDown={onType} ref={autoFocusElement}>{displayTextArray}</p>
     </div>
   )
 }
