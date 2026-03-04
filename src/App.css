@@ -5,14 +5,31 @@
   text-align: center;
 }
 
-.red {
-  color: red;
+.typingPracField {
+  font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
-.green {
-  color: green;
+/* Remove .red & .green classes and insert two classes that change a span element content in following ways: color of text (red or green), adds green or red rectangle behind element, & later an animation that displays the incorrectly typed character shaking and then disappearing. ...(also later consider remaking in a react jsx module for storing these styles.. i believe its called css-in-js using a library like styled-components) */
+
+.correctInput {
+  color: #006600;
+  border-radius: 15%;
+  background-color: #00ff00;
+  margin: 0.08em;
 }
-/* Remove above two classes and insert two classes that change a span element content in following ways: color of text (red or green), adds green or red rectangle behind element, & later an animation that displays the incorrectly typed character shaking and then disappearing. ...(also later consider remaking in a react jsx module for storing these styles) */
+
+.incorrectInput {
+  color: #990000;
+  border-radius: 15%;
+  background-color: #ff8080;
+  margin: 0.08em;
+}
+
+.practiceText {
+  margin: 0.08em;
+}
 
 .logo {
   height: 6em;

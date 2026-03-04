@@ -33,11 +33,11 @@ function TypingPracticeField() {
 
       if (currentInputText === typingPracTextArray[counter]) {
         // setUserTextArray([...userTextArray, <span className='green' key={'userTextArray' + counter}>{currentInputText}</span>])
-        setUserTextArray([...userTextArray, <span className='green' key={'userTextArray' + counter}>{typingPracTextArray[counter]}</span>])
+        setUserTextArray([...userTextArray, <span className='correctInput' key={'userTextArray' + counter}>{typingPracTextArray[counter]}</span>])
       }
       else {
         // setUserTextArray([...userTextArray, <span className="red" key={'userTextArray' + counter}>{currentInputText}</span>])
-        setUserTextArray([...userTextArray, <span className="red" key={'userTextArray' + counter}>{typingPracTextArray[counter]}</span>])
+        setUserTextArray([...userTextArray, <span className='incorrectInput' key={'userTextArray' + counter}>{typingPracTextArray[counter]}</span>])
       }
       setCounter(counter + 1)
     }
@@ -47,7 +47,7 @@ function TypingPracticeField() {
   }
   
   // A variable used to hold a new array made of the array of user typed text (colored accordingly) and the rest of the typing practice text
-  const displayTextArray = userTextArray.concat(typingPracTextArray.slice(userTextArray.length))
+  const displayTextArray = userTextArray.concat(typingPracTextArray.slice(userTextArray.length).map((c) => <span className='practiceText'>{c}</span>))
 
   // A useEffect/useRef block of code to autofocus the typing field
   const autoFocusElement = useRef(null);
@@ -62,7 +62,7 @@ function TypingPracticeField() {
   return (
     <div>
       {/* google bind keydown react webpage.. or maybe look for react components that act as text input boxes/areas?? or something similar?...*/}
-      <p className='typing_practice_field'  tabIndex='1' onKeyDown={onType} ref={autoFocusElement}>{displayTextArray}</p>
+      <p className='typingPracField'  tabIndex='1' onKeyDown={onType} ref={autoFocusElement}>{displayTextArray}</p>
     </div>
   )
 }
