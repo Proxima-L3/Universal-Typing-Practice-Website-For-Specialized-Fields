@@ -23,3 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 src/misc/useful_jsCode.txt
+src/project_plans_scrum_files/bricks_in_the_wall.txt
+src/project_plans_scrum_files/desired_features_temp.txt
+src/project_plans_scrum_files/features.txt
+src/project_plans_scrum_files/review_notes.txt
+src/project_plans_scrum_files/terms&concepts_to_review.txt
+src/project_plans_scrum_files/xalgorithms.txt
+src/project_plans_scrum_files/xbricks_in_the_wall.txt
+src/project_plans_scrum_files/xfeatures.txt
