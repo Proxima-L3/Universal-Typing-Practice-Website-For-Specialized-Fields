@@ -46,7 +46,7 @@ function TypingPracticeField() {
       setCounter(counter + 1)
     }
     else {
-      console.log('something went wrong')
+      console.log('something went wrong: in TypingPracticeField')
     }
   }
   
@@ -66,7 +66,7 @@ function TypingPracticeField() {
   return (
     <div>
       {/* google bind keydown react webpage.. or maybe look for react components that act as text input boxes/areas?? or something similar?...*/}
-      <p className='typingPracField'  tabIndex='1' onKeyDown={onType} ref={autoFocusElement}>{displayTextArray}</p>
+      <p className='typingPracField'  tabIndex='2' onKeyDown={onType} ref={autoFocusElement}>{displayTextArray}</p>
     </div>
   )
 }

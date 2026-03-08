@@ -3,6 +3,8 @@ import TypingPracticeField from './components/TypingPracticeField.jsx'
 
 // Main App function to be exported to main.jsx & index.html
 function App() {
+  // looks like we may have to insert code for managing state between components here (TypingPracticeField may need to emit an event for Timer to accept so it knows when to start the count down)
+  
   return (
     <>
       <h1>THE "APP" COMPONENT BEGINS HERE</h1>

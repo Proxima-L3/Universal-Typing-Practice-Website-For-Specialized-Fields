@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.timer {
+  background-color: aqua;
+}
+
 .typingPracField {
   font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
   letter-spacing: 0.1em;
