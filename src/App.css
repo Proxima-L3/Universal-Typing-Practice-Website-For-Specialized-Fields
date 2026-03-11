@@ -30,6 +30,7 @@
   letter-spacing: 0.1em;
   font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
   text-align: center;
+  background-color: #383838;
   border-color: grey;
   border-radius: 15px;
   border-style: inset;
@@ -57,9 +58,20 @@
   border-radius: 15%;
 }
 
-/* .nextInput {
-
-} */
+.nextInput {
+  margin: 0.08em;
+  text-decoration-line: underline;
+  text-decoration-color: #00ff00;
+  text-decoration-thickness: 20%;
+  text-underline-offset: 40%;
+  background-color: #505050;
+  border-radius: 15%;
+  animation: blink 400ms ease-in-out infinite alternate;
+}
+@keyframes blink {
+  from { text-decoration-color: #00ff00; }
+  to { text-decoration-color: transparent; }
+}
 
 
 .typingStats {
