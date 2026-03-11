@@ -6,7 +6,7 @@ import * as CONSTANTS from '../utils/constants.jsx'
 import { isAlphNumSym } from '../utils/constants.jsx';
 import Timer from './Timer.jsx';
 
-import '../App.css'
+import '../App.css';
 
 // Defines text box component that when selected, listens for user text input and updates state of text in text box.
 function TypingPracticeField({onFirstKeyPress, preventInput, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped}) {
@@ -104,9 +104,9 @@ function TypingPracticeField({onFirstKeyPress, preventInput, setWordsTyped, setC
   // const autoFocus = (element) => element?.focus();
 
   return (
-    <div>
+    <>
       <p className='typingPracField'  tabIndex='2' onKeyDown={onType} onBlur={() => preventInput ? null : autoFocusElement.current.focus()} ref={autoFocusElement}>{displayTextArray}</p>
-    </div>
+    </>
   )
 }
 

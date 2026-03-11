@@ -1,8 +1,9 @@
 import {useState} from 'react';
 
 import Timer from './Timer.jsx';
-import TypingPracticeField from './TypingPracticeField.jsx'
-import UserTypingStats from './UserTypingStats.jsx'
+import TypingPracticeField from './TypingPracticeField.jsx';
+import UserTypingStats from './UserTypingStats.jsx';
+import SeeResultsButton from './SeeResultsButton.jsx';
 
 // This component will manage the shared states of all the other timed typing test components and display them
 function TimedTypingTest() {
@@ -29,6 +30,9 @@ function TimedTypingTest() {
             <UserTypingStats timeElapsed={timeElapsed} wordsTyped={wordsTyped} charTypedCorrectly={charTypedCorrectly} totalCharTyped={totalCharTyped} />
 
             {/* {console.log(`timeElapsed: ${timeElapsed}    wordsTyped: ${wordsTyped}    charTypedCorrectly: ${charTypedCorrectly}    totalCharTyped: ${totalCharTyped}`)} */}
+
+            {/* SeeResultsButton's props are 1 input state: timerExpired bool used to determine when the SeeResultsButton component should appear */}
+            <SeeResultsButton timerExpired={timerExpired} />
 
         </>
     )

@@ -1,12 +1,12 @@
 import { useState, useEffect, useReducer } from 'react';
 
-import '../App.css'
+import '../App.css';
 
 
 function Timer({startTimer, onTimerExpire, setTimeElapsed}) {
     // below variable is the length of time the user wants the typing practice session to last.. hardcoded for now: 1 minute or 60,000 ms
     // we can put timerLength & timeRemaining state in parent component
-    const timerLength = 8;
+    const timerLength = 3;
     
     const [timeRemaining, setTimeRemaining] = useState(timerLength);
 
@@ -61,11 +61,11 @@ function Timer({startTimer, onTimerExpire, setTimeElapsed}) {
     }
 
     return (
-    <>
-      {/* {console.log('timer component mounted')} */}
-      <div className={`timer ${ startTimer && timeRemaining <= 3 ? 'testEnding' : '' }`} tabIndex='1'>{displayTimer()}</div>
-    </>
-  )
+        <>
+            {/* {console.log('timer component mounted')} */}
+            <div className={`timer ${ startTimer && timeRemaining <= 3 ? 'testEnding' : '' }`} tabIndex='1'>{displayTimer()}</div>
+        </>
+    )
 }
 
 

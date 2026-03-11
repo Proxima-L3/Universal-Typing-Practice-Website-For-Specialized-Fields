@@ -1,6 +1,6 @@
-// import {useState, useEffect} from 'react'
+// import {useState, useEffect} from 'react';
 
-import '../App.css'
+import '../App.css';
 
 
 function UserTypingStats ({timeElapsed, wordsTyped, charTypedCorrectly, totalCharTyped}) {
@@ -33,7 +33,7 @@ function UserTypingStats ({timeElapsed, wordsTyped, charTypedCorrectly, totalCha
 
     return (
         <>
-        <div className='typingStats' tabIndex='3'>{displayStats()}</div>
+            <div className='typingStats' tabIndex='3'>{displayStats()}</div>
         </>
     )
 }
