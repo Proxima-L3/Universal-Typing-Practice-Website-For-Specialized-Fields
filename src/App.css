@@ -20,18 +20,8 @@
   color: aqua;
   background-color: #404040;
   box-shadow: 0 0 0 2px #00ff00 inset;
-  /* border-color: #00ff00; */
   border-radius: 10px;
-  /* border-style: solid; */
-  /* border-width: 2px; */
-  /* add code and styling to animate a flash/glow and change border color to red on test end */
 }
-
-/* .timerEnded {
-  color: red;
-  border-color: red;
-  border-width: 4px;
-} */
 
 .testEnding {
   animation-name: testEnding;
@@ -42,9 +32,7 @@
   animation-fill-mode: forwards;
 }
 @keyframes testEnding {
-  /* from { border-color: #00ff00; } */
-  /* to { border-color: red; border-width: 4px; color: red; } */
-  from { box-shadow: 0 0 0 2px #00ff00 inset; color: red; }
+  from { box-shadow: 0 0 0 2px #00ff00 inset; }
   to { box-shadow: 0 0 0 4px red inset; color: red; }
 }
 

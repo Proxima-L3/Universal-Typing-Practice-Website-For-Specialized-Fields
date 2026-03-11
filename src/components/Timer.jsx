@@ -63,7 +63,7 @@ function Timer({startTimer, onTimerExpire, setTimeElapsed}) {
     return (
     <>
       {/* {console.log('timer component mounted')} */}
-      <div className={`timer ${ timerExpired ? 'timerEnded' : '' } ${ startTimer && timeRemaining <= 3 ? 'testEnding' : '' }`} tabIndex='1'>{displayTimer()}</div>
+      <div className={`timer ${ startTimer && timeRemaining <= 3 ? 'testEnding' : '' }`} tabIndex='1'>{displayTimer()}</div>
     </>
   )
 }
