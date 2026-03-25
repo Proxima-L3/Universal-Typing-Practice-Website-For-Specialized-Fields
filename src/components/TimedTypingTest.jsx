@@ -23,7 +23,6 @@ function TimedTypingTest() {
     
     return (
         <>
-            <h1>THE "TimedTypingTest" COMPONENT BEGINS HERE</h1>
 
             <div className='testTimerRow'>
                 {/* Timer's props are 1 input state: startTimer bool to determine when to start countdown & 1 output function: when countdown reaches 0 function is called outside component to set timerExpired bool to true && 1 more output function: which updates the time elapsed state every second && 1 input state: testRestarted bool used to reset all of the components state variables */}
