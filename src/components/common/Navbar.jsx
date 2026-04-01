@@ -1,14 +1,13 @@
 import { NavLink } from 'react-router-dom';
 
 // import '../App.css'
-import '../styles/Navbar.css';
+import '../../styles/Navbar.css';
 
 
 function Navbar () {
 
     return (
         <>
-            {/* <TimedTypingTest></TimedTypingTest> */}
             <div className='navbar'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/BasicTypingTests'>Basic Typing Tests</NavLink>

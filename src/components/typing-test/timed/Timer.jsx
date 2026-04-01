@@ -1,6 +1,6 @@
 import { useState, useEffect, useReducer } from 'react';
 
-import '../App.css';
+import '../../../App.css';
 
 
 function Timer({startTimer, onTimerExpire, setTimeElapsed, testRestarted, setTestRestarted}) {

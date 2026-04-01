@@ -1,10 +1,10 @@
 import {useState} from 'react';
 
-import Timer from './Timer.jsx';
-import RestartTestButton from './RestartTestButton.jsx';
-import TypingPracticeField from './TypingPracticeField.jsx';
-import UserTypingStats from './UserTypingStats.jsx';
-import SeeResultsButton from './SeeResultsButton.jsx';
+import Timer from './typing-test/timed/Timer.jsx';
+import RestartTestButton from './typing-test/RestartTestButton.jsx';
+import TypingPracticeField from './typing-test/TypingPracticeField.jsx';
+import UserTypingStats from './typing-test/UserTypingStats.jsx';
+import SeeResultsButton from './typing-test/SeeResultsButton.jsx';
 
 // This component will manage the shared states of all the other timed typing test components and display them
 function TimedTypingTest() {
@@ -25,6 +25,7 @@ function TimedTypingTest() {
         <>
 
             <div className='testTimerRow'>
+                {/* insert word count component that displays how many words are left in the test */}
                 {/* Timer's props are 1 input state: startTimer bool to determine when to start countdown & 1 output function: when countdown reaches 0 function is called outside component to set timerExpired bool to true && 1 more output function: which updates the time elapsed state every second && 1 input state: testRestarted bool used to reset all of the components state variables */}
                 <Timer startTimer={startTimer} onTimerExpire={() => setTimerExpired(true)} setTimeElapsed={setTimeElapsed} testRestarted={testRestarted} setTestRestarted={setTestRestarted} />
                 {/* RestartTestButton's props are all the output functions: all the output functions which are used in the component to reset all states to their starting values when the button is clicked */}

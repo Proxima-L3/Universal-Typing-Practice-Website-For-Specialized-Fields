@@ -2,11 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 
 // import AutosizeInput from 'react-input-autosize';
 
-import * as CONSTANTS from '../utils/constants.jsx'
-import { isAlphNumSym } from '../utils/constants.jsx';
-import Timer from './Timer.jsx';
+import * as CONSTANTS from '../../utils/constants.jsx'
+import { isAlphNumSym } from '../../utils/constants.jsx';
+import Timer from './timed/Timer.jsx';
 
-import '../App.css';
+import '../../App.css';
 
 // Defines text box component that when selected, listens for user text input and updates state of text in text box.
 function TypingPracticeField({setStartTimer, preventInput, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, testRestarted, setTestRestarted}) {

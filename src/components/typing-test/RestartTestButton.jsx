@@ -2,7 +2,7 @@
 
 import { MdOutlineRestartAlt } from "react-icons/md";
 
-import '../App.css';
+import '../../App.css';
 
 
 function RestartTestButton({setStartTimer, setTimerExpired,setTimeElapsed, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, setTestRestarted}) {

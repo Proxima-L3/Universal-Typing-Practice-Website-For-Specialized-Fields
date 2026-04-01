@@ -5,7 +5,7 @@ import BasicTypingTestsPage from './pages/BasicTypingTestsPage.jsx'
 import LeaderboardsPage from './pages/LeaderboardsPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
-import Navbar from './components/Navbar.jsx';
+import Navbar from './components/common/Navbar.jsx';
 
 import './App.css'
 
