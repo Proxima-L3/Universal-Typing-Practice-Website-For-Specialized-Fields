@@ -9,7 +9,7 @@ import Timer from './timed/Timer.jsx';
 import '../../App.css';
 
 // Defines text box component that when selected, listens for user text input and updates state of text in text box.
-function TypingPracticeField({setTestStarted, preventInput, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, testRestarted, setTestRestarted}) {
+function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, testRestarted, setTestRestarted}) {
   const typingPracText = CONSTANTS.TYPING_PRAC_TEXT_SAMPLE_1;
   const typingPracTextArray = typingPracText.split('');
   const [counter, setCounter] = useState(0);
@@ -40,20 +40,22 @@ function TypingPracticeField({setTestStarted, preventInput, setWordsTyped, setCh
   // const autoFocus = (element) => element?.focus();
 
 
-  // Function that checks currently typed char and: if preventInput is true stop receiving input from user and make see results button visible and "exit" (ie will later add code finalize results, unfocus typing practice field component?, & display see results button); else if backspace then decrement counter by 1, remove last item from userTextArray, and update UserTypingStats state variables; else if input is alphanumeric or a symbol, then check if it is first input, check if user's currently typed char is same value as current index of typePracTextArray and if so add current letter to end of userTextArray but as green and if not add it as red, and then update UserTypingStats state variables. ...(!!! IM REALIZING THIS FUNCTION DOCUMENTATION IS REDUNDANT BC IT JUST REHASHES ONTYPE'S CODE RATHER THAN STATING WHAT IT DOES/IS RESPONSIBLE FOR.. CHANGE LATER.)
+  // Function that checks currently typed char and: if timerExpired or wordCountReached (depending on which test the user chose) is true stop receiving input from user and make see results button visible and "exit" (ie will later add code finalize results, unfocus typing practice field component?, & display see results button); else if backspace then decrement counter by 1, remove last item from userTextArray, and update UserTypingStats state variables; else if input is alphanumeric or a symbol, then check if it is first input, check if user's currently typed char is same value as current index of typePracTextArray and if so add current letter to end of userTextArray but as green and if not add it as red, and then update UserTypingStats state variables. ...(!!! IM REALIZING THIS FUNCTION DOCUMENTATION IS REDUNDANT BC IT JUST REHASHES ONTYPE'S CODE RATHER THAN STATING WHAT IT DOES/IS RESPONSIBLE FOR.. CHANGE LATER.)
   const onType = function(currentInputEvent) {
     let currentInputText = currentInputEvent.key
     let updatedUserArray
     // let updatedUserArrayExposed
 
     // prevents ' & / from opening quick find links search box in firefox while test is still running
-    !preventInput && (currentInputText === "'" || currentInputText === "/") ? currentInputEvent.preventDefault() : null;
+    (!timerExpired || !wordCountReached) && (currentInputText === "'" || currentInputText === "/") ? currentInputEvent.preventDefault() : null;
 
     // get rid of the first conditional (not needed if typing test is timed)
     // if (userTextArray.length === typingPracTextArray.length) {
     //   console.log('practice run is complete')
     // }
-    if (preventInput) {
+    console.log('timer bool: ' + timerExpired)
+    console.log('word-count bool: ' + wordCountReached)
+    if (timerExpired || wordCountReached) {
       console.log('practice run is completed. no input allowed.')
     }
     else if (currentInputEvent.key === 'Backspace') {
@@ -118,7 +120,7 @@ function TypingPracticeField({setTestStarted, preventInput, setWordsTyped, setCh
 
   return (
     <>
-      <p className='typingPracField'  tabIndex='2' onKeyDown={onType} onBlur={() => preventInput ? null : autoFocusElement.current.focus()} ref={autoFocusElement}>{displayTextArray}</p>
+      <p className='typingPracField'  tabIndex='2' onKeyDown={onType} onBlur={() => timerExpired || wordCountReached ? null : autoFocusElement.current.focus()} ref={autoFocusElement}>{displayTextArray}</p>
     </>
   )
 }
