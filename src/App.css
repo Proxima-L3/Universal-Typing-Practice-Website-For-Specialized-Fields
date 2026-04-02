@@ -6,6 +6,39 @@
   text-align: center;
 }
 
+
+.quickLinkCard {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:800;
+  /* line-height: 2; */
+  border-color: #606060;
+  border-radius: 20px;
+  border-style: outset;
+  border-width: 4px;
+
+  color: #00ffff;
+  background-color: #505050;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.quickLinkCard:hover {
+  box-shadow: 0 0 14px 6px rgba(0, 255, 0, 0.5);
+}
+
+.quickLinkCard:active {
+  background-color: #505050;
+}
+
+
 .pageContent {
   /* max-width: 1280px; */
   padding-inline: 4rem;
@@ -32,10 +65,10 @@
 
 .wordCounter {
   width: 10%;
-  /* min-width: 100px; */
+  min-width: 100px;
   position: absolute;
   padding-block: 0.2%;
-  color: aqua;
+  color: #00ffff;
   background-color: #404040;
   box-shadow: 0 0 0 2px #00ff00 inset;
   border-radius: 10px;
@@ -46,7 +79,7 @@
   min-width: 50px;
   position: absolute;
   padding-block: 0.2%;
-  color: aqua;
+  color: #00ffff;
   background-color: #404040;
   box-shadow: 0 0 0 2px #00ff00 inset;
   border-radius: 10px;

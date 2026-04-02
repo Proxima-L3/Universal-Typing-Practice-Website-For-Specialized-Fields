@@ -1,6 +1,6 @@
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useEffect } from 'react';
 
-import '../../../App.css';
+import '/src/App.css';
 
 
 function WordCounter({wordCountReached, setWordCountReached, wordsTyped,testRestarted, setTestRestarted}) {

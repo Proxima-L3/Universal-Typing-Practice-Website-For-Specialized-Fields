@@ -17,7 +17,7 @@ function TypingTest({typingTestChoice}) {
     const [wordCountReached, setWordCountReached] = useState(false); // use for word count based test
 
     // 4 states for: calculating the user's typing stats (ie for now wpm typing speed and typing accuracy)
-    const [timeElapsed, setTimeElapsed] = useState(0);    // this state can be removed? after another timer is created in UserTypingStats since calculating timeElapsed from timer will cause problems if word count based test is chosen.. nah its still needed in parent component for reset test button
+    const [timeElapsed, setTimeElapsed] = useState(0);
     const [wordsTyped, setWordsTyped] = useState(0);
     const [charTypedCorrectly, setCharTypedCorrectly] = useState(0);
     const [totalCharTyped, setTotalCharTyped] = useState(0);
