@@ -6,6 +6,12 @@
   text-align: center;
 }
 
+.pageContent {
+  /* max-width: 1280px; */
+  padding-inline: 4rem;
+  padding-bottom: 1%;
+}
+
 .genericTextBlock {
   width: 40%;
   display: flex;
@@ -71,11 +77,6 @@
 }
 
 
-.pageContent {
-  /* max-width: 1280px; */
-  padding-inline: 4rem;
-}
-
 /* some hex codes for colors i like */
 /* #ff808017 */
 /* #b10000 */
@@ -92,7 +93,7 @@
 }
 
 
-.testTimerRow {
+.upperWidgetsRow {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,6 +160,7 @@
 
 
 .typingPracField {
+  min-width: 350px;
   margin-inline: 8rem;
   padding: 1rem;
   letter-spacing: 0.1em;
@@ -208,7 +210,7 @@
 }
 
 
-.resultsRow {
+.lowerWidgetsRow {
   display: flex;
   margin: 0 auto;
   margin-top: 5%;
@@ -238,7 +240,7 @@
 }
 
 .typingStatsTestRunning {
-  width: 80%;
+  width: 50%;
   min-width: 100px;
   margin: 0 auto;
 }

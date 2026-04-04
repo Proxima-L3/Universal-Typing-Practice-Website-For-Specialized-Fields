@@ -126,7 +126,7 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
 
   return (
     <>
-      <p className='typingPracField'  tabIndex='2' onKeyDown={onType} onBlur={() => timerExpired || wordCountReached ? null : autoFocusElement.current.focus()} ref={autoFocusElement}>{displayTextArray}</p>
+      <div className='typingPracField'  tabIndex='2' onKeyDown={onType} onBlur={() => timerExpired || wordCountReached ? null : autoFocusElement.current.focus()} ref={autoFocusElement}>{displayTextArray}</div>
     </>
   )
 }
