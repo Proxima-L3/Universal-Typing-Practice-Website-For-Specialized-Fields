@@ -1,4 +1,6 @@
-import {useState} from 'react';
+import { useState } from 'react';
+
+import { useSearchParams } from 'react-router-dom';
 
 import WordCounter from '../components/typing-test/word-count-based/WordCounter.jsx';
 import Timer from '../components/typing-test/timed/Timer.jsx';
@@ -24,16 +26,20 @@ function TypingTest({typingTestChoice}) {
 
     const [testRestarted, setTestRestarted] = useState(false);
 
+    const [searchParams, setSearchParams] = useSearchParams();
+
 
     const displayTestChoiceWidgets = function() {
-        console.log(typingTestChoice)
-        if (typingTestChoice === 'timed') {
+        // console.log(typingTestChoice)
+        // if (typingTestChoice === 'timed') {
+        console.log(searchParams.get('testChoice'))
+        if (searchParams.get('testChoice') === 'timed') {
             return (
                 // Timer's props are 1 input state: testStarted bool to determine when to start countdown & 1 output function: when countdown reaches 0 timerExpired bool is set to true && 1 input state: testRestarted bool used to reset all of the components state variables
                 <Timer testStarted={testStarted} setTimerExpired={setTimerExpired} testRestarted={testRestarted} setTestRestarted={setTestRestarted} />
             )
         }
-        else if (typingTestChoice === 'word-count') {
+        else if (searchParams.get('testChoice') === 'word-count') {
             return (
                 // WordCounter props are 
                 <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} />

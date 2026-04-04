@@ -8,7 +8,7 @@ import TypingTest from './TypingTest';
 function BasicTypingTestsPage () {
 
     // below 2 lines are temporary.. move elsewhere when taking on different approach to avoid prop drilling
-    const [typingTestChoice, setTypingTestChoice] = useState('timed')
+    // const [typingTestChoice, setTypingTestChoice] = useState('timed')
     // setTypingTestChoice('timed')
 
     return (
@@ -16,7 +16,9 @@ function BasicTypingTestsPage () {
             {/* <div className=''></div> */}
             <h1>Basic Typing Tests</h1>
 
-            <TypingTest typingTestChoice={typingTestChoice} ></TypingTest>
+            {/* <TypingTest typingTestChoice={typingTestChoice} ></TypingTest> */}
+            {/* make below component a subpage.. use route from react router? */}
+            {/* <TypingTest/>  */}
         </>
     )
 }

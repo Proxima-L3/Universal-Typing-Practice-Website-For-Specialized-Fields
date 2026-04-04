@@ -13,8 +13,8 @@ function HomePage () {
             <hr className='sectionDividerTop'/>
             
             <span className='quickStartTestRow'>
-                <QuickLinkCard cardText={'500 WORD-COUNT BASED TEST'} linkTo={'/BasicTypingTests'} />
-                <QuickLinkCard cardText={'1 MINUTE TIMED TEST'} linkTo={'/BasicTypingTests'} />
+                <QuickLinkCard cardText={'500 WORD-COUNT BASED TEST'} linkTo={'/BasicTypingTests/TypingTest'} typingTestChoice={'word-count'} />
+                <QuickLinkCard cardText={'1 MINUTE TIMED TEST'} linkTo={'/BasicTypingTests/TypingTest'} typingTestChoice={'timed'} />
             </span>
 
             <hr className='sectionDividerBottom'/>
