@@ -25,10 +25,10 @@ function BasicTypingTestsPage () {
             return (
                 <>
                     <OptionTestType />
-                    {/* <OptionInsertionPointStyle /> */}
-                    {/* <OptionShowStats /> */}
-                    {/* <OptionShowTimer /> */}
-                    {/* <OptionShowWordCounter /> */}
+                    <OptionInsertionPointStyle />
+                    <OptionShowStats />
+                    <OptionShowTimer />
+                    <OptionShowWordCounter />
                 </>
             );
         }

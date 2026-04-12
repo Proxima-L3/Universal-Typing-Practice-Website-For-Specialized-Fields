@@ -1,4 +1,6 @@
-// import {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+
+import GenericRadioButton from './GenericRadioButton';
 
 import '/src/App.css';
 
@@ -6,6 +8,7 @@ import '/src/App.css';
 function OptionShowWordCounter () {
 
     // const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
+    const [selectedOption, setSelectedOption] = useState('')
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {
@@ -19,9 +22,7 @@ function OptionShowWordCounter () {
 
     return (
         <>
-            <div className='customTestOptionsAccordion' onClick={updateAccordionStatus}>
-                <span></span>
-            </div>
+            <GenericRadioButton optionsList={['Show', 'Hide']} rowLabel='Word Counter: ' selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
         </>
     )
 }
