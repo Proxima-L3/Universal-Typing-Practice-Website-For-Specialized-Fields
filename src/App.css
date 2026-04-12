@@ -182,6 +182,38 @@
 }
 
 
+.genericRadioButtonGroup {
+  display: flex;
+  gap: 5px;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 2px;
+}
+
+.radioButtonOption {
+  padding: 4px 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
+  /* font-weight: 800; */
+  color: #aaaaaa;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.radioButtonOption:hover {
+  background-color: #3a3a3a;
+}
+
+.radioButtonSelected {
+  background-color: #505050;
+  color: #00ff00;
+}
+
+
+
+
+
+
 .upperWidgetsRow {
   display: flex;
   justify-content: center;
