@@ -182,17 +182,39 @@
 }
 
 
-.genericRadioButtonGroup {
+.genericRadioButtonGroupRow {
   display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.genericRadioButtonGroupLabel {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: fit-content;
+  margin: 10px;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.genericRadioButtonGroup {
+  width: fit-content;
+  display: flex;
+  /* justify-content: center; */
+  margin: 5px;
+  padding: 0px;
   gap: 5px;
+  border-radius: 30px;
   background-color: #2a2a2a;
-  border-radius: 10px;
-  padding: 2px;
 }
 
 .radioButtonOption {
-  padding: 4px 2px;
-  border-radius: 10px;
+  width: fit-content;
+  /* margin: 5px; */
+  padding: 15px;
+  border-radius: 30px;
   cursor: pointer;
   font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
   /* font-weight: 800; */
@@ -205,7 +227,7 @@
 }
 
 .radioButtonSelected {
-  background-color: #505050;
+  background-color: #404040;
   color: #00ff00;
 }
 

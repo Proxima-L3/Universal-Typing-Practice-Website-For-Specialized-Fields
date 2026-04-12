@@ -15,7 +15,7 @@ function Timer({testStarted, setTimerExpired, testRestarted, setTestRestarted}) 
             setTimeRemaining(timerLength);
             setTestRestarted(false);
         }
-    }, [testRestarted])
+    }, [testRestarted]);
 
     useEffect( () => {
         const intervalId = setInterval( () => {

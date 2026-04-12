@@ -3,9 +3,9 @@ import {useState, useEffect} from 'react';
 import '/src/App.css';
 
 
-function GenericRadioButton ({optionsList}) {
+function GenericRadioButton ({optionsList, rowLabel, selectedOption, setSelectedOption}) {
 
-    const [selectedOption, setSelectedOption] = useState('')
+    // const [selectedOption, setSelectedOption] = useState('')
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {
@@ -19,18 +19,20 @@ function GenericRadioButton ({optionsList}) {
 
     return (
         <>
-            <div className='genericRadioButtonGroup'>
-                {/* <span></span> */}
-                {optionsList.map((option) => (
-                    <div
-                        key={option}
-                        className={`radioButtonOption ${selectedOption === option ? 'radioButtonSelected' : ''}`}
-                        onClick={() => setSelectedOption(option)}
-                    >
-                        {option}
-                    </div>
-                ))}
-            </div>
+            <span className='genericRadioButtonGroupRow'>
+                <div className='genericRadioButtonGroupLabel'>{rowLabel}</div>
+                <div className='genericRadioButtonGroup'>
+                    {optionsList.map((option) => (
+                        <div
+                            key={option}
+                            className={`radioButtonOption ${selectedOption === option ? 'radioButtonSelected' : ''}`}
+                            onClick={() => setSelectedOption(option)}
+                        >
+                            {option}
+                        </div>
+                    ))}
+                </div>
+            </span>
         </>
     );
 }
