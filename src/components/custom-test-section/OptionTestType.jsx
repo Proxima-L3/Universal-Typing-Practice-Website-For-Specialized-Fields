@@ -6,7 +6,7 @@ import '/src/App.css';
 import OptionGeneratedTextModifiers from './OptionGenTextModifiers';
 
 
-function OptionTestType () {
+function OptionTestType ({accordionSectionOpen}) {
 
     // const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
     const [selectedTest, setSelectedTest] = useState('')
@@ -43,7 +43,16 @@ function OptionTestType () {
             <GenericRadioButton optionsList={['Word-Count Based', 'Timer Based']} rowLabel='Test Type: ' selectedOption={selectedTest} setSelectedOption={setSelectedTest} />
             <GenericRadioButton optionsList={testTypeOptionsList} rowLabel='' selectedOption={selectedTestTypeOption} setSelectedOption={setSelectedTestTypeOption} />
 
-            {selectedTest === 'Timer Based' ? <OptionGeneratedTextModifiers/> : null}
+            {/* {selectedTest === 'Timer Based' ? <OptionGeneratedTextModifiers/> : null} */}
+            
+            <div className={accordionSectionOpen && selectedTest === 'Timer Based' ? '' : 'contentHidden'}>
+                <OptionGeneratedTextModifiers/>
+            </div>
+
+            <div className={accordionSectionOpen && selectedTestTypeOption === 'Custom Time' ? '' : 'contentHidden'}>
+                
+            </div>
+            
             {/* <div className='customTestOptionsAccordion' onClick={updateAccordionStatus}>
             </div> */}
         </>

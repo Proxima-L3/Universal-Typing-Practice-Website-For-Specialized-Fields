@@ -56,8 +56,8 @@ function BasicTypingTestsPage () {
 
             <div className='genericSectionTitle'>Custom Test</div>
             <CustomTestOptionsAccordion accordionSectionOpen={accordionSectionOpen} setAccordionSectionOpen={setAccordionSectionOpen} />
-            <div className={accordionSectionOpen ? '' : 'accordionContentHidden'}>
-                <OptionTestType />
+            <div className={accordionSectionOpen ? '' : 'contentHidden'}>
+                <OptionTestType accordionSectionOpen={accordionSectionOpen} />
                 <OptionInsertionPointStyle />
                 <OptionShowStats />
                 <OptionShowTimer />
