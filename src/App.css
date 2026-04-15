@@ -182,7 +182,11 @@
 }
 
 
-.genericRadioButtonGroupRow {
+.accordionContentHidden {
+  display: none;
+}
+
+.genericButtonGroupRow {
   display: grid;
   width: 80%;
   margin: 0 auto;
@@ -190,9 +194,10 @@
   /* justify-content: flex-end; */
   /* grid-template-columns: 1fr auto; */
   grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
 }
 
-.genericRadioButtonGroupLabel {
+.genericButtonGroupLabel {
   width: fit-content;
   display: flex;
   /* flex: 1; */
@@ -206,6 +211,7 @@
 }
 
 .genericRadioButtonGroup {
+  height: fit-content;
   width: fit-content;
   min-width: max-content;
   display: flex;
@@ -225,18 +231,64 @@
   /* margin: 5px; */
   padding: 15px;
   border-radius: 30px;
+  box-sizing: border-box;
   cursor: pointer;
   font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
   /* font-weight: 800; */
   color: #aaaaaa;
+  background-color: #2a2a2a;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .radioButtonOption:hover {
   background-color: #3a3a3a;
+  border-color: #3a3a3a;
 }
 
 .radioButtonSelected {
+  background-color: #404040;
+  color: #00ff00;
+}
+
+.genericCheckBoxGroup {
+  height: fit-content;
+  width: fit-content;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex: 1; */
+  /* justify-content: right; */
+  /* align-items: end; */
+  /* -ms-flex-item-align: end; */
+  margin: 5px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+}
+
+.checkBoxOption {
+  height: fit-content;
+  width: fit-content;
+  /* margin: 5px; */
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Concert One', Verdana, Geneva, Tahoma, sans-serif;
+  /* font-weight: 800; */
+  color: #aaaaaa;
+  background-color: #2a2a2a;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.checkBoxOption:hover {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+}
+
+.checkBoxOptionSelected {
   background-color: #404040;
   color: #00ff00;
 }

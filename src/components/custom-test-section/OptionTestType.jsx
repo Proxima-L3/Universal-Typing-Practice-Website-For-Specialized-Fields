@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import GenericRadioButton from './GenericRadioButton';
 
 import '/src/App.css';
+import OptionGeneratedTextModifiers from './OptionGenTextModifiers';
 
 
 function OptionTestType () {
@@ -14,12 +15,18 @@ function OptionTestType () {
 
     useEffect( () => {
         if (selectedTest === 'Word-Count Based') {
-            setTestTypeOptionsList(['100 Words', '500 Words', '1000 Words', '2000 Words', 'Custom'])
+            setTestTypeOptionsList(['100 Words', '500 Words', '1000 Words', '2000 Words', 'Custom Text'])
         }
         else if (selectedTest === 'Timer Based') {
-            setTestTypeOptionsList(['30 secs', '1 min', '2 mins', '3 mins', '5 mins', 'Custom'])
+            setTestTypeOptionsList(['30 secs', '1 min', '2 mins', '3 mins', '5 mins', 'Custom Time'])
         }
-    }, [selectedTest])
+    }, [selectedTest, selectedTestTypeOption])
+
+    useEffect ( () => {
+        if (selectedTestTypeOption === 'Custom') {
+            console.log('idk')
+        }
+    })
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {
@@ -33,12 +40,12 @@ function OptionTestType () {
 
     return (
         <>
-            <span>
-                <GenericRadioButton optionsList={['Word-Count Based', 'Timer Based']} rowLabel='Test Type: ' selectedOption={selectedTest} setSelectedOption={setSelectedTest} />
-                <GenericRadioButton optionsList={testTypeOptionsList} rowLabel='' selectedOption={selectedTestTypeOption} setSelectedOption={setSelectedTestTypeOption} />
-                {/* <div className='customTestOptionsAccordion' onClick={updateAccordionStatus}>
-                </div> */}
-            </span>
+            <GenericRadioButton optionsList={['Word-Count Based', 'Timer Based']} rowLabel='Test Type: ' selectedOption={selectedTest} setSelectedOption={setSelectedTest} />
+            <GenericRadioButton optionsList={testTypeOptionsList} rowLabel='' selectedOption={selectedTestTypeOption} setSelectedOption={setSelectedTestTypeOption} />
+
+            {selectedTest === 'Timer Based' ? <OptionGeneratedTextModifiers/> : null}
+            {/* <div className='customTestOptionsAccordion' onClick={updateAccordionStatus}>
+            </div> */}
         </>
     )
 }

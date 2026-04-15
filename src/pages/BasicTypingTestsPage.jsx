@@ -20,19 +20,19 @@ function BasicTypingTestsPage () {
 
     const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
     
-    const displayCustomTestOptions = function () {
-        if (accordionSectionOpen) {
-            return (
-                <>
-                    <OptionTestType />
-                    <OptionInsertionPointStyle />
-                    <OptionShowStats />
-                    <OptionShowTimer />
-                    <OptionShowWordCounter />
-                </>
-            );
-        }
-    }
+    // const displayCustomTestOptions = function () {
+    //     if (accordionSectionOpen) {
+    //         return (
+    //             <>
+    //                 <OptionTestType />
+    //                 <OptionInsertionPointStyle />
+    //                 <OptionShowStats />
+    //                 <OptionShowTimer />
+    //                 <OptionShowWordCounter />
+    //             </>
+    //         );
+    //     }
+    // }
 
     return (
         <>
@@ -56,7 +56,14 @@ function BasicTypingTestsPage () {
 
             <div className='genericSectionTitle'>Custom Test</div>
             <CustomTestOptionsAccordion accordionSectionOpen={accordionSectionOpen} setAccordionSectionOpen={setAccordionSectionOpen} />
-            {displayCustomTestOptions()}
+            <div className={accordionSectionOpen ? '' : 'accordionContentHidden'}>
+                <OptionTestType />
+                <OptionInsertionPointStyle />
+                <OptionShowStats />
+                <OptionShowTimer />
+                <OptionShowWordCounter />
+            </div>
+            {/* {displayCustomTestOptions()} */}
 
         </>
     )

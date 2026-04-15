@@ -3,9 +3,10 @@ import {useState, useEffect} from 'react';
 import '/src/App.css';
 
 
-function GenericRadioButton ({optionsList, rowLabel, selectedOption, setSelectedOption}) {
+function GenericMultiChoiceButton ({optionsList, rowLabel}) {
 
     // const [selectedOption, setSelectedOption] = useState('')
+    const [selectedOptionsList, setSelectedOptionsList] = useState(Array(optionsList.length).fill(false))
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {
@@ -21,12 +22,14 @@ function GenericRadioButton ({optionsList, rowLabel, selectedOption, setSelected
         <>
             <span className='genericButtonGroupRow'>
                 <div className='genericButtonGroupLabel'>{rowLabel}</div>
-                <div className='genericRadioButtonGroup'>
-                    {optionsList.map((option) => (
+                <div className='genericCheckBoxGroup'>
+                    {optionsList.map((option, index) => (
                         <button
+                            // type='checkbox'
                             key={option}
-                            className={`radioButtonOption ${selectedOption === option ? 'radioButtonSelected' : ''}`}
-                            onClick={() => setSelectedOption(option)}
+                            className={`checkBoxOption ${selectedOptionsList[index] ? 'checkBoxOptionSelected' : ''}`}
+                            onClick={() => setSelectedOptionsList(selectedOptionsList.toSpliced(index, 1, selectedOptionsList[index] ? false : true
+                            ))}
                         >
                             {option}
                         </button>
@@ -37,4 +40,4 @@ function GenericRadioButton ({optionsList, rowLabel, selectedOption, setSelected
     );
 }
 
-export default GenericRadioButton;
+export default GenericMultiChoiceButton;
