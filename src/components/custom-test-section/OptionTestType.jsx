@@ -44,13 +44,13 @@ function OptionTestType ({accordionSectionOpen}) {
             <GenericRadioButton optionsList={testTypeOptionsList} rowLabel='' selectedOption={selectedTestTypeOption} setSelectedOption={setSelectedTestTypeOption} />
 
             {/* {selectedTest === 'Timer Based' ? <OptionGeneratedTextModifiers/> : null} */}
-            
+
             <div className={accordionSectionOpen && selectedTest === 'Timer Based' ? '' : 'contentHidden'}>
                 <OptionGeneratedTextModifiers/>
             </div>
 
-            <div className={accordionSectionOpen && selectedTestTypeOption === 'Custom Time' ? '' : 'contentHidden'}>
-                
+            <div className={accordionSectionOpen && selectedTest === 'Word-Count Based' && selectedTestTypeOption === 'Custom Text' ? '' : 'contentHidden'}>
+                <textarea className='customTextArea' placeholder='Type or paste your custom text here...' name='usersCustomText' required />
             </div>
             
             {/* <div className='customTestOptionsAccordion' onClick={updateAccordionStatus}>

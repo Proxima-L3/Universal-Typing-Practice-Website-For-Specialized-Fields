@@ -293,6 +293,14 @@
   color: #00ff00;
 }
 
+.customTextArea {
+  height: 200px;
+  width: 70%;
+  min-width: 70%;
+  max-width: 70%;
+  font-size: 1rem;
+}
+
 
 
 
