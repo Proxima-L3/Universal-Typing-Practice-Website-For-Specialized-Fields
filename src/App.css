@@ -387,6 +387,27 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+.insertionPointCheckBoxRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.insertionPointStyleCheckBoxLabel {
+  text-align: center;
+}
+
+.insertionPointStyleCheckBox {
+  width: 25px;
+  height: 25px;
+  margin-inline: 5px;
+}
+
+.insertionPointStyleCheckBox:checked {
+  accent-color: #00dd00 ;
+}
+
 
 
 

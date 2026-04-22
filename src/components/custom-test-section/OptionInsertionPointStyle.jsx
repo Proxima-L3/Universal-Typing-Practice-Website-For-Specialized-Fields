@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 
 import GenericRadioButton from './GenericRadioButton';
+import ShowInsertionPointCheckBox from './ShowInsertionPointCheckBox';
 
 import '/src/App.css';
 
@@ -23,6 +24,7 @@ function OptionInsertionPointStyle () {
     return (
         <>
             <GenericRadioButton optionsList={['Line', 'Underscore', 'Block']} rowLabel='Insertion Point Style: ' selectedOption={selectedInsertionPoint} setSelectedOption={setSelectedInsertionPoint} />
+            <ShowInsertionPointCheckBox />
         </>
     )
 }
