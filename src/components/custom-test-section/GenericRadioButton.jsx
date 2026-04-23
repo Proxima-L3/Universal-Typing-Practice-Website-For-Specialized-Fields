@@ -20,7 +20,7 @@ function GenericRadioButton ({optionsList, rowLabel, selectedOption, setSelected
     return (
         <>
             <span className='genericButtonGroupRow'>
-                <div className='genericButtonGroupLabel'>{rowLabel}</div>
+                <label className='genericButtonGroupLabel'>{rowLabel}</label>
                 <div className='genericRadioButtonGroup'>
                     {optionsList.map((option) => (
                         <button

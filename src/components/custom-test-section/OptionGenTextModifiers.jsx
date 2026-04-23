@@ -5,10 +5,9 @@ import GenericMultiChoiceButton from './GenericMultiChoiceButton';
 import '/src/App.css';
 
 
-function OptionGeneratedTextModifiers () {
+function OptionGeneratedTextModifiers ({selectedModifiers, setSelectedModifiers}) {
 
     // const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
-    const [selectedOption, setSelectedOption] = useState('')
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {
@@ -22,7 +21,7 @@ function OptionGeneratedTextModifiers () {
 
     return (
         <>
-            <GenericMultiChoiceButton optionsList={['Capital Letters', 'Punctuation', 'Numbers', 'Symbols']} rowLabel='Generated Text Modifiers: ' />
+            <GenericMultiChoiceButton optionsDict={selectedModifiers} setOptionsDict={setSelectedModifiers} rowLabel='Generated Text Modifiers: ' />
         </>
     )
 }

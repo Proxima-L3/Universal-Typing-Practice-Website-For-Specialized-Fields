@@ -1,14 +1,14 @@
-import {useState, useEffect} from 'react';
+// import {useState, useEffect} from 'react';
 
 import GenericRadioButton from './GenericRadioButton';
 
 import '/src/App.css';
 
 
-function OptionShowWordCounter () {
+function OptionShowWordCounter ({selectedOption, setSelectedOption}) {
 
     // const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
-    const [selectedOption, setSelectedOption] = useState('')
+    // const [selectedOption, setSelectedOption] = useState('Show')
 
     // // checks if accordion component is clicked
     // const updateAccordionStatus = function () {

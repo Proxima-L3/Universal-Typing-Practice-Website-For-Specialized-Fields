@@ -3,26 +3,28 @@ import {useState, useEffect} from 'react';
 import '/src/App.css';
 
 
-function GenericMultiChoiceButton ({optionsList, rowLabel}) {
+function GenericMultiChoiceButton ({optionsDict, setOptionsDict, rowLabel}) {
 
-    // const [selectedOption, setSelectedOption] = useState('')
-    const [selectedOptionsList, setSelectedOptionsList] = useState(Array(optionsList.length).fill(false))
-
-    // // checks if accordion component is clicked
-    // const updateAccordionStatus = function () {
-    //     if (accordionSectionOpen) {
-    //         setAccordionSectionOpen(false);
-    //     }
-    //     else {
-    //         setAccordionSectionOpen(true);
-    //     }
-    // }
+    // const [selectedOptionsList, setSelectedOptionsList] = useState(Array(optionsList.length).fill(false))
 
     return (
         <>
             <span className='genericButtonGroupRow'>
-                <div className='genericButtonGroupLabel'>{rowLabel}</div>
+                <label className='genericButtonGroupLabel'>{rowLabel}</label>
                 <div className='genericCheckBoxGroup'>
+                    {Object.entries(optionsDict).map(([option, isSelected]) => (
+                        <button
+                            // type='checkbox'
+                            key={option}
+                            className={`checkBoxOption ${isSelected ? 'checkBoxOptionSelected' : ''}`}
+                            onClick={() => setOptionsDict({...optionsDict, [option]: !isSelected})}
+                        >
+                            {option}
+                        </button>
+                    ))}
+                </div>
+
+                {/* <div className='genericCheckBoxGroup'>
                     {optionsList.map((option, index) => (
                         <button
                             // type='checkbox'
@@ -34,7 +36,8 @@ function GenericMultiChoiceButton ({optionsList, rowLabel}) {
                             {option}
                         </button>
                     ))}
-                </div>
+                </div> */}
+
             </span>
         </>
     );

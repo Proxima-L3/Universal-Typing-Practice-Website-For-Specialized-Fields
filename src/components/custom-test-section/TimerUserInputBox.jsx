@@ -1,10 +1,15 @@
-import {useRef} from 'react';
+import {useState, useRef, useEffect} from 'react';
 
 import '/src/App.css';
 
 
-function TimerUserInputBox () {
+function TimerUserInputBox ({setCustomTime}) {
 
+    // useEffect ( () => {
+    //     console.log(customTime)
+    // }, [customTime, setCustomTime])
+
+    const minsRef = useRef(null);
     const secsRef = useRef(null);
 
     const handleKeyDown = function (inputEvent) {
@@ -43,7 +48,27 @@ function TimerUserInputBox () {
 
     const handleFocus = function (inputEvent) {
         inputEvent.target.select();
+
+
+
+        // if (inputEvent.target === minsRef.current) {
+        //     // setCustomTime(`${String(inputEvent.target.value)}${String(customTime.slice(2, -1))}`);
+        //     setCustomTime(String(inputEvent.target.value) + String(customTime.slice(2, -1)));
+        //     console.log(customTime);
+        // }
+        // else if (inputEvent.target === secsRef.current) {
+        //     // setCustomTime(`${String(customTime.slice(0, 2))}${String(inputEvent.target.value)}`);
+        //     setCustomTime(String(customTime.slice(0, 2)) + String(inputEvent.target.value));
+        //     console.log(customTime);
+        // }
     }
+
+    const updateCustomTime = function () {
+        const mins = minsRef.current.value.padStart(2, '0');
+        const secs = secsRef.current.value.padStart(2, '0');
+        setCustomTime(`${mins}:${secs}`);
+    }
+
 
     return (
         <>
@@ -55,8 +80,13 @@ function TimerUserInputBox () {
                     min="0"
                     max="60"
                     defaultValue="00"
+                    ref={minsRef}
                     onKeyDown={handleKeyDown}
-                    onInput={handleMinsInput}
+                    onInput={(e) => {
+                        handleMinsInput(e);
+                        updateCustomTime();
+                        }
+                    }
                     onBlur={handleBlur}
                     onFocus={handleFocus}
                     required
@@ -70,7 +100,11 @@ function TimerUserInputBox () {
                     defaultValue="00"
                     ref={secsRef}
                     onKeyDown={handleKeyDown}
-                    onInput={(e) => handleInput(e, 59)}
+                    onInput={(e) => {
+                        handleInput(e, 59);
+                        updateCustomTime();
+                        }
+                    }
                     onBlur={handleBlur}
                     onFocus={handleFocus}
                     required
