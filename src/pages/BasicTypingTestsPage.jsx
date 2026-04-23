@@ -14,26 +14,7 @@ import '/src/App.css';
 
 function BasicTypingTestsPage () {
 
-    // below 2 lines are temporary.. move elsewhere when taking on different approach to avoid prop drilling
-    // const [typingTestChoice, setTypingTestChoice] = useState('timed')
-    // setTypingTestChoice('timed')
-
-
     const [accordionSectionOpen, setAccordionSectionOpen] = useState(false)
-    
-    // const displayCustomTestOptions = function () {
-    //     if (accordionSectionOpen) {
-    //         return (
-    //             <>
-    //                 <OptionTestType />
-    //                 <OptionInsertionPointStyle />
-    //                 <OptionShowStats />
-    //                 <OptionShowTimer />
-    //                 <OptionShowWordCounter />
-    //             </>
-    //         );
-    //     }
-    // }
 
     const [selectedTest, setSelectedTest] = useState('Timer Based');
     const [selectedTestTypeOption, setSelectedTestTypeOption] = useState('1 min');
@@ -48,8 +29,6 @@ function BasicTypingTestsPage () {
 
     return (
         <>
-            {/* <div className=''></div> */}
-            {/* <h1>Basic Typing Tests</h1> */}
             <div className='genericPageTitle'>Basic Typing Tests</div>
 
             <div className='genericSectionTitle'>Word-Count Tests</div>
@@ -76,7 +55,6 @@ function BasicTypingTestsPage () {
                 <OptionShowTimer selectedOption={selectedOptionShowTimer} setSelectedOption={setSelectedOptionShowTimer} />
                 <OptionShowWordCounter selectedOption={selectedOptionShowWordCounter} setSelectedOption={setSelectedOptionShowWordCounter} />
             </div>
-            {/* {displayCustomTestOptions()} */}
 
         </>
     )
