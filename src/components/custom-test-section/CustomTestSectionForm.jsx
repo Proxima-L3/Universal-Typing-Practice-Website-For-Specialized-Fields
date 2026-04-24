@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { useNavigate, URLSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import CustomTestOptionsAccordion from '/src/components/custom-test-section/CustomTestOptionsAccordion';
 import OptionTestType from '/src/components/custom-test-section/OptionTestType';

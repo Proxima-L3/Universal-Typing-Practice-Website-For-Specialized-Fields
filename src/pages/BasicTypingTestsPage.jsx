@@ -48,15 +48,6 @@ function BasicTypingTestsPage () {
 
             <div className='genericSectionTitle'>Custom Test</div>
             <CustomTestSectionForm />
-            {/* <CustomTestOptionsAccordion accordionSectionOpen={accordionSectionOpen} setAccordionSectionOpen={setAccordionSectionOpen} />
-            <div className={accordionSectionOpen ? '' : 'contentHidden'}>
-                <OptionTestType accordionSectionOpen={accordionSectionOpen} selectedTest={selectedTest} setSelectedTest={setSelectedTest} selectedTestTypeOption={selectedTestTypeOption} setSelectedTestTypeOption={setSelectedTestTypeOption} setCustomTime={setCustomTime} setCustomTextInput={setCustomTextInput} selectedModifiers={selectedModifiers} setSelectedModifiers={setSelectedModifiers} />
-                <OptionInsertionPointStyle selectedOption={selectedInsertionPoint} setSelectedOption={setSelectedInsertionPoint} />
-                <ShowInsertionPointCheckBox isChecked={isChecked} setIsChecked={setIsChecked} />
-                <OptionShowStats selectedOption={selectedOptionShowStats} setSelectedOption={setSelectedOptionShowStats} />
-                <OptionShowTimer selectedOption={selectedOptionShowTimer} setSelectedOption={setSelectedOptionShowTimer} />
-                <OptionShowWordCounter selectedOption={selectedOptionShowWordCounter} setSelectedOption={setSelectedOptionShowWordCounter} />
-            </div> */}
 
         </>
     )
