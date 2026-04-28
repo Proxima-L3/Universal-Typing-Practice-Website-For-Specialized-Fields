@@ -135,14 +135,62 @@ Issue:
 
 /*
 Location:
-    from  file
+    from OptionTestType file
+Purpose:
+    below code was a temporary dropdown menu to act as a placeholder for the initial hardcoded specialization field options row until i could make an auto text generation algorithm
+Issue:
+    kept thinking of fields that could benefit from the site and adding them as options but for a mvp we dont need this many options fn
+*/
+
+
+            // {/* below dropdown menu is a temporary display placeholder for the initial hardcoded expertise area selection options */}
+            // <div>
+            //     <span className='genericButtonGroupRow'>
+            //         <label className='genericButtonGroupLabel'>{'Specialization Field:'}</label>
+            //         <select name="" id="">
+            //             <option value='generic'>Generic</option>
+            //             <option value='accounting'>Accounting</option>
+            //             <option value='administrativeAssistance'>Administrative Assistance</option>
+            //             <option value='architecture'>Architecture</option>
+            //             <option value='autoMechanics'>Auto Mechanics</option>
+            //             <option value='businessLaw'>Business Law</option>
+            //             <option value='carpentry'>Carpentry</option>
+            //             <option value='computerScience'>Computer Science</option>
+            //             <option value='customerServiceRep'>Customer Service Rep</option>
+            //             <option value='dataEntry'>Data Entry</option>
+            //             <option value='emt'>EMT work</option>
+            //             <option value='financialAnalysis'>Financial Analysis</option>
+            //             <option value='marketing'>Marketing</option>
+            //             <option value='medicalTranscription'>Medical Transcription</option>
+            //             <option value='phlebotomy'>Phlebotomy</option>
+            //             <option value='psychology'>Psychology</option>
+            //             <option value='socialWork'>Social Work</option>
+            //             <option value='techSupport'>Tech Support</option>
+            //             <option value='vetTech'>Vet Tech</option>
+            //             <option value='webDesign'>Web Design</option>
+            //             <option value='journalism'>Journalism</option>
+            //             <option value='transcription'>Transcription</option>
+            //             <option value=''></option>
+            //             <option value=''></option>
+            //             <option value=''></option>
+            //             <option value=''></option>
+            //         </select>
+            //     </span>
+            // </div>
+
+
+
+
+
+//##################################################
+//##################################################
+
+
+/*
+Location:
+    from OptionTestType file
 Purpose:
     
 Issue:
     
 */
-
-
-
-
-

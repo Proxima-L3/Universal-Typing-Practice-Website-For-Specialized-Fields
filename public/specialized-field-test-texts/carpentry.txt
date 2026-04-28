@@ -1,0 +1,57 @@
+Carpentry is a skilled trade focused on the construction, installation, repair, and finishing of wooden structures, frameworks, cabinetry, and architectural elements using a combination of hand tools, power tools, measurement systems, and building materials. A typical carpentry project begins with interpreting blueprints, architectural drawings, or construction plans that specify dimensions, materials, load-bearing requirements, and structural design elements. Common carpentry terminology includes studs, joists, rafters, beams, headers, trusses, subflooring, sheathing, drywall backing, and finish trim. Accurate measurement is essential, often using tape measures, framing squares, speed squares, levels, plumb bobs, and laser levels to ensure precision and structural integrity.
+
+Standard measurements in carpentry frequently include inches, feet, and fractions such as 1/2", 3/4", 1-1/4", or 2x4 nominal lumber dimensions (which actually measure 1.5" x 3.5"). Lumber grades such as Select Structural, #1 Common, #2 Common, and Construction Grade determine strength and appearance quality. Wood species commonly used include pine, oak, maple, cedar, fir, birch, and plywood composites. Engineered materials like OSB (oriented strand board), MDF (medium-density fiberboard), and laminated veneer lumber (LVL) are also widely used in framing and finish work.
+
+Framing carpenters construct the structural skeleton of buildings, including walls, floors, and roofs. A standard wall frame includes bottom plates, top plates, studs spaced typically at 16" or 24" on center (OC), and headers above openings such as doors and windows. A framing layout may include measurements such as 96" stud height for 8-foot ceilings or 120" studs for 10-foot ceilings. Roof framing involves rafters, ridge boards, collar ties, and trusses designed to distribute load and resist wind or snow forces.
+
+Example framing notation might include: STUD LAYOUT 16" O.C., WALL HEIGHT 92-5/8", HEADER 2-2x10 w/ 1/2" plywood spacer, or RAFTER CUT 7/12 PITCH. Roof pitch is often expressed as a ratio such as 4/12, 6/12, or 12/12, indicating vertical rise over 12 inches of horizontal run.
+
+Carpenters frequently use power tools such as circular saws, miter saws, table saws, jigsaws, reciprocating saws (Sawzall), drills, impact drivers, nail guns (framing nailer, finish nailer, brad nailer), routers, planers, and sanders. Hand tools include hammers, chisels, hand saws, clamps, utility knives, pry bars, and wood rasps. Safety equipment is essential and includes safety glasses, ear protection, gloves, dust masks, respirators, steel-toe boots, and hard hats.
+
+Fasteners commonly used in carpentry include nails, screws, bolts, anchors, brackets, and construction adhesive. Nail sizes may be labeled as 8d, 10d, 16d, or 2", 3", 3.5" framing nails. Screw types include wood screws, deck screws, drywall screws, and structural screws such as lag bolts and TimberLOK fasteners. Adhesives like Liquid Nails or polyurethane construction glue are often applied in conjunction with mechanical fasteners for increased strength.
+
+A typical carpentry workflow may include material estimation, cutting lists, layout marking, cutting lumber to size, assembling components, installing structural elements, and finishing surfaces. Cutting lists often include entries such as:
+- 2x4 @ 92-5/8" (Qty: 24)
+- 2x6 @ 14'-0" (Qty: 10)
+- Plywood 3/4" sheet 4x8 (Qty: 6)
+
+Precision is critical when marking and cutting materials, using techniques such as “measure twice, cut once” to reduce waste and errors. Marking tools include pencils, chalk lines, marking gauges, and carpenter’s squares. A chalk line may be snapped across a surface to create a straight reference line for cutting or alignment.
+
+Foundation carpentry involves sill plates, anchor bolts, concrete forms, rebar reinforcement, and moisture barriers. Sill plates are typically treated lumber (pressure-treated 2x4 or 2x6) anchored to concrete using 1/2" anchor bolts spaced every 4–6 feet. Concrete formwork uses plywood panels, stakes, and bracing to hold wet concrete in shape until it cures.
+
+Floor framing includes joists spaced at 16" or 24" OC, rim joists, blocking, and subfloor installation. Subflooring is commonly 3/4" tongue-and-groove plywood glued and nailed to joists using construction adhesive and ring-shank nails or screws. Example floor system notation: JOIST 2x10 @ 16" OC, SPAN 12'-0", SUBFLOOR 3/4" T&G PLYWOOD.
+
+Wall sheathing may consist of OSB or plywood panels nailed or screwed to studs, providing lateral stability and structural rigidity. Sheathing panels are often 4x8 sheets installed horizontally or vertically depending on design requirements. Building wrap or house wrap such as Tyvek is installed over sheathing to provide weather resistance and moisture control.
+
+Window and door installation requires rough openings (RO) that exceed the actual unit size to allow for shimming and adjustment. A typical window rough opening might be labeled as 48" x 48" RO for a 46-1/2" x 46-1/2" window unit. Flashing tape, sill pans, and sealants are used to prevent water infiltration.
+
+Finish carpentry focuses on interior and exterior trim work, cabinetry, molding, and detailed woodwork. Trim elements include baseboards, crown molding, casing, chair rails, and wainscoting. Example trim sizes may include 1x4 baseboard, 1x6 casing, or custom millwork profiles. Miter joints, cope joints, and butt joints are commonly used for corner transitions.
+
+Cabinet making involves precise joinery, including dovetail joints, mortise and tenon joints, pocket screws, dowels, and biscuit joints. Cabinet dimensions are often measured in inches with high precision, such as 24-3/4" width or 34-1/2" height. Hardware includes hinges, drawer slides, knobs, pulls, and soft-close mechanisms.
+
+Wood finishing processes include sanding (grits such as 80, 120, 180, 220), staining, sealing, varnishing, lacquering, or painting. Sanding must follow the grain direction to avoid scratches and surface damage. Example finishing instruction: SAND 120 → 180 → 220 GRIT, APPLY STAIN (WALNUT), THEN 2 COATS POLYURETHANE.
+
+Structural calculations in carpentry may involve load-bearing capacity, span tables, deflection limits, and building code compliance. Example notation: MAX SPAN 2x10 = 15'-2" @ 40 PSF LOAD. Engineers and carpenters must ensure compliance with local building codes such as IRC (International Residential Code).
+
+Carpenters often work with levels of precision tolerance such as ±1/16", ±1/8", or tighter tolerances for finish work. Laser measuring tools may display distances such as 0.00 ft, 12.75 ft, or 3.25 m depending on settings.
+
+Job site communication includes coordination with electricians, plumbers, HVAC technicians, and general contractors. Construction schedules may include phases such as rough framing, mechanical rough-in, insulation, drywall, trim, and final inspection.
+
+Example job site instruction:
+FRAME WALL A-3 PER PLAN, VERIFY PLUMB AND SQUARE, INSTALL DOUBLE TOP PLATE, AND CHECK ALL OPENINGS FOR CORRECT RO DIMENSIONS.
+
+Carpentry safety protocols include lockout/tagout procedures for power tools, maintaining clean workspaces, securing materials to prevent falls, and proper ladder usage with 3-point contact rule. Ladder angles are often set at a 4:1 ratio for stability.
+
+Material handling involves lifting techniques, forklift operation, pallet stacking, and securing lumber bundles with straps or bands labeled with dimensions such as 2x4x8', 2x6x10', or 4x8 plywood stacks.
+
+Sustainable carpentry practices may include using reclaimed wood, FSC-certified lumber, low-VOC adhesives, and minimizing construction waste through efficient cutting layouts and material reuse.
+
+Advanced carpentry projects may involve custom stair building, which requires calculating rise and run, stringer layout, tread depth, and riser height. Example stair notation: 7" RISE / 11" RUN / TOTAL RISE 105".
+
+Deck construction includes footings, posts, beams, joists, decking boards, and railing systems. Example deck spec: 6x6 POST, 2x10 BEAM, 2x8 JOISTS @ 16" OC, 5/4x6 DECKING BOARDS.
+
+Roofing carpentry includes installing sheathing, underlayment, shingles, flashing, fascia boards, soffits, and drip edges. Shingle installation may be specified as 3-tab asphalt shingles or architectural shingles rated for 30–50 years.
+
+Carpentry also includes restoration work on historic buildings, requiring careful replication of original joinery, wood species matching, and preservation techniques that maintain structural and aesthetic authenticity.
+
+Ultimately, carpentry combines technical measurement, material knowledge, physical skill, and precision craftsmanship to construct durable, functional, and aesthetically pleasing structures that meet safety standards, architectural design requirements, and client expectations.

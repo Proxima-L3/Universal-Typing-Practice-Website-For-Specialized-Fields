@@ -1,0 +1,122 @@
+Accounting is the systematic process of recording, classifying, summarizing, and interpreting financial transactions to provide useful information for decision-making, compliance, and financial reporting. The primary objective of accounting is to produce accurate financial statements that reflect an entity’s financial position, performance, and cash flows over a specified period. Core financial statements include the balance sheet, income statement, statement of cash flows, and statement of retained earnings.
+
+The balance sheet presents a snapshot of a company’s financial position at a specific point in time, following the accounting equation: Assets = Liabilities + Equity. Assets include current assets such as cash, accounts receivable, inventory, and prepaid expenses, as well as non-current assets such as property, plant, and equipment (PP&E), intangible assets, and long-term investments. Liabilities include accounts payable, accrued expenses, short-term debt, long-term debt, and deferred tax liabilities. Equity represents the residual interest in assets after liabilities are deducted and includes common stock, retained earnings, and additional paid-in capital.
+
+Example balance sheet equation entry:
+$500,000 Assets = $200,000 Liabilities + $300,000 Equity
+
+The income statement measures financial performance over a period of time, reporting revenues, expenses, gains, and losses. Revenue may include sales revenue, service revenue, interest income, and rental income. Expenses may include cost of goods sold (COGS), salaries expense, rent expense, utilities expense, depreciation expense, and interest expense. Net income is calculated as:
+Net Income = Revenues - Expenses
+
+Example income statement:
+Revenue: $1,200,000  
+COGS: $500,000  
+Gross Profit: $700,000  
+Operating Expenses: $300,000  
+Net Income: $400,000
+
+The statement of cash flows categorizes cash movements into operating activities, investing activities, and financing activities. Operating activities include cash received from customers and cash paid for expenses. Investing activities include purchase or sale of equipment, property, or investments. Financing activities include issuance of stock, payment of dividends, and borrowing or repayment of loans.
+
+Accounting follows the double-entry bookkeeping system, where every transaction affects at least two accounts, maintaining the balance of debits and credits. Debits (Dr) and credits (Cr) must always balance such that total debits equal total credits.
+
+Example journal entry:
+Dr Cash $10,000  
+Cr Revenue $10,000
+
+Another example:
+Dr Equipment $5,000  
+Cr Cash $5,000
+
+The chart of accounts is a structured list of all accounts used by a business, typically organized into assets, liabilities, equity, revenue, and expenses. Each account is assigned a unique account number such as:
+1000 Cash  
+1100 Accounts Receivable  
+1200 Inventory  
+2000 Accounts Payable  
+3000 Owner’s Equity  
+4000 Revenue  
+5000 Expenses
+
+Accounts receivable (A/R) represents money owed to a business by customers for goods or services delivered on credit. Accounts payable (A/P) represents money a business owes to suppliers or vendors. Aging reports categorize receivables based on time outstanding, such as 0–30 days, 31–60 days, 61–90 days, and 90+ days overdue.
+
+Example aging schedule:
+Customer A: $2,500 (0–30 days)  
+Customer B: $1,200 (31–60 days)  
+Customer C: $800 (90+ days)
+
+The accrual basis of accounting recognizes revenues when earned and expenses when incurred, regardless of cash movement. The cash basis recognizes transactions only when cash is received or paid. Example accrual entry:
+Dr Accounts Receivable $3,000  
+Cr Service Revenue $3,000
+
+Depreciation allocates the cost of tangible assets over their useful lives using methods such as straight-line, declining balance, or units of production. Example straight-line depreciation:
+($10,000 cost - $2,000 salvage value) / 4 years = $2,000 per year
+
+Common accounting principles include GAAP (Generally Accepted Accounting Principles) and IFRS (International Financial Reporting Standards), which provide standardized rules for financial reporting, consistency, and comparability across organizations.
+
+Financial ratios are used to analyze performance, liquidity, solvency, and profitability. Key ratios include:
+Current Ratio = Current Assets / Current Liabilities  
+Debt-to-Equity Ratio = Total Liabilities / Equity  
+Gross Profit Margin = (Revenue - COGS) / Revenue  
+Net Profit Margin = Net Income / Revenue
+
+Example:
+Current Ratio = $150,000 / $75,000 = 2.0  
+Debt-to-Equity = $200,000 / $100,000 = 2.0
+
+Budgeting involves forecasting revenues and expenses for a future period. A budget may include fixed costs such as rent and salaries, and variable costs such as utilities, materials, and commissions. Example budget line:
+Marketing Expense: $25,000/year  
+Payroll: $120,000/year  
+Software Licenses: $8,000/year
+
+Internal controls are procedures designed to safeguard assets, prevent fraud, and ensure accuracy in financial reporting. Controls may include segregation of duties, authorization requirements, reconciliation processes, and audit trails.
+
+Example control statement:
+“All cash disbursements over $1,000 require dual approval from management.”
+
+Auditing is the independent examination of financial statements to ensure accuracy and compliance. Auditors perform substantive testing, analytical procedures, and internal control evaluations. Audit findings may result in qualified, unqualified, adverse, or disclaimer opinions.
+
+Tax accounting focuses on preparing tax returns and ensuring compliance with tax laws. Taxable income is calculated after adjustments, deductions, credits, and exemptions. Example calculation:
+Gross Income $100,000 - Deductions $20,000 = Taxable Income $80,000
+
+Common tax forms include W-2 (employee wages), 1099 (independent contractor income), and corporate tax filings such as Form 1120.
+
+Payroll accounting involves calculating employee wages, withholding taxes, and recording employer obligations. Deductions may include federal income tax, Social Security, Medicare, retirement contributions (401k), and health insurance premiums.
+
+Example payroll entry:
+Dr Salary Expense $5,000  
+Cr Cash $3,800  
+Cr Tax Payable $1,200
+
+Reconciliation is the process of comparing internal records with external statements such as bank statements to ensure accuracy. A bank reconciliation statement may identify outstanding checks, deposits in transit, and bank errors.
+
+Example reconciliation item:
+Outstanding Check #1045: $750  
+Deposit in Transit: $1,200
+
+Cost accounting analyzes production costs to support pricing, budgeting, and efficiency improvements. Costs are categorized as fixed, variable, direct, or indirect. Example:
+Direct Materials: $40,000  
+Direct Labor: $25,000  
+Manufacturing Overhead: $15,000
+
+Inventory accounting tracks goods available for sale using methods such as FIFO (First-In, First-Out), LIFO (Last-In, First-Out), or weighted average cost.
+
+Example FIFO calculation:
+Units purchased at $5 → $10 → $12  
+Ending inventory valued using oldest cost first.
+
+Financial reporting cycles typically follow monthly, quarterly (Q1, Q2, Q3, Q4), and annual reporting periods. Year-end closing entries transfer temporary accounts into retained earnings.
+
+Example closing entry:
+Dr Revenue $50,000  
+Cr Retained Earnings $50,000
+
+Professional accounting software includes QuickBooks, Xero, SAP, Oracle NetSuite, and Microsoft Dynamics. These systems automate bookkeeping, invoicing, payroll, reporting, and compliance tasks.
+
+Example invoice:
+Invoice #INV-2026-045  
+Client: ABC Corp  
+Amount: $3,250.00  
+Due Date: 05/15/2026
+
+Accounting ethics emphasize integrity, objectivity, confidentiality, and professional competence. Accountants must avoid conflicts of interest and adhere to standards set by organizations such as the AICPA.
+
+Ultimately, accounting provides the financial language of business, enabling organizations to track performance, ensure compliance, support strategic decision-making, and communicate financial health to stakeholders including investors, management, regulators, and the public.

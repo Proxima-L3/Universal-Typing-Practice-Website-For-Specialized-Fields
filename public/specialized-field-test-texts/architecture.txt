@@ -1,0 +1,82 @@
+Architecture is the art and science of designing buildings, structures, and built environments that balance functionality, aesthetics, structural integrity, sustainability, and human experience. Architects develop concepts through sketches, diagrams, CAD software, and physical or digital models before producing construction documents that guide engineers, contractors, and builders throughout the construction process. A typical architectural workflow includes site analysis, schematic design, design development, construction documentation, permitting, bidding, and construction administration.
+
+Site analysis evaluates environmental conditions such as topography, soil composition, sun path, wind direction, climate zone, zoning regulations, setbacks, easements, and surrounding infrastructure. Example notation: SITE AREA = 12,500 m², ZONING: R-2 RESIDENTIAL, MAX HEIGHT: 45 ft, FAR: 1.5. Architects often conduct feasibility studies to determine whether a proposed building can meet budget, regulatory, and spatial requirements.
+
+Schematic design focuses on conceptual layouts, massing studies, spatial organization, circulation paths, and functional zoning within a building. Early sketches may define relationships between public, private, and service areas. For example, a residential plan may include living room, kitchen, bedrooms, bathrooms, utility spaces, and outdoor areas arranged to optimize light, privacy, and flow.
+
+Design development refines structural systems, material selection, building envelope performance, mechanical systems integration, and aesthetic detailing. Architects collaborate with structural engineers, mechanical engineers (HVAC), electrical engineers, and civil engineers to ensure coordination across all building systems. Structural systems may include steel frame, reinforced concrete, wood framing, or hybrid systems.
+
+Common architectural drawing types include floor plans, elevations, sections, site plans, reflected ceiling plans (RCP), and detail drawings. A floor plan is a horizontal cut through a building at approximately 4 feet above finished floor level, showing walls, doors, windows, furniture layout, and circulation paths. Example annotation: DOOR D-01, 36" x 80", SWING INWARD.
+
+Elevations illustrate vertical views of building facades, including exterior materials, window placements, rooflines, and architectural proportions. Sections cut through the building vertically to reveal structural relationships between floors, ceilings, and foundations. Detail drawings zoom in on specific construction elements such as wall assemblies, window flashing, or roof connections.
+
+Architectural scales are used to represent real-world dimensions on drawings, such as 1/8" = 1'-0", 1/4" = 1'-0", or 1:100 metric scale. Accurate scaling is essential for construction accuracy and coordination between disciplines. Example dimension: 24'-6" wall length, 9'-0" ceiling height, 3'-0" corridor width.
+
+Building materials play a critical role in architectural design, influencing structural performance, cost, durability, and aesthetics. Common materials include concrete, steel, glass, brick, stone, wood, aluminum, composite panels, and engineered timber products such as CLT (cross-laminated timber) and glulam beams.
+
+Concrete is widely used for foundations, slabs, columns, and structural cores due to its compressive strength and versatility. Reinforced concrete incorporates steel rebar to resist tensile forces. Example specification: 4,000 PSI concrete mix with #4 rebar @ 12" O.C.
+
+Steel structures use beams, columns, and trusses fabricated from I-beams, HSS (hollow structural sections), and angle iron. Steel connections may be welded, bolted, or riveted depending on design requirements. Example: W12x26 steel beam spanning 20'-0" with moment connection at supports.
+
+Building envelopes separate interior and exterior environments and include walls, roofs, insulation, vapor barriers, air barriers, cladding systems, and glazing. High-performance envelopes improve energy efficiency, thermal comfort, and moisture control. Example wall assembly: gypsum board + metal studs + rigid insulation R-21 + air barrier + brick veneer.
+
+Windows and curtain wall systems provide natural light, ventilation, and visual connection to the exterior. Glazing systems may include single-pane, double-pane, or triple-pane insulated glass units (IGUs) with low-E coatings and argon gas fills. Example specification: U-value 0.25, SHGC 0.35.
+
+Sustainability in architecture focuses on energy efficiency, water conservation, material reuse, carbon reduction, and environmental impact. Green building certifications include LEED (Leadership in Energy and Environmental Design), BREEAM, and WELL Building Standard. Example LEED credit: energy optimization, daylighting, and sustainable materials.
+
+Passive design strategies include orientation, shading devices, thermal mass, natural ventilation, and daylight harvesting. Example: building oriented 15° east of south to maximize winter solar gain while minimizing summer overheating.
+
+Mechanical systems include HVAC (heating, ventilation, air conditioning), plumbing, and fire protection systems. HVAC design ensures indoor thermal comfort using boilers, chillers, air handling units (AHU), ductwork, and thermostatic controls. Example: supply air temperature 55°F, return air 75°F.
+
+Electrical systems include lighting design, power distribution, emergency systems, fire alarms, and low-voltage systems such as data and telecommunications. Lighting design considers lumens, color temperature (Kelvin), and energy usage in watts. Example: LED fixture 3000K, 12W, 1200 lumens.
+
+Fire safety design includes sprinklers, fire-rated walls, egress paths, exit signage, smoke control systems, and occupancy calculations. Example occupancy load: 1 person per 15 ft² in assembly spaces.
+
+Egress design ensures safe evacuation with minimum corridor widths, exit distances, and stairwell placement. Example requirement: maximum travel distance 200 ft to exit, stair width 44 inches minimum.
+
+Universal design and accessibility standards ensure buildings are usable by people of all abilities. ADA compliance includes ramp slopes (1:12 ratio), accessible restroom clearances, door widths (minimum 32 inches clear), and tactile signage.
+
+Architectural firms use software such as AutoCAD, Revit, SketchUp, Rhino, ArchiCAD, and Adobe Creative Suite for drafting, modeling, rendering, and presentation. BIM (Building Information Modeling) allows integrated 3D models containing geometry, materials, scheduling, and cost data.
+
+Example BIM object: WALL TYPE A1
+- Gypsum board: 1/2"
+- Metal studs: 3-5/8" @ 16" O.C.
+- Insulation: R-19
+- Exterior sheathing: 5/8" OSB
+
+Rendering and visualization tools produce photorealistic images and animations of proposed designs using lighting, textures, and environmental simulation. Example render setting: sunlight angle 32°, HDRI environment map, resolution 4K (3840 x 2160).
+
+Construction documents include architectural drawings, structural drawings, mechanical/electrical/plumbing (MEP) drawings, specifications, schedules, and code compliance documentation. These documents form the legal basis for construction contracts.
+
+Specifications (specs) define materials, workmanship, installation methods, and quality standards. Example spec note: “All gypsum board joints shall be taped, mudded, and sanded to Level 4 finish minimum.”
+
+Construction administration involves site visits, contractor coordination, submittal review, request for information (RFI) responses, and punch list inspections. Example RFI: “Clarification requested regarding window head height at grid line B-4.”
+
+Grids and coordinates are used to organize structural layouts, often labeled A, B, C horizontally and 1, 2, 3 vertically. Example: Column located at intersection B-3, offset 2'-0" east.
+
+Architectural detailing ensures proper assembly of building components to prevent water intrusion, thermal bridging, and structural failure. Example detail: flashing membrane integrated at window sill with slope 1/4" per foot.
+
+Urban design expands architecture to the scale of neighborhoods and cities, considering density, transportation, public space, zoning, infrastructure, and social interaction. Example: mixed-use development with retail on ground floor and residential units above.
+
+Historic preservation architecture focuses on restoring and adapting existing buildings while maintaining historical integrity and compliance with preservation guidelines.
+
+Adaptive reuse converts existing structures into new functions such as warehouses into apartments or factories into office spaces, preserving embodied energy and cultural heritage.
+
+Parametric design uses algorithmic modeling tools to generate complex geometries based on variable inputs such as height, curvature, spacing, and environmental data.
+
+Example parametric rule: IF solar exposure > threshold THEN increase shading depth by 15%.
+
+Structural loads in architecture include dead loads, live loads, wind loads, seismic loads, and snow loads. Example calculation: live load = 40 psf, dead load = 20 psf, total load = 60 psf.
+
+Seismic design considers earthquake resistance using shear walls, base isolators, moment-resisting frames, and ductile detailing.
+
+Wind load analysis evaluates pressure on building facades based on height, exposure category, and wind speed ratings such as 90 mph or 120 mph design wind speeds.
+
+Architectural typography and presentation boards communicate design intent through diagrams, renderings, material palettes, and conceptual narratives.
+
+Material palettes may include codes such as:
+- Concrete: #C4C4C4
+- Wood finish: #8B5A2B
+- Glass: rgba(135, 206, 235, 0.4)
+
+Ultimately, architecture integrates creativity, technical knowledge, engineering principles, environmental responsibility, and human-centered design to create spaces that are functional, safe, sustainable, and visually meaningful across residential, commercial, institutional, and urban contexts.
