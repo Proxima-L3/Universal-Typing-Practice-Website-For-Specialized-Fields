@@ -16,11 +16,13 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
     useEffect( () => {
         if (selectedTest === 'Word-Count Based') {
             setTestTypeOptionsList(['100 Words', '500 Words', '1000 Words', '2000 Words', 'Custom Text'])
+            setSelectedTestTypeOption('500 Words')
         }
         else if (selectedTest === 'Timer Based') {
             setTestTypeOptionsList(['30 secs', '1 min', '2 mins', '3 mins', '5 mins', 'Custom Time'])
+            setSelectedTestTypeOption('1 min')
         }
-    }, [selectedTest, selectedTestTypeOption])
+    }, [selectedTest])
 
     useEffect ( () => {
         if (selectedTestTypeOption === '') {

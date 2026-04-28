@@ -181,7 +181,7 @@ function TypingTest({typingTestChoice}) {
             }
             else if (searchParams.get('testChoice') === 'word-count') {
                 return (
-                    <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={searchParams.get('testWords')} showWordCounter={showWordCounter} />
+                    <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} timerExpired={timerExpired} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={searchParams.get('testWords')} showWordCounter={showWordCounter} />
                 )
             }
         
@@ -191,7 +191,7 @@ function TypingTest({typingTestChoice}) {
             if (testType === 'Timer Based') {
                 return (
                     <>
-                        <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={wordCount} showWordCounter={showWordCounter} />
+                        <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} timerExpired={timerExpired} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={wordCount} showWordCounter={showWordCounter} />
 
                         <Timer testStarted={testStarted} setTimerExpired={setTimerExpired} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} timerLength={timeLimit} wordCountReached={wordCountReached} showTimer={showTimer} />
                     </>
@@ -202,13 +202,13 @@ function TypingTest({typingTestChoice}) {
                     <>
                         <Timer testStarted={testStarted} setTimerExpired={setTimerExpired} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} timerLength={timeLimit} wordCountReached={wordCountReached} showTimer={showTimer} />
 
-                        <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={wordCount} showWordCounter={showWordCounter} />
+                        <WordCounter wordCountReached={wordCountReached} setWordCountReached={setWordCountReached} timerExpired={timerExpired} wordsTyped={wordsTyped} testRestarted={testRestarted} setTestRestarted={setTestRestarted} testType={testType} wordCount={wordCount} showWordCounter={showWordCounter} />
                     </>
                 )
             }
         
         }
-        
+
     }
 
 
