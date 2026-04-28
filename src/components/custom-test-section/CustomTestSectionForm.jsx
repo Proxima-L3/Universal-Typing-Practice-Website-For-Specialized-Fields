@@ -22,7 +22,7 @@ function CustomTestSectionForm () {
     const [selectedTest, setSelectedTest] = useState('Timer Based');
     const [selectedTestTypeOption, setSelectedTestTypeOption] = useState('1 min');
     const [customTime, setCustomTime] = useState('00:00');
-    const [customTextInput, setCustomTextInput] = useState('no text was entered lols')
+    const [customTextInput, setCustomTextInput] = useState('')
     const [selectedModifiers, setSelectedModifiers] = useState({'Capital Letters': true, 'Punctuation': true, 'Numbers': false, 'Symbols': false})
     const [selectedInsertionPoint, setSelectedInsertionPoint] = useState('Underscore');
     const [isChecked, setIsChecked] = useState(true);
@@ -30,6 +30,7 @@ function CustomTestSectionForm () {
     const [selectedOptionShowTimer, setSelectedOptionShowTimer] = useState('Show');
     const [selectedOptionShowWordCounter, setSelectedOptionShowWordCounter] = useState('Show');
 
+    // const handleFormSubmit = async function () {
     const handleFormSubmit = function () {
 
         const params = new URLSearchParams({

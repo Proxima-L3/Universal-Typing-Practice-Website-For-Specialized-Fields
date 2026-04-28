@@ -439,16 +439,24 @@ input[type="number"] {
   /* margin: 0 auto; */
   margin-top: 4%;
   margin-bottom: 2%;
-  /* gap: 1%; */
+  gap: 2%;
   /* position: relative; */
 }
 
+.extraWidget {
+  position: static;
+  left: 25%;
+}
 
 .wordCounter {
+  /* display: flex; */
+  justify-content: center;
   width: 10%;
-  min-width: 100px;
+  min-width: fit-content;
   position: absolute;
   padding-block: 0.2%;
+  padding-inline: 1%;
+  white-space: nowrap;
   color: #00ffff;
   background-color: #404040;
   box-shadow: 0 0 0 2px #00ff00 inset;
@@ -483,7 +491,7 @@ input[type="number"] {
 .restartTestButton {
   align-self: stretch;
   position: relative;
-  left: 9%;
+  left: 12%;
   height: 100%;
   padding-inline: 1%;
   padding-top: 0.4%;
@@ -517,10 +525,13 @@ input[type="number"] {
 
 .practiceText {
   margin: 0.08em;
+  /* padding-left: 1px; */
+  /* padding-right: -1px; */
 }
 
 .correctInput {
   margin: 0.08em;
+  /* padding-left: 1px; */
   color: #006600;
   background-color: #00ff00;
   border-radius: 15%;
@@ -528,6 +539,7 @@ input[type="number"] {
 
 .incorrectInput {
   margin: 0.08em;
+  /* padding-left: 1px; */
   color: #990000;
   background-color: #ff8080;
   border-radius: 15%;
@@ -535,17 +547,85 @@ input[type="number"] {
 
 .nextInput {
   margin: 0.08em;
+  padding-left: 1px;
+  background-color: #505050;
+}
+
+.nextInputUnderscore {
+  margin: 0.08em;
+  padding-left: 1px;
   text-decoration-line: underline;
   text-decoration-color: #00ff00;
   text-decoration-thickness: 20%;
   text-underline-offset: 40%;
   background-color: #505050;
   border-radius: 15%;
-  animation: blink 400ms ease-in-out infinite alternate;
+  animation: blinkUnderscore 400ms ease-in-out infinite alternate;
 }
-@keyframes blink {
+@keyframes blinkUnderscore {
   from { text-decoration-color: #00ff00; }
   to { text-decoration-color: transparent; }
+}
+
+.nextInputBlock {
+  /* display: block; */
+  /* width: fit-content; */
+  margin: 0.08em;
+  padding-left: 1px;
+  /* text-decoration-line: underline; */
+  /* text-decoration-color: #00ff00; */
+  /* text-decoration-thickness: 20%; */
+  /* text-underline-offset: 40%; */
+  background-color: #505050;
+  /* background-size: cover; */
+  /* box-shadow: 0 0 0 0.5px #00ff00 inset; */
+  /* border-color: #00ff00; */
+  /* border-width: 1px; */
+  /* border-style: solid; */
+  border-radius: 15%;
+  /* letter-spacing: -0.1em; */
+  /* font-kerning: none; */
+  /* initial-letter-align: center; */
+  /* overflow-wrap: break-word; */
+  /* overflow: overlay; */
+  /* text-align: justify; */
+  /* text-justify: inter-character; */
+  
+  animation: blinkBlock 500ms ease-in-out infinite alternate;
+}
+@keyframes blinkBlock {
+  from { background-color: #009900; }
+  to { background-color: #505050; }
+}
+
+.nextInputLine {
+  margin: 0.08em;
+  padding-left: 1px;
+  /* box-shadow: -1px 0 0 0 #00ff00; */
+  /* clip-path: margin-box; */
+  border-left-color: #00ff00;
+  border-left-width: 2.5px;
+  border-left-style: solid;
+  /* border-left-height: 50%; */
+  /* outline-color: #00ffff; */
+  /* outline-width: 1px; */
+  /* outline-style: solid; */
+  /* outline-offset: 2px; */
+  /* border-top-right-radius: 15%; */
+  /* border-bottom-right-radius: 15%; */
+  /* writing-mode: sideways-rl; */
+  /* text-decoration-line: underline; */
+  /* text-decoration-color: #00ff00; */
+  /* text-decoration-thickness: 20%; */
+  /* text-underline-offset: 40%; */
+  /* text-underline-position: left; */
+  background-color: #505050;
+  /* border-radius: 15%; */
+  animation: blinkLine 400ms ease-in-out infinite alternate;
+}
+@keyframes blinkLine {
+  from { border-color: #00ff00; }
+  to { border-color: transparent; }
 }
 
 

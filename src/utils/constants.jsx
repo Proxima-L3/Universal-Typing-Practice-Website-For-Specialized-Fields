@@ -15,7 +15,17 @@ export function calcWordCount(stringOfWords) {
 
     // updatedUserArray.filter(spaces => spaces.props.children === ' ').length
 
-    return   ((stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length - 1)
+    const userTextArray = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/))
+    
+    let numberOfWords = userTextArray.length
+
+    if (stringOfWords.length !== 0) {
+    // if (numberOfWords > 0) {
+        numberOfWords = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length + 1
+    }
+
+    // return   ((stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length - 1)
+    return (numberOfWords)
 
 }
 

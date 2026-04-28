@@ -9,7 +9,7 @@ import Timer from './timed/Timer.jsx';
 import '../../App.css';
 
 // Defines text box component that when selected, listens for user text input and updates state of text in text box.
-function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, setWordCountReached, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, testRestarted, setTestRestarted}) {
+function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, setWordCountReached, setWordsTyped, setCharTypedCorrectly, setTotalCharTyped, testRestarted, setTestRestarted, showInsertionPoint, insertionPointStyle,}) {
   const typingPracText = CONSTANTS.TYPING_PRAC_TEXT_SAMPLE_1;
   const typingPracTextArray = typingPracText.split('');
   const [counter, setCounter] = useState(0);
@@ -46,8 +46,8 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
     let updatedUserArray
     // let updatedUserArrayExposed
 
-    // prevents ' & / from opening quick find links search box in firefox while test is still running
-    (!timerExpired || !wordCountReached) && (currentInputText === "'" || currentInputText === "/") ? currentInputEvent.preventDefault() : null;
+    // prevents ' & / from opening quick find links search box and space from going down page in firefox while test is still running
+    (!timerExpired || !wordCountReached) && (["'", '/', ' '].includes(currentInputText)) ? currentInputEvent.preventDefault() : null;
 
     // get rid of the first conditional (not needed if typing test is timed)
     // if (userTextArray.length === typingPracTextArray.length) {
@@ -121,7 +121,7 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
   }
   
   // A variable used to hold a new array made of the array of user typed text (colored accordingly) and the rest of the typing practice text
-  const displayTextArray = userTextArray.concat(<span className='nextInput'>{typingPracTextArray[userTextArray.length]}</span>).concat(typingPracTextArray.slice(userTextArray.length + 1).map((c) => <span className='practiceText'>{c}</span>))  // note: figure out how to add key prop to avoid that "every child must have unique key" error
+  const displayTextArray = userTextArray.concat(<span className={`nextInput${showInsertionPoint ? insertionPointStyle : ''}`}>{typingPracTextArray[userTextArray.length]}</span>).concat(typingPracTextArray.slice(userTextArray.length + 1).map((c) => <span className='practiceText'>{c}</span>))  // note: figure out how to add key prop to avoid that "every child must have unique key" error
 
   return (
     <>

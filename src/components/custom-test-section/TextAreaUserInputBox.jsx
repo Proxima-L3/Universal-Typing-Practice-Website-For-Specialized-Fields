@@ -5,7 +5,7 @@ import * as CONSTANTS from '/src/utils/constants.jsx';
 import '/src/App.css';
 
 
-function TextAreaUserInputBox (setCustomTextInput) {
+function TextAreaUserInputBox ({setCustomTextInput}) {
 
     const [userCustomTextWordCount, setUserCustomTextWordCount] = useState(0)
 

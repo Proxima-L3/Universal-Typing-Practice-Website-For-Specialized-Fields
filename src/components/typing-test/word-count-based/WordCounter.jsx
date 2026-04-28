@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 
+import { useSearchParams } from 'react-router-dom';
+
 import '/src/App.css';
 
 
-function WordCounter({wordCountReached, setWordCountReached, wordsTyped,testRestarted, setTestRestarted}) {
+function WordCounter({wordCountReached, setWordCountReached, wordsTyped, testRestarted, setTestRestarted, testType, wordCount, showWordCounter}) {
     // below variable is the length of time the user wants the typing practice session to last.. hardcoded for now: 1 minute or 60,000 ms
     // we can put wordCount & wordsRemaining? state in parent component
-    const wordCount = 100;
+    // const wordCount = 100;
+
+    const [searchParams, setSearchParams] = useSearchParams();
     
     const [wordsRemaining, setWordsRemaining] = useState(wordCount);
     // const [timeRemaining, setTimeRemaining] = useState(timerLength);
@@ -36,13 +40,10 @@ function WordCounter({wordCountReached, setWordCountReached, wordsTyped,testRest
     }, [wordsTyped, wordCountReached])
 
 
-    const displayWordCounter = function() {
-        // let mins = Math.floor(timeRemaining / 60);
-        // let secs = timeRemaining % 60;
+    // const displayWordCounter = function() {
 
-        // return `${mins}:${String(secs).padStart(2,'0')}`;
-        return `${wordsRemaining} Words Left`;
-    }
+    //     return `${wordsRemaining} Words Left`;
+    // }
 
     // const displayTimer = function() {
     //     let mins = Math.floor(timeRemaining / 60);
@@ -51,10 +52,29 @@ function WordCounter({wordCountReached, setWordCountReached, wordsTyped,testRest
     //     return `${mins}:${String(secs).padStart(2,'0')}`;
     // }
 
+    const displayWordCounter = function() {
+
+        let contentVar = `${wordsRemaining} Words Left`
+        
+        if (testType === 'Word-Count Based' || searchParams.get('testChoice') === 'word-count') {
+
+            return (
+                <div className={`wordCounter ${ showWordCounter ? '' : 'contentHidden' }`} tabIndex='1'>{contentVar}</div>
+            )
+        }
+        else if (testType === 'Timer Based') {
+
+            return (
+                <div className={`wordCounter extraWidget ${ showWordCounter ? '' : 'contentHidden' }`} tabIndex='1'>{contentVar}</div>
+            )
+        }
+    }
+
     return (
         <>
             {/* <div className={`timer ${ testStarted && timeRemaining <= 3 ? 'testEnding' : '' }`} tabIndex='1'>{displayTimer()}</div> */}
-            <div className='wordCounter' tabIndex='1'>{displayWordCounter()}</div>
+            {/* <div className={`wordCounter ${ showWordCounter ? '' : 'contentHidden' }`} tabIndex='1'>{displayWordCounter()}</div> */}
+            {displayWordCounter()}
         </>
     )
 }

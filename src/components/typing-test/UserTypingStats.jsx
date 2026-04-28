@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import '../../App.css';
 
 
-function UserTypingStats ({testStarted, timeElapsed, setTimeElapsed, wordsTyped, charTypedCorrectly, totalCharTyped, timerExpired, wordCountReached}) {
+function UserTypingStats ({testStarted, timeElapsed, setTimeElapsed, wordsTyped, charTypedCorrectly, totalCharTyped, timerExpired, wordCountReached, showStats}) {
     // const [avgWpm, setAvgWpm] = useState(0);
     // const [accuracy, setAccuracy] = useState(0);
     // const [timeElapsed, setTimeElapsed] = useState(0);
@@ -55,7 +55,7 @@ function UserTypingStats ({testStarted, timeElapsed, setTimeElapsed, wordsTyped,
 
     return (
         <>
-            <div className={`typingStats ${ timerExpired || wordCountReached ? 'typingStatsTestEnded' : 'typingStatsTestRunning' }`} tabIndex='3'>{displayStats()}</div>
+            <div className={`typingStats ${ timerExpired || wordCountReached ? 'typingStatsTestEnded' : 'typingStatsTestRunning'} ${showStats ? '' : 'contentHidden'}`} tabIndex='3'>{displayStats()}</div>
         </>
     )
 }
