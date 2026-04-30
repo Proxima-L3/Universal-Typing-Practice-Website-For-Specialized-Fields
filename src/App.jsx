@@ -19,12 +19,12 @@ function App() {
 
       <div className='pageContent'>
         <Routes>
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields' element={<HomePage/>} />
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields/BasicTypingTests' element={<BasicTypingTestsPage/>} />
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields/BasicTypingTests/TypingTest' element={<TypingTest/>} />
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields/Leaderboards' element={<LeaderboardsPage/>} />
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields/About' element={<AboutPage/>} />
-          <Route path='/Universal-Typing-Practice-Website-For-Specialized-Fields/Contact' element={<ContactPage/>} />
+          <Route path='/' element={<HomePage/>} />
+          <Route path='/BasicTypingTests' element={<BasicTypingTestsPage/>} />
+          <Route path='/BasicTypingTests/TypingTest' element={<TypingTest/>} />
+          <Route path='/Leaderboards' element={<LeaderboardsPage/>} />
+          <Route path='/About' element={<AboutPage/>} />
+          <Route path='/Contact' element={<ContactPage/>} />
         </Routes>
       </div>
     </>
