@@ -179,7 +179,7 @@ function TypingTest({typingTestChoice}) {
 
 
             // insert fetch statement to get requested text file and convert to string, then process text to apply modifiers and slice text to word count choice
-            fetch(`/specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
+            fetch(`${import.meta.env.BASE_URL}/specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
                 .then(response => response.text())
                 .then(text => {
                     setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, text, textModifiers))
@@ -196,7 +196,7 @@ function TypingTest({typingTestChoice}) {
             textModifiers = {'Capital Letters': true, 'Punctuation': true, 'Numbers': true, 'Symbols': true}
             setAutoGenModifiers(textModifiers)
 
-            fetch('/specialized-field-test-texts/generic.txt')
+            fetch(`${import.meta.env.BASE_URL}/specialized-field-test-texts/generic.txt`)
                 .then(response => response.text())
                 .then(text => {
                     setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testChoice'), Number(params.get('testWords')), text, textModifiers))

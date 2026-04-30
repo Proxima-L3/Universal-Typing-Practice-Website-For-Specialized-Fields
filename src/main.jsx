@@ -8,7 +8,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename='Universal-Typing-Practice-Website-For-Specialized-Fields'>
+    <BrowserRouter basename='/Universal-Typing-Practice-Website-For-Specialized-Fields/'>
       <App />
     </BrowserRouter>
   </StrictMode>,
