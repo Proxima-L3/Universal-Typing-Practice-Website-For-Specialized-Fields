@@ -100,7 +100,7 @@ Manufacturing Overhead: $15,000
 Inventory accounting tracks goods available for sale using methods such as FIFO (First-In, First-Out), LIFO (Last-In, First-Out), or weighted average cost.
 
 Example FIFO calculation:
-Units purchased at $5 → $10 → $12  
+Units purchased at $5 -> $10 -> $12  
 Ending inventory valued using oldest cost first.
 
 Financial reporting cycles typically follow monthly, quarterly (Q1, Q2, Q3, Q4), and annual reporting periods. Year-end closing entries transfer temporary accounts into retained earnings.

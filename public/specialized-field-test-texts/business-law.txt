@@ -20,7 +20,7 @@ Non-compete agreements restrict former employees from engaging in competitive bu
 
 Intellectual property law protects intangible assets such as trademarks, copyrights, patents, and trade secrets. A trademark identifies and distinguishes goods or services, such as brand names, logos, or slogans. Copyright protects original works of authorship including literature, software code, music, and visual art. Patent protection applies to novel, useful, and non-obvious inventions for a limited term, typically 20 years from filing.
 
-Example trademark notation: ™ BrandName™ or registered mark ® BrandName®. Example patent reference: U.S. Patent No. 10,123,456. Trade secret protection covers confidential business information such as formulas, algorithms, customer lists, and proprietary processes, often protected through non-disclosure agreements (NDAs).
+Example trademark notation: (TM) BrandName(TM) or registered mark (R) BrandName(R). Example patent reference: U.S. Patent No. 10,123,456. Trade secret protection covers confidential business information such as formulas, algorithms, customer lists, and proprietary processes, often protected through non-disclosure agreements (NDAs).
 
 Mergers and acquisitions (M&A) involve the consolidation of companies through purchase, merger, or asset acquisition. Due diligence is a critical phase involving financial analysis, legal review, operational assessment, and risk evaluation. Example transaction: "Company A acquires Company B for $250,000,000 in a stock-and-cash deal."
 

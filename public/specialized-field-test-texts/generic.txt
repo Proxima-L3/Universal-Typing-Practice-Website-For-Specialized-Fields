@@ -4,11 +4,11 @@ The day starts early, and people wake up to the sound of alarms, clocks, phones,
 
 In many places, work begins at 8:00 AM or 9:00 AM, depending on the job or location. Offices, schools, shops, and services open their doors to customers, students, and clients. People travel by car, bus, train, bike, or on foot. Traffic can be slow or fast, heavy or light, depending on the time and city. A typical commute might take 10, 25, or even 60 minutes.
 
-Numbers are everywhere in daily life: 1, 2, 3, 10, 25, 50, 100, 250, 500, and 1000. Prices change constantly: $1.99, $5.50, $10.00, $19.95, or $100.00. Percentages also appear often: 5%, 10%, 25%, 50%, 75%, and 100%. Temperature might read 32°F, 68°F, 72°F, or 98.6°F depending on the weather and season.
+Numbers are everywhere in daily life: 1, 2, 3, 10, 25, 50, 100, 250, 500, and 1000. Prices change constantly: $1.99, $5.50, $10.00, $19.95, or $100.00. Percentages also appear often: 5%, 10%, 25%, 50%, 75%, and 100%. Temperature might read 32F, 68F, 72F, or 98.6F depending on the weather and season.
 
 People use computers, phones, and tablets for communication, work, and entertainment. Emails are sent and received every second, often containing subject lines like "Meeting Update," "Project Status," or "Hello Again." Messages include greetings such as "Hi," "Hello," "Good morning," and "How are you?" Social media platforms show posts, comments, likes, shares, and notifications constantly updating.
 
-In school or learning environments, students read books, write essays, solve problems, and take notes. Teachers explain lessons using examples, questions, and exercises. Subjects include math, science, English, history, and art. A simple equation might look like 2 + 2 = 4 or 10 - 3 = 7. More advanced calculations include 12 × 8 = 96 or 144 ÷ 12 = 12.
+In school or learning environments, students read books, write essays, solve problems, and take notes. Teachers explain lessons using examples, questions, and exercises. Subjects include math, science, English, history, and art. A simple equation might look like 2 + 2 = 4 or 10 - 3 = 7. More advanced calculations include 12 x 8 = 96 or 144 / 12 = 12.
 
 Everyday conversation includes common words like "and," "the," "is," "are," "was," "were," "be," "have," "has," "had," "do," "does," "did," "will," "would," "can," "could," "should," "this," "that," "these," "those," "it," "they," "we," "you," and "I." These words appear constantly in both spoken and written English.
 
@@ -16,7 +16,7 @@ People often ask questions such as: What time is it? Where are you going? How mu
 
 Punctuation is important in writing. Sentences end with periods. Questions end with question marks? Exclamations show emotion! Commas separate ideas, items, or phrases. Colons introduce lists: apples, oranges, bananas, and grapes. Semicolons connect related ideas; they help structure complex sentences.
 
-Symbols appear in many contexts: @, #, $, %, &, *, +, -, =, /, \, <, >, and ~. Email addresses include symbols such as name@example.com. Hashtags like #daily, #work, or #practice are used online. Currency symbols include $ (dollar), € (euro), £ (pound), and ¥ (yen).
+Symbols appear in many contexts: @, #, $, %, &, *, +, -, =, /, \, <, >, and ~. Email addresses include symbols such as name@example.com. Hashtags like #daily, #work, or #practice are used online. Currency symbols include $ (dollar), EUR (euro), GBP (pound), and JPY (yen).
 
 At work, tasks include writing reports, answering emails, attending meetings, and completing assignments. Deadlines may be set for 1 day, 3 days, 1 week, or 30 days. Projects may require collaboration between 2, 3, 5, or more people. Communication is often clear, direct, and structured to avoid confusion.
 
@@ -36,9 +36,9 @@ People often use lists to organize thoughts:
 
 Time is measured in seconds, minutes, hours, days, weeks, months, and years. There are 60 seconds in a minute, 60 minutes in an hour, 24 hours in a day, 7 days in a week, and 365 days in a year (366 in a leap year). Dates may appear as 01/01/2026, 12/25/2025, or 07/04/2026.
 
-Travel is a common part of life. People visit cities, towns, countries, and places for work or vacation. Distances may be measured in miles or kilometers: 1 mile ≈ 1.6 km. A short trip might be 5 miles, while a long trip could be 100, 500, or even 1000 miles.
+Travel is a common part of life. People visit cities, towns, countries, and places for work or vacation. Distances may be measured in miles or kilometers: 1 mile ~= 1.6 km. A short trip might be 5 miles, while a long trip could be 100, 500, or even 1000 miles.
 
-Weather changes daily. It can be sunny, cloudy, rainy, snowy, windy, or stormy. Temperatures vary from -10°C to 40°C depending on location and season. Forecasts often include percentages such as 20% chance of rain or 80% humidity.
+Weather changes daily. It can be sunny, cloudy, rainy, snowy, windy, or stormy. Temperatures vary from -10C to 40C depending on location and season. Forecasts often include percentages such as 20% chance of rain or 80% humidity.
 
 In conversations, people often use short responses: yes, no, maybe, okay, sure, thanks, please, sorry, excuse me, and goodbye. These words help maintain polite and efficient communication.
 
@@ -48,7 +48,7 @@ Music, movies, games, and entertainment are common topics of discussion. People 
 
 Technology continues to grow and change. Devices include laptops, desktops, smartphones, smartwatches, and smart home systems. Applications are used for communication, productivity, learning, and entertainment. Software updates often include versions like v1.0, v2.5, or v3.14.
 
-Basic math is used in everyday life: 1 + 1 = 2, 3 + 4 = 7, 10 - 6 = 4, 5 × 5 = 25, 20 ÷ 4 = 5. More complex problems involve variables such as x, y, and z, where x = 10 or y = 20.
+Basic math is used in everyday life: 1 + 1 = 2, 3 + 4 = 7, 10 - 6 = 4, 5 x 5 = 25, 20 / 4 = 5. More complex problems involve variables such as x, y, and z, where x = 10 or y = 20.
 
 People often express feelings such as happy, sad, excited, tired, worried, or calm. Emotions influence decisions, actions, and communication throughout the day.
 

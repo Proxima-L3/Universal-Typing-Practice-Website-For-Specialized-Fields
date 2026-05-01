@@ -29,11 +29,11 @@ Finish carpentry focuses on interior and exterior trim work, cabinetry, molding,
 
 Cabinet making involves precise joinery, including dovetail joints, mortise and tenon joints, pocket screws, dowels, and biscuit joints. Cabinet dimensions are often measured in inches with high precision, such as 24-3/4" width or 34-1/2" height. Hardware includes hinges, drawer slides, knobs, pulls, and soft-close mechanisms.
 
-Wood finishing processes include sanding (grits such as 80, 120, 180, 220), staining, sealing, varnishing, lacquering, or painting. Sanding must follow the grain direction to avoid scratches and surface damage. Example finishing instruction: SAND 120 → 180 → 220 GRIT, APPLY STAIN (WALNUT), THEN 2 COATS POLYURETHANE.
+Wood finishing processes include sanding (grits such as 80, 120, 180, 220), staining, sealing, varnishing, lacquering, or painting. Sanding must follow the grain direction to avoid scratches and surface damage. Example finishing instruction: SAND 120 -> 180 -> 220 GRIT, APPLY STAIN (WALNUT), THEN 2 COATS POLYURETHANE.
 
 Structural calculations in carpentry may involve load-bearing capacity, span tables, deflection limits, and building code compliance. Example notation: MAX SPAN 2x10 = 15'-2" @ 40 PSF LOAD. Engineers and carpenters must ensure compliance with local building codes such as IRC (International Residential Code).
 
-Carpenters often work with levels of precision tolerance such as ±1/16", ±1/8", or tighter tolerances for finish work. Laser measuring tools may display distances such as 0.00 ft, 12.75 ft, or 3.25 m depending on settings.
+Carpenters often work with levels of precision tolerance such as +/-1/16", +/-1/8", or tighter tolerances for finish work. Laser measuring tools may display distances such as 0.00 ft, 12.75 ft, or 3.25 m depending on settings.
 
 Job site communication includes coordination with electricians, plumbers, HVAC technicians, and general contractors. Construction schedules may include phases such as rough framing, mechanical rough-in, insulation, drywall, trim, and final inspection.
 

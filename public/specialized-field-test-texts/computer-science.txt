@@ -49,11 +49,11 @@ GET https://api.example.com/users/123
 
 Cybersecurity focuses on protecting systems from unauthorized access, malware, phishing, ransomware, and denial-of-service (DoS) attacks. Security techniques include encryption, hashing, firewalls, intrusion detection systems (IDS), multi-factor authentication (MFA), and secure socket layers (SSL/TLS). Password hashing algorithms include SHA-256, bcrypt, and Argon2.
 
-Artificial intelligence (AI) and machine learning (ML) involve training models on datasets to perform tasks such as classification, regression, clustering, and reinforcement learning. A dataset may contain features X and labels Y, where a model learns a function f(X) → Y. Common ML algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines (SVM), and neural networks.
+Artificial intelligence (AI) and machine learning (ML) involve training models on datasets to perform tasks such as classification, regression, clustering, and reinforcement learning. A dataset may contain features X and labels Y, where a model learns a function f(X) -> Y. Common ML algorithms include linear regression, logistic regression, decision trees, random forests, support vector machines (SVM), and neural networks.
 
 Deep learning uses multi-layer neural networks with architectures such as CNNs (Convolutional Neural Networks), RNNs (Recurrent Neural Networks), and Transformers. Training involves forward propagation, loss calculation, backpropagation, and gradient descent optimization.
 
-Loss functions may include mean squared error (MSE), cross-entropy loss, or hinge loss. Optimization algorithms include stochastic gradient descent (SGD), Adam, RMSProp, and momentum-based updates. Example learning rate: α = 0.001.
+Loss functions may include mean squared error (MSE), cross-entropy loss, or hinge loss. Optimization algorithms include stochastic gradient descent (SGD), Adam, RMSProp, and momentum-based updates. Example learning rate: alpha = 0.001.
 
 Computer architecture studies CPU design, instruction sets, registers, ALU (Arithmetic Logic Unit), and pipeline processing. A CPU cycle includes fetch, decode, execute, and write-back stages. Cache memory is divided into L1, L2, and L3 levels to reduce latency.
 
@@ -82,7 +82,7 @@ RUN apt-get update && apt-get install -y python3
 
 Web development includes frontend, backend, and full-stack engineering. Frontend technologies include HTML5, CSS3, JavaScript, React, Vue, and Angular. Backend frameworks include Node.js, Django, Flask, Spring Boot, and Express.js.
 
-A typical web request-response cycle involves client → server → database → server → client. JSON (JavaScript Object Notation) is commonly used for data exchange:
+A typical web request-response cycle involves client -> server -> database -> server -> client. JSON (JavaScript Object Notation) is commonly used for data exchange:
 {
   "user": "alice",
   "id": 501,
@@ -102,7 +102,7 @@ Mathematics in computer science includes discrete math, linear algebra, probabil
 
 Boolean logic uses operators such as AND, OR, NOT, XOR, and NAND. Truth tables define logical outputs for binary inputs 0 and 1.
 
-Binary representation underlies all computing systems, using base-2 numbers such as 1010₂ = 10₁₀. Hexadecimal representation uses base-16 such as 0xFF = 255.
+Binary representation underlies all computing systems, using base-2 numbers such as 10102 = 1010. Hexadecimal representation uses base-16 such as 0xFF = 255.
 
 Programming often involves constants, variables, loops, conditionals, recursion, and function calls. Example loop:
 
