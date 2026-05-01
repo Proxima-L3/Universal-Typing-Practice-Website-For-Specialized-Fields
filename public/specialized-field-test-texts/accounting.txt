@@ -1,6 +1,6 @@
-Accounting is the systematic process of recording, classifying, summarizing, and interpreting financial transactions to provide useful information for decision-making, compliance, and financial reporting. The primary objective of accounting is to produce accurate financial statements that reflect an entity’s financial position, performance, and cash flows over a specified period. Core financial statements include the balance sheet, income statement, statement of cash flows, and statement of retained earnings.
+Accounting is the systematic process of recording, classifying, summarizing, and interpreting financial transactions to provide useful information for decision-making, compliance, and financial reporting. The primary objective of accounting is to produce accurate financial statements that reflect an entity's financial position, performance, and cash flows over a specified period. Core financial statements include the balance sheet, income statement, statement of cash flows, and statement of retained earnings.
 
-The balance sheet presents a snapshot of a company’s financial position at a specific point in time, following the accounting equation: Assets = Liabilities + Equity. Assets include current assets such as cash, accounts receivable, inventory, and prepaid expenses, as well as non-current assets such as property, plant, and equipment (PP&E), intangible assets, and long-term investments. Liabilities include accounts payable, accrued expenses, short-term debt, long-term debt, and deferred tax liabilities. Equity represents the residual interest in assets after liabilities are deducted and includes common stock, retained earnings, and additional paid-in capital.
+The balance sheet presents a snapshot of a company's financial position at a specific point in time, following the accounting equation: Assets = Liabilities + Equity. Assets include current assets such as cash, accounts receivable, inventory, and prepaid expenses, as well as non-current assets such as property, plant, and equipment (PP&E), intangible assets, and long-term investments. Liabilities include accounts payable, accrued expenses, short-term debt, long-term debt, and deferred tax liabilities. Equity represents the residual interest in assets after liabilities are deducted and includes common stock, retained earnings, and additional paid-in capital.
 
 Example balance sheet equation entry:
 $500,000 Assets = $200,000 Liabilities + $300,000 Equity
@@ -32,15 +32,15 @@ The chart of accounts is a structured list of all accounts used by a business, t
 1100 Accounts Receivable  
 1200 Inventory  
 2000 Accounts Payable  
-3000 Owner’s Equity  
+3000 Owner's Equity  
 4000 Revenue  
 5000 Expenses
 
-Accounts receivable (A/R) represents money owed to a business by customers for goods or services delivered on credit. Accounts payable (A/P) represents money a business owes to suppliers or vendors. Aging reports categorize receivables based on time outstanding, such as 0–30 days, 31–60 days, 61–90 days, and 90+ days overdue.
+Accounts receivable (A/R) represents money owed to a business by customers for goods or services delivered on credit. Accounts payable (A/P) represents money a business owes to suppliers or vendors. Aging reports categorize receivables based on time outstanding, such as 0-30 days, 31-60 days, 61-90 days, and 90+ days overdue.
 
 Example aging schedule:
-Customer A: $2,500 (0–30 days)  
-Customer B: $1,200 (31–60 days)  
+Customer A: $2,500 (0-30 days)  
+Customer B: $1,200 (31-60 days)  
 Customer C: $800 (90+ days)
 
 The accrual basis of accounting recognizes revenues when earned and expenses when incurred, regardless of cash movement. The cash basis recognizes transactions only when cash is received or paid. Example accrual entry:
@@ -70,7 +70,7 @@ Software Licenses: $8,000/year
 Internal controls are procedures designed to safeguard assets, prevent fraud, and ensure accuracy in financial reporting. Controls may include segregation of duties, authorization requirements, reconciliation processes, and audit trails.
 
 Example control statement:
-“All cash disbursements over $1,000 require dual approval from management.”
+"All cash disbursements over $1,000 require dual approval from management."
 
 Auditing is the independent examination of financial statements to ensure accuracy and compliance. Auditors perform substantive testing, analytical procedures, and internal control evaluations. Audit findings may result in qualified, unqualified, adverse, or disclaimer opinions.
 
@@ -100,7 +100,7 @@ Manufacturing Overhead: $15,000
 Inventory accounting tracks goods available for sale using methods such as FIFO (First-In, First-Out), LIFO (Last-In, First-Out), or weighted average cost.
 
 Example FIFO calculation:
-Units purchased at $5 → $10 → $12  
+Units purchased at $5 -> $10 -> $12  
 Ending inventory valued using oldest cost first.
 
 Financial reporting cycles typically follow monthly, quarterly (Q1, Q2, Q3, Q4), and annual reporting periods. Year-end closing entries transfer temporary accounts into retained earnings.

@@ -2,15 +2,15 @@ Auto mechanics is a skilled trade focused on diagnosing, repairing, maintaining,
 
 Modern vehicles rely heavily on electronic control systems, including the Engine Control Module (ECM), Powertrain Control Module (PCM), Transmission Control Module (TCM), and Body Control Module (BCM). These modules communicate through CAN bus networks, exchanging data from sensors such as oxygen sensors (O2), mass airflow sensors (MAF), throttle position sensors (TPS), crankshaft position sensors, camshaft position sensors, and coolant temperature sensors. Diagnostic Trouble Codes (DTCs) such as P0300 (random misfire), P0171 (system too lean), or P0420 (catalyst efficiency below threshold) are retrieved using an OBD-II scanner.
 
-An OBD-II scan tool may display live data including RPM, fuel trim (short-term and long-term), engine load percentage, intake air temperature (IAT), manifold absolute pressure (MAP), and vehicle speed sensor (VSS) readings. Example live data: RPM 850, STFT +3.2%, LTFT -1.5%, coolant temp 195°F, MAP 12 inHg. Technicians interpret these values to diagnose issues such as vacuum leaks, fuel delivery problems, or ignition system failures.
+An OBD-II scan tool may display live data including RPM, fuel trim (short-term and long-term), engine load percentage, intake air temperature (IAT), manifold absolute pressure (MAP), and vehicle speed sensor (VSS) readings. Example live data: RPM 850, STFT +3.2%, LTFT -1.5%, coolant temp 195F, MAP 12 inHg. Technicians interpret these values to diagnose issues such as vacuum leaks, fuel delivery problems, or ignition system failures.
 
 The internal combustion engine operates through four strokes: intake, compression, power, and exhaust. Key components include pistons, cylinders, crankshaft, camshaft, timing belt or timing chain, valves, spark plugs, fuel injectors, and engine block. Engine displacement is commonly measured in liters (L) such as 2.0L I4, 3.5L V6, or 5.7L V8 configurations. Compression ratios may range from 9.5:1 to 12.5:1 depending on engine design.
 
-Fuel systems include carbureted systems (older vehicles) and modern electronic fuel injection (EFI) systems. Fuel injectors deliver fuel in precise amounts measured in milliseconds of pulse width, often controlled by the ECM. Fuel pressure specifications may include values such as 45–60 PSI for port fuel injection systems or higher for direct injection systems exceeding 2,000 PSI.
+Fuel systems include carbureted systems (older vehicles) and modern electronic fuel injection (EFI) systems. Fuel injectors deliver fuel in precise amounts measured in milliseconds of pulse width, often controlled by the ECM. Fuel pressure specifications may include values such as 45-60 PSI for port fuel injection systems or higher for direct injection systems exceeding 2,000 PSI.
 
-Ignition systems generate the spark required for combustion using components such as ignition coils, spark plug wires, distributor assemblies (older systems), and coil-on-plug (COP) setups. Spark plug gaps are measured in thousandths of an inch, such as 0.028"–0.060", depending on manufacturer specifications. Example ignition fault: misfire detected in cylinder #3 due to weak coil output.
+Ignition systems generate the spark required for combustion using components such as ignition coils, spark plug wires, distributor assemblies (older systems), and coil-on-plug (COP) setups. Spark plug gaps are measured in thousandths of an inch, such as 0.028"-0.060", depending on manufacturer specifications. Example ignition fault: misfire detected in cylinder #3 due to weak coil output.
 
-The charging system includes the alternator, voltage regulator, battery, and wiring harness. A healthy alternator typically produces 13.5–14.8 volts while the engine is running. Battery condition is tested using voltage readings such as 12.6V (fully charged), 12.2V (partially discharged), or below 12.0V (weak battery). Cold Cranking Amps (CCA) ratings such as 650 CCA or 850 CCA indicate battery starting power in cold temperatures.
+The charging system includes the alternator, voltage regulator, battery, and wiring harness. A healthy alternator typically produces 13.5-14.8 volts while the engine is running. Battery condition is tested using voltage readings such as 12.6V (fully charged), 12.2V (partially discharged), or below 12.0V (weak battery). Cold Cranking Amps (CCA) ratings such as 650 CCA or 850 CCA indicate battery starting power in cold temperatures.
 
 The starting system includes the ignition switch, starter motor, solenoid, and battery cables. Common issues include clicking sounds, slow cranking, or no-start conditions. Voltage drop testing may reveal excessive resistance in cables or poor grounding connections.
 
@@ -18,15 +18,15 @@ Brake systems include disc brakes, drum brakes, calipers, rotors, brake pads, br
 
 ABS (Anti-lock Braking System) prevents wheel lockup during emergency braking by modulating brake pressure using wheel speed sensors and hydraulic control units (HCU). ABS warning lights indicate system faults requiring scan tool diagnosis.
 
-Suspension systems include struts, shocks, control arms, ball joints, bushings, sway bars, coil springs, leaf springs, and torsion bars. Alignment angles such as camber, caster, and toe are measured in degrees. Example alignment specification: camber -0.5°, caster +3.2°, toe-in 0.10".
+Suspension systems include struts, shocks, control arms, ball joints, bushings, sway bars, coil springs, leaf springs, and torsion bars. Alignment angles such as camber, caster, and toe are measured in degrees. Example alignment specification: camber -0.5, caster +3.2, toe-in 0.10".
 
 Steering systems include rack-and-pinion assemblies, power steering pumps, steering columns, tie rods, and steering knuckles. Power steering systems may be hydraulic or electric (EPS). Fluid leaks or stiff steering may indicate pump failure or low fluid levels.
 
 Transmission systems include manual, automatic, continuously variable transmissions (CVT), and dual-clutch transmissions (DCT). Automatic transmissions use hydraulic pressure, planetary gear sets, torque converters, and valve bodies. Transmission fluid levels and condition are critical; burnt fluid may indicate overheating or internal wear.
 
-Example transmission data: Fluid temp 180°F, gear ratio 3.42:1, slip rate 2%. Symptoms of transmission issues include slipping gears, delayed shifting, harsh engagement, or unusual noises.
+Example transmission data: Fluid temp 180F, gear ratio 3.42:1, slip rate 2%. Symptoms of transmission issues include slipping gears, delayed shifting, harsh engagement, or unusual noises.
 
-Cooling systems regulate engine temperature using radiators, coolant, water pumps, thermostats, cooling fans, and hoses. Coolant mixtures are typically 50/50 antifreeze and water, often ethylene glycol-based. Operating temperature ranges from 195°F to 220°F depending on engine design. Overheating may be caused by thermostat failure, coolant leaks, or radiator blockage.
+Cooling systems regulate engine temperature using radiators, coolant, water pumps, thermostats, cooling fans, and hoses. Coolant mixtures are typically 50/50 antifreeze and water, often ethylene glycol-based. Operating temperature ranges from 195F to 220F depending on engine design. Overheating may be caused by thermostat failure, coolant leaks, or radiator blockage.
 
 Air conditioning (A/C) systems include compressors, condensers, evaporators, expansion valves, and refrigerant such as R-134a or R-1234yf. Refrigerant pressures are measured in PSI on both high and low sides, such as 35 PSI low side and 250 PSI high side under normal operation.
 
@@ -34,19 +34,19 @@ Exhaust systems include exhaust manifolds, catalytic converters, oxygen sensors,
 
 Electrical systems include wiring harnesses, relays, fuses, grounds, switches, and control modules. Fuse ratings are commonly 5A, 10A, 15A, 20A, or 30A. A blown fuse may indicate a short circuit or overloaded circuit.
 
-Example wiring note: “Check continuity between pin 4 and ground; resistance should be < 0.5 ohms.”
+Example wiring note: "Check continuity between pin 4 and ground; resistance should be < 0.5 ohms."
 
-Technicians use multimeters to measure voltage (V), resistance (ohms Ω), and current (amps A). Example measurement: 12.45V battery voltage, 0.3Ω circuit resistance, 3.2A parasitic draw.
+Technicians use multimeters to measure voltage (V), resistance (ohms), and current (amps A). Example measurement: 12.45V battery voltage, 0.3 ohms circuit resistance, 3.2A parasitic draw.
 
 Parasitic battery drain diagnostics involve testing systems when the vehicle is off to identify excessive current draw, often above 50 milliamps (mA).
 
 Engine oil systems include oil pump, oil filter, oil pan, dipstick, and lubrication passages. Oil viscosity ratings such as 5W-30, 10W-40, or 0W-20 indicate flow characteristics at different temperatures. Low oil pressure can cause engine damage and trigger warning lights.
 
-Example service interval: oil change every 5,000–7,500 miles depending on manufacturer recommendations.
+Example service interval: oil change every 5,000-7,500 miles depending on manufacturer recommendations.
 
-Timing systems synchronize engine components using timing belts or chains. A timing belt replacement interval may be 60,000–100,000 miles. Failure can result in catastrophic engine damage in interference engines.
+Timing systems synchronize engine components using timing belts or chains. A timing belt replacement interval may be 60,000-100,000 miles. Failure can result in catastrophic engine damage in interference engines.
 
-Turbocharged and supercharged engines use forced induction to increase horsepower and torque by compressing intake air. Boost pressure is measured in PSI or bar, such as 8–14 PSI for stock turbo systems.
+Turbocharged and supercharged engines use forced induction to increase horsepower and torque by compressing intake air. Boost pressure is measured in PSI or bar, such as 8-14 PSI for stock turbo systems.
 
 Hybrid and electric vehicles (EVs) include high-voltage battery systems, inverter modules, electric drive motors, regenerative braking systems, and onboard chargers. High-voltage safety procedures require insulated tools, gloves rated for 1000V, and proper lockout/tagout procedures.
 
@@ -63,12 +63,12 @@ Diagnostic workflow typically includes:
 
 Common repair actions include replacing spark plugs, ignition coils, brake pads, rotors, sensors, belts, hoses, batteries, alternators, starters, and gaskets. Gasket failures such as head gasket leaks may cause coolant loss, white smoke, overheating, or oil contamination.
 
-Torque specifications are critical in automotive repair, measured in ft-lbs or Nm. Example: lug nuts torqued to 80 ft-lbs, cylinder head bolts torqued in sequence to 60 ft-lbs + 90° angle tightening.
+Torque specifications are critical in automotive repair, measured in ft-lbs or Nm. Example: lug nuts torqued to 80 ft-lbs, cylinder head bolts torqued in sequence to 60 ft-lbs + 90 angle tightening.
 
 Shop safety practices include using jack stands instead of hydraulic jacks alone, wearing PPE, properly disposing of hazardous fluids, and following OSHA guidelines. Fluid disposal includes engine oil, transmission fluid, coolant, brake fluid, and refrigerant handling protocols.
 
 VIN (Vehicle Identification Number) decoding provides vehicle information such as manufacturer, model year, engine type, assembly plant, and production sequence. Example VIN format: 1HGCM82633A123456.
 
-Service documentation includes repair orders (RO), labor time estimates, parts invoices, warranty claims, and inspection checklists. Example RO: #458921 – Customer complaint: “engine knocking under acceleration.”
+Service documentation includes repair orders (RO), labor time estimates, parts invoices, warranty claims, and inspection checklists. Example RO: #458921 - Customer complaint: "engine knocking under acceleration."
 
 Ultimately, auto mechanics combines mechanical systems knowledge, electrical diagnostics, precision measurement, safety awareness, and hands-on repair skills to ensure vehicles operate safely, efficiently, and reliably across all driving conditions.

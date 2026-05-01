@@ -1,6 +1,6 @@
 Architecture is the art and science of designing buildings, structures, and built environments that balance functionality, aesthetics, structural integrity, sustainability, and human experience. Architects develop concepts through sketches, diagrams, CAD software, and physical or digital models before producing construction documents that guide engineers, contractors, and builders throughout the construction process. A typical architectural workflow includes site analysis, schematic design, design development, construction documentation, permitting, bidding, and construction administration.
 
-Site analysis evaluates environmental conditions such as topography, soil composition, sun path, wind direction, climate zone, zoning regulations, setbacks, easements, and surrounding infrastructure. Example notation: SITE AREA = 12,500 m², ZONING: R-2 RESIDENTIAL, MAX HEIGHT: 45 ft, FAR: 1.5. Architects often conduct feasibility studies to determine whether a proposed building can meet budget, regulatory, and spatial requirements.
+Site analysis evaluates environmental conditions such as topography, soil composition, sun path, wind direction, climate zone, zoning regulations, setbacks, easements, and surrounding infrastructure. Example notation: SITE AREA = 12,500 m^2, ZONING: R-2 RESIDENTIAL, MAX HEIGHT: 45 ft, FAR: 1.5. Architects often conduct feasibility studies to determine whether a proposed building can meet budget, regulatory, and spatial requirements.
 
 Schematic design focuses on conceptual layouts, massing studies, spatial organization, circulation paths, and functional zoning within a building. Early sketches may define relationships between public, private, and service areas. For example, a residential plan may include living room, kitchen, bedrooms, bathrooms, utility spaces, and outdoor areas arranged to optimize light, privacy, and flow.
 
@@ -24,13 +24,13 @@ Windows and curtain wall systems provide natural light, ventilation, and visual 
 
 Sustainability in architecture focuses on energy efficiency, water conservation, material reuse, carbon reduction, and environmental impact. Green building certifications include LEED (Leadership in Energy and Environmental Design), BREEAM, and WELL Building Standard. Example LEED credit: energy optimization, daylighting, and sustainable materials.
 
-Passive design strategies include orientation, shading devices, thermal mass, natural ventilation, and daylight harvesting. Example: building oriented 15° east of south to maximize winter solar gain while minimizing summer overheating.
+Passive design strategies include orientation, shading devices, thermal mass, natural ventilation, and daylight harvesting. Example: building oriented 15 east of south to maximize winter solar gain while minimizing summer overheating.
 
-Mechanical systems include HVAC (heating, ventilation, air conditioning), plumbing, and fire protection systems. HVAC design ensures indoor thermal comfort using boilers, chillers, air handling units (AHU), ductwork, and thermostatic controls. Example: supply air temperature 55°F, return air 75°F.
+Mechanical systems include HVAC (heating, ventilation, air conditioning), plumbing, and fire protection systems. HVAC design ensures indoor thermal comfort using boilers, chillers, air handling units (AHU), ductwork, and thermostatic controls. Example: supply air temperature 55F, return air 75F.
 
 Electrical systems include lighting design, power distribution, emergency systems, fire alarms, and low-voltage systems such as data and telecommunications. Lighting design considers lumens, color temperature (Kelvin), and energy usage in watts. Example: LED fixture 3000K, 12W, 1200 lumens.
 
-Fire safety design includes sprinklers, fire-rated walls, egress paths, exit signage, smoke control systems, and occupancy calculations. Example occupancy load: 1 person per 15 ft² in assembly spaces.
+Fire safety design includes sprinklers, fire-rated walls, egress paths, exit signage, smoke control systems, and occupancy calculations. Example occupancy load: 1 person per 15 ft^2 in assembly spaces.
 
 Egress design ensures safe evacuation with minimum corridor widths, exit distances, and stairwell placement. Example requirement: maximum travel distance 200 ft to exit, stair width 44 inches minimum.
 
@@ -44,13 +44,13 @@ Example BIM object: WALL TYPE A1
 - Insulation: R-19
 - Exterior sheathing: 5/8" OSB
 
-Rendering and visualization tools produce photorealistic images and animations of proposed designs using lighting, textures, and environmental simulation. Example render setting: sunlight angle 32°, HDRI environment map, resolution 4K (3840 x 2160).
+Rendering and visualization tools produce photorealistic images and animations of proposed designs using lighting, textures, and environmental simulation. Example render setting: sunlight angle 32, HDRI environment map, resolution 4K (3840 x 2160).
 
 Construction documents include architectural drawings, structural drawings, mechanical/electrical/plumbing (MEP) drawings, specifications, schedules, and code compliance documentation. These documents form the legal basis for construction contracts.
 
-Specifications (specs) define materials, workmanship, installation methods, and quality standards. Example spec note: “All gypsum board joints shall be taped, mudded, and sanded to Level 4 finish minimum.”
+Specifications (specs) define materials, workmanship, installation methods, and quality standards. Example spec note: "All gypsum board joints shall be taped, mudded, and sanded to Level 4 finish minimum."
 
-Construction administration involves site visits, contractor coordination, submittal review, request for information (RFI) responses, and punch list inspections. Example RFI: “Clarification requested regarding window head height at grid line B-4.”
+Construction administration involves site visits, contractor coordination, submittal review, request for information (RFI) responses, and punch list inspections. Example RFI: "Clarification requested regarding window head height at grid line B-4."
 
 Grids and coordinates are used to organize structural layouts, often labeled A, B, C horizontally and 1, 2, 3 vertically. Example: Column located at intersection B-3, offset 2'-0" east.
 
