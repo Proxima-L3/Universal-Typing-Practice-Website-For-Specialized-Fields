@@ -47,6 +47,8 @@ export function applyModifiers(fieldTextString, pracTextModifiers) {
     
     textWithModifiers = textWithModifiers.replace(regex, '')
 
+    textWithModifiers = textWithModifiers.replace(/\s{2,}/g, ' ')
+
     return textWithModifiers
 }
 

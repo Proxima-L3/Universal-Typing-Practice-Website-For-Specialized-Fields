@@ -1,1 +1,1 @@
-CAPITAL LETTERS and punctuation:;.,'" and numbers 1234567890 and symbols !@#$%^&*()-+_=
+CAPITAL LETTERS and punctuation:;.,'" and numbers 1234567890 and symbols !@#$%^&*()-+_= some  white spaces:  double   triple    and 4 whitespaces
