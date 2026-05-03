@@ -508,8 +508,11 @@ input[type="number"] {
 
 .typingPracField {
   min-width: 350px;
+  max-height: 350px;
   margin-inline: 8rem;
   padding: 1rem;
+  overflow: auto;
+  overflow-x: hidden;
   letter-spacing: 0.1em;
   font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
   text-align: center;

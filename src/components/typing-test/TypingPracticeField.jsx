@@ -39,6 +39,14 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
   // An alternative to the above ..(i believe this can be moved to an export module)
   // const autoFocus = (element) => element?.focus();
 
+  // a useRef for character with the nextInput className attached to it (will be used to check if nextInput character is on a new line and if so scrolls the TypingPracticeField text area to the new line)
+  const nextInputCharRef = useRef(null);
+
+  // scroll text area down to where nextInput span element is into view ..(on page load and then whenever userTextArray changes)
+  useEffect(() => {
+    nextInputCharRef.current?.scrollIntoView({behavior: 'smooth'});
+  }, [processedTextString, userTextArray]);
+
 
   // Function that checks currently typed char and: if timerExpired or wordCountReached (depending on which test the user chose) is true stop receiving input from user and make see results button visible and "exit" (ie will later add code finalize results, unfocus typing practice field component?, & display see results button); else if backspace then decrement counter by 1, remove last item from userTextArray, and update UserTypingStats state variables; else if input is alphanumeric or a symbol, then check if it is first input, check if user's currently typed char is same value as current index of typePracTextArray and if so add current letter to end of userTextArray but as green and if not add it as red, and then update UserTypingStats state variables. ...(!!! IM REALIZING THIS FUNCTION DOCUMENTATION IS REDUNDANT BC IT JUST REHASHES ONTYPE'S CODE RATHER THAN STATING WHAT IT DOES/IS RESPONSIBLE FOR.. CHANGE LATER.)
   const onType = function(currentInputEvent) {
@@ -112,6 +120,9 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
 
       // increment
       setCounter(counter + 1)
+
+      // scroll text area down to where nextInput span element is into view
+      // nextInputCharRef.current?.scrollIntoView({behavior: 'smooth'})
     }
     else {
       // console.log('something went wrong: in TypingPracticeField')
@@ -121,7 +132,7 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
   }
   
   // A variable used to hold a new array made of the array of user typed text (colored accordingly) and the rest of the typing practice text
-  const displayTextArray = userTextArray.concat(<span className={`nextInput${showInsertionPoint ? insertionPointStyle : ''}`}>{typingPracTextArray[userTextArray.length]}</span>).concat(typingPracTextArray.slice(userTextArray.length + 1).map((c) => <span className='practiceText'>{c}</span>))  // note: figure out how to add key prop to avoid that "every child must have unique key" error
+  const displayTextArray = userTextArray.concat(<span className={`nextInput${showInsertionPoint ? insertionPointStyle : ''}`} ref={nextInputCharRef}>{typingPracTextArray[userTextArray.length]}</span>).concat(typingPracTextArray.slice(userTextArray.length + 1).map((c) => <span className='practiceText'>{c}</span>))  // note: figure out how to add key prop to avoid that "every child must have unique key" error
 
   return (
     <>
