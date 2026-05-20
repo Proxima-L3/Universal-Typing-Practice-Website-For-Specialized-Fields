@@ -65,11 +65,15 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                         <option value='computer-science'>Computer Science</option>
                         <option value='data-entry'>Data Entry</option>
                         <option value='ems'>EMS</option>
+                        <option value='event-planning'>Event Planning</option>
+                        <option value='executive-assistance'>Executive Assistance</option>
                         <option value='financial-analysis'>Financial Analysis</option>
+                        <option value='graphic-design'>Graphic Design</option>
                         <option value='marketing'>Marketing</option>
                         <option value='medical-transcription'>Medical Transcription</option>
                         <option value='phlebotomy'>Phlebotomy</option>
                         <option value='psychology'>Psychology</option>
+                        <option value='rf-cable-design-technician'>RF Cable Design Technician</option>
                         <option value='social-work'>Social Work</option>
                         <option value='vet-tech'>Vet Tech</option>
                         <option value='web-design'>Web Design</option>
