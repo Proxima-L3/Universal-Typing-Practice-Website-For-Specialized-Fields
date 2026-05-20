@@ -522,6 +522,7 @@ input[type="number"] {
   border-style: inset;
   border-width: 3.8px;
   white-space: pre-wrap;
+  /* clip-path: inset(0 round 15px); */
 }
 
 /* Add animation that displays the incorrectly typed character shaking and then disappearing to the two below classes. ...(also later consider remaking in a react jsx module for storing these styles.. i believe its called css-in-js using a library like styled-components) */

@@ -56,7 +56,6 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                 <span className='genericButtonGroupRow'>
                     <label className='genericButtonGroupLabel'>{'Specialization Field:'}</label>
                     <select name='' id='' onChange={handleDropdownMenuChange}>
-                        <option value='debugging-temp'>DEBUG ME</option>
                         <option value='generic'>Generic</option>
                         <option value='accounting'>Accounting</option>
                         <option value='architecture'>Architecture</option>
@@ -74,6 +73,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                         <option value='social-work'>Social Work</option>
                         <option value='vet-tech'>Vet Tech</option>
                         <option value='web-design'>Web Design</option>
+                        {/* <option value='debugging-temp'>DEBUG ME</option> */}
                     </select>
                 </span>
             </div>

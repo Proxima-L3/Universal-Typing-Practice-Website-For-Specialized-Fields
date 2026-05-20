@@ -30,7 +30,7 @@ function CustomTestSectionForm () {
     const [selectedOptionShowTimer, setSelectedOptionShowTimer] = useState('Show');
     const [selectedOptionShowWordCounter, setSelectedOptionShowWordCounter] = useState('Show');
 
-    const [selectedSpecializedFieldTheme, setSelectedSpecializedFieldTheme] = useState('debugging-temp');
+    const [selectedSpecializedFieldTheme, setSelectedSpecializedFieldTheme] = useState('generic');
 
     // const handleFormSubmit = async function () {
     const handleFormSubmit = function () {
