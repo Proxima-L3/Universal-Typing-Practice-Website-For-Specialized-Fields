@@ -61,8 +61,8 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
     // if (userTextArray.length === typingPracTextArray.length) {
     //   console.log('practice run is complete')
     // }
-    console.log('timer bool: ' + timerExpired)
-    console.log('word-count bool: ' + wordCountReached)
+    // console.log('timer bool: ' + timerExpired)
+    // console.log('word-count bool: ' + wordCountReached)
     if (timerExpired || wordCountReached) {
       console.log('practice run is completed. no input allowed.')
     }
