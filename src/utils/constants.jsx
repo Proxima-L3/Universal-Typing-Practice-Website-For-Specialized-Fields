@@ -1,9 +1,11 @@
 import {useRef, useEffect} from 'react';
 
 
-export const TYPING_PRAC_TEXT_SAMPLE_1 = 'A beginning is the time for taking the most delicate care that the balances are correct. This every sister of the Bene Gesserit knows. To begin your study of the life of Muad\'Dib, then, take care that you first place him in his time: born in the 57th year of the Padishah Emperor, Shaddam IV. And take the most special care that you locate Muad\'Dib in his place: the planet Arrakis. Do not be deceived by the fact that he was born on Caladan and lived his first fifteen years there. Arrakis, the planet known as Dune, is forever his place.';
+export const frontendURL = 'http://localhost:5173';
 
-export const TYPING_PRAC_TEXT_SAMPLE_2 = 'Postoperative care is equally critical, involving wound management, bandaging, pain assessment, and client education regarding home care instructions, nutrition, and follow-up appointments. Preventative care is a major component of veterinary medicine, so vet techs frequently educate pet owners about parasite control, heartworm prevention, dental prophylaxis, and vaccination schedules to promote long-term animal health. Laboratory duties often include running diagnostics such as urinalysis, fecal exams, cytology, and hematology, requiring familiarity with microscopes, centrifuges, and in-house analyzers to identify pathogens, parasites, or abnormalities in blood chemistry.';
+export const backendURL = 'http://localhost:8000';
+
+export const pathToTestResultsTable = '/api/test_results_entries/';
 
 // A simple regex function that checks if a string has any characters that are alphanumeric or a commonly typed symbol and returns a truthy value. (Less noticeably the function also checks if the string is only 1 character long.. this was done to avoid other func keys like backspace from being considered input text.)
 export function isAlphNumSym(str) {

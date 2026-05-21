@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams, useNavigate } from 'react-router-dom';
 
 import WordCounter from '../components/typing-test/word-count-based/WordCounter.jsx';
 import Timer from '../components/typing-test/timed/Timer.jsx';
@@ -9,6 +9,8 @@ import TypingPracticeField from '../components/typing-test/TypingPracticeField.j
 import UserTypingStats from '../components/typing-test/UserTypingStats.jsx';
 import SeeResultsButton from '../components/typing-test/SeeResultsButton.jsx';
 import * as CONSTANTS from '/src/utils/constants.jsx';
+import { frontendURL, backendURL, pathToTestResultsTable } from '/src/utils/constants.jsx';
+import api from '/src/utils/api.js';
 
 // This component will manage the shared states of all the other timed typing test components and display them
 function TypingTest({typingTestChoice}) {
@@ -67,6 +69,7 @@ function TypingTest({typingTestChoice}) {
     const [testTypeSubOption, setTestTypeSubOption] = useState('');
     const [timeLimit, setTimeLimit] = useState(60);
     const [autoGenModifiers, setAutoGenModifiers] = useState({});
+    const [specializationField, setSpecializationField] = useState('generic');
     const [insertionPointStyle, setInsertionPointStyle] = useState('');
     const [showInsertionPoint, setShowInsertionPoint] = useState(true);
     const [showStats, setShowStats] = useState(true);
@@ -76,6 +79,15 @@ function TypingTest({typingTestChoice}) {
 
     const [wordCount, setWordCount] = useState(100);
     const [processedTextString, setProcessedTextString] = useState('');
+
+    const [customTestBool, setCustomTestBool] = useState(false);
+    const [basicTestOption, setBasicTestOption] = useState(null);
+    const [customTimeBool, setCustomTimeBool] = useState(false);
+    const [customTextBool, setCustomTextBool] = useState(false);
+    const [testDateTimeTaken, setTestDateTimeTaken] = useState(new Date().toISOString());
+
+    // use navigate hook used to save all the test data to be used in the next page TestResults which is navigated to
+    const navigateTo = useNavigate();
 
 
     useEffect(() => {
@@ -108,6 +120,7 @@ function TypingTest({typingTestChoice}) {
         // let fieldTextString = ''
 
         if (params.has('testType')) {
+            setCustomTestBool(true);
             setTestType(params.get('testType'));
             // console.log('from url', params.get('testType'))
             // console.log('from state', testType)
@@ -128,6 +141,7 @@ function TypingTest({typingTestChoice}) {
             setShowStats(params.get('showStats') === 'Show' ? true : false);
             setShowTimer(params.get('showTimer') === 'Show' ? true : false);
             setShowWordCounter(params.get('showWordCounter') === 'Show' ? true : false);
+            setSpecializationField(params.get('selectedFieldThemeFileName'));
 
 
 
@@ -154,6 +168,7 @@ function TypingTest({typingTestChoice}) {
                 let secs = Number(timeLimitString.slice(-2));
                 let timeLimitInSecs = (mins * 60) + secs;
                 setTimeLimit(timeLimitInSecs);
+                setCustomTimeBool(true);
             }
 
 
@@ -175,11 +190,12 @@ function TypingTest({typingTestChoice}) {
             else if (params.get('testTypeSubOption') === 'Custom Text') {
                 customTextWordCountNum = CONSTANTS.calcWordCount(customText)
                 setWordCount(customTextWordCountNum)
+                setCustomTextBool(true);
             }
 
 
             // insert fetch statement to get requested text file and convert to string, then process text to apply modifiers and slice text to word count choice
-            fetch(`${import.meta.env.BASE_URL}/specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
+            fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
                 .then(response => response.text())
                 .then(text => {
                     setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, text, textModifiers))
@@ -188,15 +204,16 @@ function TypingTest({typingTestChoice}) {
 
 
         else if (params.has('testChoice')) {
+            setBasicTestOption(params.get('testChoice'));
             setTestType(params.get('testChoice'));
-            setTimeLimit(params.get('testTime'));
-            setWordCount(params.get('testWords'));
+            setTimeLimit(Number(params.get('testTime')));
+            setWordCount(Number(params.get('testWords')));
             setInsertionPointStyle('Underscore');
             setShowInsertionPoint(true);
             textModifiers = {'Capital Letters': true, 'Punctuation': true, 'Numbers': true, 'Symbols': true}
             setAutoGenModifiers(textModifiers)
 
-            fetch(`${import.meta.env.BASE_URL}/specialized-field-test-texts/generic.txt`)
+            fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/generic.txt`)
                 .then(response => response.text())
                 .then(text => {
                     setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testChoice'), Number(params.get('testWords')), text, textModifiers))
@@ -204,6 +221,87 @@ function TypingTest({typingTestChoice}) {
         }
 
 
+    }
+
+
+    const navigateToResults = function(entryId) {
+
+        navigateTo('/BasicTypingTests/TypingTest/TestResults/', {
+            state: {
+                entryId,
+                testDateTimeTaken,
+                typingSpeedKPS: null,
+                typingSpeedKPH: null,
+                typingSpeedCPM: null,
+                typingSpeedWPM: timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0,
+                typingAccuracy: totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0,
+                testWordsCompleted: wordsTyped,
+                testTimeCompletedIn: timeElapsed,
+                basicTestOption,
+                customTestBool,
+                testType,
+                timeLimit,
+                wordCount,
+                customTimeBool,
+                customTextBool,
+                autoGenModifiers,
+                specializationField,
+                insertionPointStyle,
+                showInsertionPoint,
+                showStats,
+                showTimer,
+                showWordCounter,
+            }
+        })
+    }
+
+
+    const saveTestResults = function() {
+
+        api.post(`${pathToTestResultsTable}`, {
+            // list backend model table fields as keys with values like: is_private_test: userLoggedInBool ? true : false , test_words_completed: wordsCompleted , etc...
+            is_private_test: null,
+            is_private_user: null,
+            username_tag: null,
+            test_date_time_taken: testDateTimeTaken,
+            test_typing_speed_kps: null,
+            test_typing_speed_kph: null,
+            test_typing_speed_cpm: null,
+            test_typing_speed_wpm: timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0,
+            test_typing_accuracy: totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0,
+            test_words_completed: wordsTyped,
+            test_time_completed_in: timeElapsed,
+            basic_test_option: customTestBool ? null : basicTestOption,
+            custom_test_bool: customTestBool ? true : false,
+            test_type: testType,
+            test_time_limit: timeLimit,
+            test_word_count: wordCount,
+            test_custom_time_bool: customTimeBool,
+            test_custom_time: timeLimit,
+            test_custom_text_bool: customTextBool,
+            test_modifiers: autoGenModifiers,
+            test_specialization_field: specializationField,
+            test_insertion_point_style: insertionPointStyle,
+            test_show_insertion_point: showInsertionPoint,
+            test_show_stats: showStats,
+            test_show_timer: showTimer,
+            test_show_word_count: showWordCounter,
+        })
+        .then(response => {
+            console.log('Data sent successfully:', response.data);
+            const entryId = response.data.id;
+            navigateToResults(entryId);
+        })
+        .catch(error => {
+            console.log('Error sending data:', error);
+        })
+    }
+
+
+    const handleSeeResults = function() {
+        if (timerExpired || wordCountReached) {
+            saveTestResults();
+        }
     }
 
 
@@ -268,60 +366,10 @@ function TypingTest({typingTestChoice}) {
                 {/* {console.log(`timeElapsed: ${timeElapsed}    wordsTyped: ${wordsTyped}    charTypedCorrectly: ${charTypedCorrectly}    totalCharTyped: ${totalCharTyped}`)} */}
 
                 {/* SeeResultsButton's props are 2 input states: timerExpired and wordCountReached bools used to determine when the SeeResultsButton component should appear */}
-                <SeeResultsButton timerExpired={timerExpired} wordCountReached={wordCountReached} />
+                <SeeResultsButton timerExpired={timerExpired} wordCountReached={wordCountReached} handleSeeResults={handleSeeResults} />
             </div>
         </>
     )
 }
 
 export default TypingTest;
-
-
-
-
-
-
-
-
-
-
-// import { useState } from 'react'
-// import './App.css'
-
-// function App() {
-//   // const [count, setCount] = useState(0)
-//   const [text, setText] = useState("cranky")
-//   const [input, setInput] = useState("")
-//   const onType = (_) => setInput(input + _.currentTarget.value)
-
-//   const printChar = (i) => {
-//     console.log(input)
-//     console.log(input.length)
-//     // if (i > input.length - 1) {
-//     //   return <span>{text[i]}</span>
-//     // }
-//     if (text[i] == input[i]) {
-//       return <span className="green">{text[i]}</span>
-//     }
-//     else {
-//       return <span className="red">{text[i]}</span>
-//     }
-//   }
-
-//   return (
-//     <>
-
-//       <div className="card">
-
-//         <p>{text.split("").map((_,i) => printChar(i))}</p>
-//         <input type="text" value={""} onInput={onType}/>
-//         {/* {text.split("").map(l => <p>{l}</p>)} */}
-
-//       </div>
-
-//     </>
-//   )
-// }
-
-// export default App
-
