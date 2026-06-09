@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // import QuickLinkCard from "../components/common/QuickLinkCard";
+import SummaryTab from '../components/test-results/SummaryTab';
+import LeaderboardTab from '../components/test-results/LeaderboardTab';
 
 import '../App.css';
 
@@ -115,10 +117,6 @@ function TestResultsPage () {
         )
     }
 
-    const displaySummaryTab = function () {
-        // 
-    }
-
     return (
         <>
             <div>{displayTestDataInConsole()}</div>
@@ -127,7 +125,8 @@ function TestResultsPage () {
 
             <div className='testResultsSectionTitle' ref={testSectionRef}>Test Results</div>
             <hr className='sectionDividerTop'/>
-            <div className='testResultsSummaryTab'>{displaySummaryTab()}</div>
+            <SummaryTab></SummaryTab>
+            {/* <LeaderboardTab></LeaderboardTab> */}
         </>
     )
 }
