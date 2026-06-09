@@ -712,6 +712,59 @@ input[type="number"] {
 
 
 
+.testResultsTestSnapshot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; */
+  margin-top: 4%;
+  margin-bottom: 2%;
+  gap: 2%;
+}
+
+.testResultsSectionTitle {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  /* margin-block: 30px; */
+  margin-top: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Bebas neue', 'Black Ops One', Bungee, 'Concert One', 'Russo One', 'Passion One', Righteous, sans-serif;
+  font-size: 2.5rem;  
+}
+
+.testResultsSummaryTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  max-height: 1000px;
+  margin-top: 4%;
+  margin-inline: 4rem;
+  padding: 4rem;
+  overflow: auto;
+  overflow-x: hidden;
+  letter-spacing: 0.1em;
+  font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
+  text-align: left;
+  background-color: #505050;
+  border-color: #00ffff;
+  border-radius: 5px;
+  border-style: ridge;
+  border-width: 4px;
+  /* white-space: pre-wrap; */
+}
+
+.testResultsLeaderboardTab {
+  /*  */
+}
+
+
+
+
 
 
 

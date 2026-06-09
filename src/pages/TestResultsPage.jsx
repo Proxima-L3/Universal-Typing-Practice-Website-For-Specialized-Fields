@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import { useState, useRef, useEffect } from 'react';
 
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 // import QuickLinkCard from "../components/common/QuickLinkCard";
 
@@ -36,6 +36,14 @@ function TestResultsPage () {
     const showStats = locationObject.state?.showStats
     const showTimer = locationObject.state?.showTimer
     const showWordCounter = locationObject.state?.showWordCounter
+
+    const snapShotData = JSON.parse(sessionStorage.getItem('typingPracticeFieldSnapshot'));
+
+    const typingPracFieldSnapshot = snapShotData.userText.map((item, i) => (
+        <span className={item.className} key={i}>{item.char}</span>
+    )).concat(snapShotData.practiceText.slice(snapShotData.userText.length).map((char, i) => (
+        <span className='practiceText' key={'rest' + i}>{char}</span>
+    )));
                 // entryId,
                 // testDateTimeTaken,
                 // typingSpeedKPS: null,
@@ -59,6 +67,15 @@ function TestResultsPage () {
                 // showStats,
                 // showTimer,
                 // showWordCounter,
+    
+    // a useRef & useEffect statement that automatically scrolls past the test snapshot to the test result section of the page on page load
+    const testSectionRef = useRef(null);
+
+    useEffect(() => {
+        if (testSectionRef != null) {
+            testSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
 
     const displayTestDataInConsole = function () {
         console.log('---------------------------------------------------------')
@@ -90,9 +107,27 @@ function TestResultsPage () {
         console.log('---------------------------------------------------------')
     }
 
+    const displayTypingPracFieldSnapshot = function () {
+        return (
+            <>
+                <div className='typingPracField'>{typingPracFieldSnapshot}</div>
+            </>
+        )
+    }
+
+    const displaySummaryTab = function () {
+        // 
+    }
+
     return (
         <>
             <div>{displayTestDataInConsole()}</div>
+            <div className='testResultsTestSnapshot'>{displayTypingPracFieldSnapshot()}</div>
+            <hr className='sectionDividerBottom'/>
+
+            <div className='testResultsSectionTitle' ref={testSectionRef}>Test Results</div>
+            <hr className='sectionDividerTop'/>
+            <div className='testResultsSummaryTab'>{displaySummaryTab()}</div>
         </>
     )
 }
