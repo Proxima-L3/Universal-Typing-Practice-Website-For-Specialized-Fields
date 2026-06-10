@@ -722,29 +722,48 @@ input[type="number"] {
   gap: 2%;
 }
 
+.summaryTitle {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-decoration: underline;
+  text-decoration-color: #00dd00;
+  text-underline-offset: 10px;
+  text-align: top;
+  margin-block: 20px;
+}
+
+.summaryRow {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  margin-block: 5px;
+  /* justify-content: flex-end; */
+  /* grid-template-columns: 1fr auto; */
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+
 .testResultsSectionTitle {
   width: 60%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   margin: 0 auto;
   /* margin-block: 30px; */
-  margin-top: 80px;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
   font-family: 'Bebas neue', 'Black Ops One', Bungee, 'Concert One', 'Russo One', 'Passion One', Righteous, sans-serif;
-  font-size: 2.5rem;  
+  font-size: 2.5rem;
 }
 
 .testResultsSummaryTab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-width: 300px;
-  max-height: 1000px;
+  /* max-height: 1000px; */
+  height: auto;
   margin-top: 4%;
   margin-inline: 4rem;
-  padding: 4rem;
+  padding: 2rem;
   overflow: auto;
   overflow-x: hidden;
   letter-spacing: 0.1em;
@@ -760,6 +779,70 @@ input[type="number"] {
 
 .testResultsLeaderboardTab {
   /*  */
+}
+
+.summaryColumns {
+  display: grid;
+  width: 80%;
+  margin: 0;
+  margin-block: 10px;
+  /* justify-content: flex-end; */
+  /* grid-template-columns: 1fr auto; */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.summaryColumnOne {
+  margin-bottom: 10px;
+  align-items: left;
+  text-align: left;
+}
+
+.statRow {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: fit-content;
+  /* margin: 0 auto; */
+  margin-block: 10px;
+  white-space: nowrap;
+  /* justify-content: flex-end; */
+  /* grid-template-columns: 1fr auto; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* align-items: center; */
+}
+
+.statLabel {
+  width: fit-content;
+  /* display: flex; */
+  /* flex: 1; */
+  /* justify-content: left; */
+  /* align-items: start; */
+  /* -ms-flex-item-align: start; */
+  margin: 5px;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.statValue {
+  width: fit-content;
+  /* display: flex; */
+  /* margin: 5px; */
+  padding: 5px;
+  color: #00dd00;
+  font-size: 1rem;
+}
+
+.summaryColumnTwo {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.summaryColumnTwoButtons {
+  flex-direction: column;
+  margin-top: auto;
 }
 
 
