@@ -2,7 +2,7 @@
 
 // import { useLocation } from 'react-router-dom';
 
-import '../App.css';
+import '/src/App.css';
 
 
 function LeaderboardTab () {
