@@ -11,34 +11,6 @@ import '../App.css';
 
 function TestResultsPage () {
 
-    // page session location object that will be used to retrieve values previously saved to session storage
-    const locationObject = useLocation();
-
-    // all the previously saved session data
-    const entryId = locationObject.state?.entryId
-    const testDateTimeTaken = locationObject.state?.testDateTimeTaken
-    const typingSpeedKPS = locationObject.state?.typingSpeedKPS
-    const typingSpeedKPH = locationObject.state?.typingSpeedKPH
-    const typingSpeedCPM = locationObject.state?.typingSpeedCPM
-    const typingSpeedWPM = locationObject.state?.typingSpeedWPM
-    const typingAccuracy = locationObject.state?.typingAccuracy
-    const testWordsCompleted = locationObject.state?.testWordsCompleted
-    const testTimeCompletedIn = locationObject.state?.testTimeCompletedIn
-    const basicTestOption = locationObject.state?.basicTestOption
-    const customTestBool = locationObject.state?.customTestBool
-    const testType = locationObject.state?.testType
-    const timeLimit = locationObject.state?.timeLimit
-    const wordCount = locationObject.state?.wordCount
-    const customTimeBool = locationObject.state?.customTimeBool
-    const customTextBool = locationObject.state?.customTextBool
-    const autoGenModifiers = locationObject.state?.autoGenModifiers
-    const specializationField = locationObject.state?.specializationField
-    const insertionPointStyle = locationObject.state?.insertionPointStyle
-    const showInsertionPoint = locationObject.state?.showInsertionPoint
-    const showStats = locationObject.state?.showStats
-    const showTimer = locationObject.state?.showTimer
-    const showWordCounter = locationObject.state?.showWordCounter
-
     const snapShotData = JSON.parse(sessionStorage.getItem('typingPracticeFieldSnapshot'));
 
     const typingPracFieldSnapshot = snapShotData.userText.map((item, i) => (
@@ -46,29 +18,6 @@ function TestResultsPage () {
     )).concat(snapShotData.practiceText.slice(snapShotData.userText.length).map((char, i) => (
         <span className='practiceText' key={'rest' + i}>{char}</span>
     )));
-                // entryId,
-                // testDateTimeTaken,
-                // typingSpeedKPS: null,
-                // typingSpeedKPH: null,
-                // typingSpeedCPM: null,
-                // typingSpeedWPM: wordsTyped / (timeElapsed / 60),
-                // typingAccuracy: 100 * (charTypedCorrectly / totalCharTyped),
-                // testWordsCompleted: wordsTyped,
-                // testTimeCompletedIn: timeElapsed,
-                // basicTestOption,
-                // customTestBool,
-                // testType,
-                // timeLimit,
-                // wordCount,
-                // customTimeBool,
-                // customTextBool,
-                // autoGenModifiers,
-                // specializationField,
-                // insertionPointStyle,
-                // showInsertionPoint,
-                // showStats,
-                // showTimer,
-                // showWordCounter,
     
     // a useRef & useEffect statement that automatically scrolls past the test snapshot to the test result section of the page on page load
     const testSectionRef = useRef(null);
