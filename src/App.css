@@ -740,7 +740,7 @@ input[type="number"] {
   margin-block: 5px;
   /* justify-content: flex-end; */
   /* grid-template-columns: 1fr auto; */
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
 }
 
@@ -792,7 +792,7 @@ input[type="number"] {
   align-items: center;
 }
 
-.summaryColumnOne {
+.summaryRowOne {
   margin-bottom: 10px;
   align-items: left;
   text-align: left;
@@ -830,19 +830,44 @@ input[type="number"] {
   /* display: flex; */
   /* margin: 5px; */
   padding: 5px;
+  white-space: wrap;
   color: #00dd00;
   font-size: 1rem;
 }
 
-.summaryColumnTwo {
+.summaryRowTwo {
   display: flex;
-  flex-direction: column;
-  margin-top: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .summaryColumnTwoButtons {
-  flex-direction: column;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   margin-top: auto;
+  gap: 4%;
+}
+
+.leaderboardUsernameButtonPair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userNameInputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15px;
+  width: 100px;
+  min-width: 120px;
+  max-width: 150px;
+  margin-bottom: 10px;
+  font-size: 1rem;
 }
 
 

@@ -49,7 +49,7 @@ function CustomTestSectionForm () {
             selectedFieldThemeFileName: selectedSpecializedFieldTheme
         });
 
-        navigateTo(`/BasicTypingTests/TypingTest/?${params.toString()}`, {
+        navigateTo(`/BasicTypingTests/TypingTest?${params.toString()}`, {
             state: {
                 customTextInput
             }

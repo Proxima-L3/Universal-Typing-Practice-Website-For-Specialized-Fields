@@ -226,6 +226,9 @@ function TypingTest({typingTestChoice}) {
 
     const navigateToResults = function(entryId) {
 
+        // saves current version of test in case user wants to take same test again on next page
+        sessionStorage.setItem('previousTestURL', window.location.search);
+
         navigateTo('/BasicTypingTests/TypingTest/TestResults/', {
             state: {
                 entryId,

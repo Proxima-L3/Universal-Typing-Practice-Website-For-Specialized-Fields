@@ -1,12 +1,13 @@
-// import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import '/src/App.css';
 
 
 function SummaryTab () {
 
+    const navigateTo = useNavigate();
     // page session location object that will be used to retrieve values previously saved to session storage
     const locationObject = useLocation();
 
@@ -34,6 +35,9 @@ function SummaryTab () {
     const showStats = locationObject.state?.showStats
     const showTimer = locationObject.state?.showTimer
     const showWordCounter = locationObject.state?.showWordCounter
+
+    const [username, setUsername] = useState('');
+    const [showUsernameError, setShowUsernameError] = useState(false);
 
 
                 // entryId,
@@ -92,6 +96,16 @@ function SummaryTab () {
         console.log('---------------------------------------------------------')
     }
 
+    const enterUserToLeaderboard = function () {
+
+        if (username.trim() === '') {
+            // alert('Please enter a username')
+            setShowUsernameError(true);
+            return;
+        }
+        setShowUsernameError(false);
+        // wip until leaderboards are up then having get requests to backend to publish stats to leaderboard will make this function be filled in
+    }
 
     const displaySummaryTab = function () {
 
@@ -107,9 +121,9 @@ function SummaryTab () {
                 </div>
 
                 <div className='summaryRows'>
-                    <div className='summaryColumns'>
+                    {/* <div className='summaryColumns'> */}
 
-                        <div className='summaryColumnOne'>
+                        <div className='summaryRowOne'>
                             <div className='statRow'>
                                 <span className='statLabel'>Test Type: </span>
                                 <span className='statValue'>{customTestBool ? 'Custom - ' : 'Basic Preset - '}{customTestBool ? testType : basicTestOption}</span>
@@ -160,15 +174,29 @@ function SummaryTab () {
                             </div>
                         </div>
 
-                        <div className='summaryColumnTwo'>
+                        <div className='summaryRowTwo'>
                             <div className='summaryColumnTwoButtons'>
-                                <div>
-                                    <input type='username' />
-                                    <button></button>
-                                </div>
+                                {/* <div className='leaderboardUsernameButtonPair'> */}
+                                    <form className='leaderboardUsernameButtonPair' onSubmit={(e) => {
+                                        e.preventDefault();
+                                        enterUserToLeaderboard();
+                                    }}>
+                                        <input className='userNameInputBox' type='text' placeholder='Enter Username' maxLength={15} required />
+                                        <button className='quickLinkCard smallQuickLinkCard' type='submit'>Submit to Leaderboard</button>
+                                    </form>
+                                    {/* <input className='userNameInputBox' type='text' placeholder='Enter Username' maxLength={15} value={username} onChange={(e) => setUsername(e.target.value)} /> */}
+                                    {/* {showUsernameError && <span className='usernameError'>Please enter a username</span>} */}
+                                    {/* <button className='quickLinkCard smallQuickLinkCard' onClick={() => enterUserToLeaderboard()} >Submit to Leaderboard</button> */}
+                                {/* </div> */}
+                                <button className='quickLinkCard smallQuickLinkCard' 
+                                    onClick={() => navigateTo({
+                                        pathname: '/BasicTypingTests/TypingTest',
+                                        search: sessionStorage.getItem('previousTestURL')
+                                    })}>Take Same Test Again</button>
+                                <button className='quickLinkCard smallQuickLinkCard' onClick={() => navigateTo('/BasicTypingTests/', { state: { openCustomSection: true } })}>Customize a Different Test</button>
                             </div>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
             </>
         )
