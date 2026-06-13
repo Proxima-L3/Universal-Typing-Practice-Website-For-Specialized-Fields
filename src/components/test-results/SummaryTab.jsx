@@ -2,10 +2,12 @@ import { useState } from 'react';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 
+import { pathToTestResultsTable } from '/src/utils/constants.jsx';
+import api from '/src/utils/api.js';
 import '/src/App.css';
 
 
-function SummaryTab () {
+function SummaryTab ({setHasSubmittedToLeaderboard }) {
 
     const navigateTo = useNavigate();
     // page session location object that will be used to retrieve values previously saved to session storage
@@ -103,8 +105,23 @@ function SummaryTab () {
             setShowUsernameError(true);
             return;
         }
-        setShowUsernameError(false);
-        // wip until leaderboards are up then having get requests to backend to publish stats to leaderboard will make this function be filled in
+        else if (username.trim() !== '') {
+            setShowUsernameError(false);
+            api.patch(`${pathToTestResultsTable}${entryId}/`, {
+                username_tag: username,
+            })
+            .then(response => {
+                console.log('Data updated successfully:', response.data);
+                // below must be in .then so it only runs if patch request is successful (the request is async and setHasSubmittedToLeaderboard(true) is not by default...)
+                setHasSubmittedToLeaderboard(true);
+            })
+            .catch(error => {
+                console.log('Error updating data:', error);
+            })
+
+            // setActiveTab('leaderboard');
+            // wip until leaderboards are up then having get requests to backend to publish stats to leaderboard will make this function be filled in
+        }
     }
 
     const displaySummaryTab = function () {
@@ -114,15 +131,7 @@ function SummaryTab () {
 
         return (
             <>
-                {/* // insert test results summary and leaderboard tabs with styling */}
-
                 <div className='summaryRows'>
-                    <div className='genericSectionTitle summaryTitle'>Test Results Summary</div>
-                </div>
-
-                <div className='summaryRows'>
-                    {/* <div className='summaryColumns'> */}
-
                         <div className='summaryRowOne'>
                             <div className='statRow'>
                                 <span className='statLabel'>Test Type: </span>
@@ -176,18 +185,13 @@ function SummaryTab () {
 
                         <div className='summaryRowTwo'>
                             <div className='summaryColumnTwoButtons'>
-                                {/* <div className='leaderboardUsernameButtonPair'> */}
-                                    <form className='leaderboardUsernameButtonPair' onSubmit={(e) => {
-                                        e.preventDefault();
-                                        enterUserToLeaderboard();
+                                <form className='leaderboardUsernameButtonPair' onSubmit={(e) => {
+                                    e.preventDefault();
+                                    enterUserToLeaderboard();
                                     }}>
-                                        <input className='userNameInputBox' type='text' placeholder='Enter Username' maxLength={15} required />
-                                        <button className='quickLinkCard smallQuickLinkCard' type='submit'>Submit to Leaderboard</button>
-                                    </form>
-                                    {/* <input className='userNameInputBox' type='text' placeholder='Enter Username' maxLength={15} value={username} onChange={(e) => setUsername(e.target.value)} /> */}
-                                    {/* {showUsernameError && <span className='usernameError'>Please enter a username</span>} */}
-                                    {/* <button className='quickLinkCard smallQuickLinkCard' onClick={() => enterUserToLeaderboard()} >Submit to Leaderboard</button> */}
-                                {/* </div> */}
+                                    <input className='userNameInputBox' type='text' placeholder='Enter Username' value={username} maxLength={15} required onChange={(e) => setUsername(e.target.value)}/>
+                                    <button className='quickLinkCard smallQuickLinkCard' type='submit'>Submit to Leaderboard</button>
+                                </form>
                                 <button className='quickLinkCard smallQuickLinkCard' 
                                     onClick={() => navigateTo({
                                         pathname: '/BasicTypingTests/TypingTest',
@@ -196,7 +200,6 @@ function SummaryTab () {
                                 <button className='quickLinkCard smallQuickLinkCard' onClick={() => navigateTo('/BasicTypingTests/', { state: { openCustomSection: true } })}>Customize a Different Test</button>
                             </div>
                         </div>
-                    {/* </div> */}
                 </div>
             </>
         )
@@ -206,7 +209,7 @@ function SummaryTab () {
         <>
 
             {displayTestDataInConsole()}
-            <div className='testResultsSummaryTab'>{displaySummaryTab()}</div>
+            {displaySummaryTab()}
         </>
     )
 }

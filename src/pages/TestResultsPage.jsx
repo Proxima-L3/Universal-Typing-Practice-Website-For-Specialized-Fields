@@ -12,6 +12,7 @@ import '/src/App.css';
 function TestResultsPage () {
     
     const [activeTab, setActiveTab] = useState('summary');
+    const [hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard] = useState(false);
     
     const snapShotData = JSON.parse(sessionStorage.getItem('typingPracticeFieldSnapshot'));
     
@@ -38,14 +39,22 @@ function TestResultsPage () {
         )
     }
     
+    const displayTabTitle = function () {
+        if (activeTab === 'summary') {
+            return 'Test Results Summary'
+        }
+        else if (activeTab === 'leaderboard') {
+            return 'Test Leaderboard'
+        }
+    }
+
     const displayActiveTab = function () {
-        console.log(activeTab)
-        if (activeTab == 'summary') {
+        if (activeTab === 'summary') {
             return (
-                <SummaryTab></SummaryTab>
+                <SummaryTab setHasSubmittedToLeaderboard={setHasSubmittedToLeaderboard} ></SummaryTab>
             )
         }
-        else if (activeTab == 'leaderboard'){
+        else if (activeTab === 'leaderboard'){
             return (
                 <LeaderboardTab></LeaderboardTab>
             )
@@ -66,7 +75,33 @@ function TestResultsPage () {
             <hr className='sectionDividerBottom'/>
             <div className='testResultsSectionTitle' ref={testSectionRef}>Test Results</div>
             <hr className='sectionDividerTop'/>
-            <div>{displayActiveTab()}</div>
+
+
+
+            <div className={`testResultsTabSection ${activeTab === 'summary' ? 'testResultsSummaryTab' : 'testResultsLeaderboardTab'}`}>
+            {/* // insert test results summary and leaderboard tabs with styling */}
+            <div className='tabSwitcher'>
+                <button
+                    className={`tabButton ${activeTab === 'summary' ? 'tabButtonActive' : ''}`}
+                    onClick={() => setActiveTab('summary')}>
+                    Summary
+                </button>
+
+                <button 
+                    className={`tabButton ${activeTab === 'leaderboard' ? 'tabButtonActive' : ''} ${!hasSubmittedToLeaderboard ? 'tabButtonDisabled' : ''} `} 
+                    onClick={() => hasSubmittedToLeaderboard && setActiveTab('leaderboard')}
+                    disabled={!hasSubmittedToLeaderboard}>
+                    Leaderboard
+                </button>
+            </div>
+                
+                <div className='summaryRows'>
+                    <div className='genericSectionTitle summaryTitle'>{displayTabTitle()}</div>
+                </div>
+                
+                {displayActiveTab()}
+                
+            </div>
         </>
     )
 }
