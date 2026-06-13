@@ -212,6 +212,14 @@ function TypingTest({typingTestChoice}) {
             setShowInsertionPoint(true);
             textModifiers = {'Capital Letters': true, 'Punctuation': true, 'Numbers': true, 'Symbols': true}
             setAutoGenModifiers(textModifiers)
+            if (params.get('testChoice') === 'word-count') {
+                setShowWordCounter(true);
+                setShowTimer(false);
+            }
+            else {
+                setShowWordCounter(false);
+                setShowTimer(true);
+            }
 
             fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/generic.txt`)
                 .then(response => response.text())
