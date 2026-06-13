@@ -722,6 +722,38 @@ input[type="number"] {
   gap: 2%;
 }
 
+  .tabSwitcher {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-top: 20px;
+  }
+
+  .tabButton {
+      padding: 10px 30px;
+      border: 2px solid #00ffff;
+      border-bottom: none;
+      background-color: #3a3a3a;
+      color: #ffffff;
+      font-family: "Space Mono", monospace;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+  }
+
+  .tabButtonActive {
+      background-color: #505050;
+      color: #00dd00;
+      border-bottom: 2px solid #505050;
+      /* matches testResultsTabSection background so it looks connected */
+  }
+
+  .tabButtonDisabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+  }
+
+
 .summaryTitle {
   /* display: flex; */
   /* justify-content: center; */
@@ -757,11 +789,68 @@ input[type="number"] {
   font-size: 2.5rem;
 }
 
-.testResultsSummaryTab {
+.testResultsTabSection {
   min-width: 300px;
+  width: fit-content;
   /* max-height: 1000px; */
   height: auto;
   margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: #505050;
+  border-color: #00ffff;
+  border-radius: 5px;
+  border-style: ridge;
+  border-width: 4px;
+}
+
+
+.testResultsLeaderboardTab {
+  margin-inline: 2rem;
+  padding: 2rem;
+  overflow-x: auto;
+  font-family: "Space Mono", monospace;
+}
+
+.testResultsLeaderboardTab table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.testResultsLeaderboardTab caption {
+  color: #00dd00;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.1em;
+}
+
+.testResultsLeaderboardTab th {
+  padding: 8px 12px;
+  border-bottom: 2px solid #00ffff;
+  color: #00ffff;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.testResultsLeaderboardTab td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #3a3a3a;
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.testResultsLeaderboardTab .userRow {
+  background-color: #2a4a2a;
+  color: #00dd00;
+}
+
+.testResultsLeaderboardTab .userRow td {
+  color: #00dd00;
+  font-weight: bold;
+}
+
+
+.testResultsSummaryTab {
   margin-inline: 4rem;
   padding: 2rem;
   overflow: auto;
@@ -769,17 +858,9 @@ input[type="number"] {
   letter-spacing: 0.1em;
   font-family: "Space Mono", "JetBrains Mono", "Roboto Mono", monospace, sans-serif;
   text-align: left;
-  background-color: #505050;
-  border-color: #00ffff;
-  border-radius: 5px;
-  border-style: ridge;
-  border-width: 4px;
   /* white-space: pre-wrap; */
 }
 
-.testResultsLeaderboardTab {
-  /*  */
-}
 
 .summaryColumns {
   display: grid;
