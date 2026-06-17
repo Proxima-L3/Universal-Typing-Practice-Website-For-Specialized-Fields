@@ -841,6 +841,10 @@ input[type="number"] {
   white-space: nowrap;
 }
 
+.testResultsLeaderboardTab table tbody {
+  border: 4px solid #242424;
+}
+
 .testResultsLeaderboardTab td {
   padding: 8px 12px;
   border-inline: 1px solid #00ff00;
