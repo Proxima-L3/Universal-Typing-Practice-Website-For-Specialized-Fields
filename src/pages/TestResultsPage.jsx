@@ -77,8 +77,6 @@ function TestResultsPage () {
             <hr className='sectionDividerTop'/>
 
 
-
-            <div className={`testResultsTabSection ${activeTab === 'summary' ? 'testResultsSummaryTab' : 'testResultsLeaderboardTab'}`}>
             {/* // insert test results summary and leaderboard tabs with styling */}
             <div className='tabSwitcher'>
                 <button
@@ -94,6 +92,8 @@ function TestResultsPage () {
                     Leaderboard
                 </button>
             </div>
+
+            <div className={`testResultsTabSection ${activeTab === 'summary' ? 'testResultsSummaryTab' : 'testResultsLeaderboardTab'}`}>
                 
                 <div className='summaryRows'>
                     <div className='genericSectionTitle summaryTitle'>{displayTabTitle()}</div>
