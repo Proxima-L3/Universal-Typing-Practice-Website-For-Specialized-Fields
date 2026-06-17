@@ -7,7 +7,7 @@ import api from '/src/utils/api.js';
 import '/src/App.css';
 
 
-function SummaryTab ({ setHasSubmittedToLeaderboard, setActiveTab }) {
+function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, setActiveTab }) {
 
     const navigateTo = useNavigate();
     // page session location object that will be used to retrieve values previously saved to session storage
