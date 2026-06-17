@@ -101,6 +101,10 @@ function TypingTest({typingTestChoice}) {
         processCustomTestUserOptions();
     }, []);
 
+    useEffect(() => {
+        finalizeTypingStats();
+    }, [timerExpired, wordCountReached])
+
 
     // updates all custom test user options state variables from url params to their desired data type and values
     const processCustomTestUserOptions = function () {
@@ -241,14 +245,20 @@ function TypingTest({typingTestChoice}) {
 
     const finalizeTypingStats = function () {
         if (timerExpired || wordCountReached) {
-            setTypingSpeedKPS(null);
-            setTypingSpeedKPH(null);
-            setTypingSpeedCPM(null);
-            setTypingSpeedWPM(timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0);
-            setTypingAccuracy(totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0);
+            const kps = timeElapsed > 0 ? Math.floor(totalCharTyped / timeElapsed) : 0;
+            const kph = timeElapsed > 0 ? Math.floor(totalCharTyped / (timeElapsed / 3600)) : 0;
+            const cpm = timeElapsed > 0 ? Math.floor(totalCharTyped / (timeElapsed / 60)) : 0;
+            const wpm = timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0;
+            const accuracy = totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0;
             
-            const speedScore = (typingSpeedWPM / 100) + (typingSpeedCPM / 500) + (typingSpeedKPS / 10) + (typingSpeedKPH / 36000)
-            setOverallScore(speedScore * (typingAccuracy / 100) ** 2 * 250)
+            setTypingSpeedKPS(kps);
+            setTypingSpeedKPH(kph);
+            setTypingSpeedCPM(cpm);
+            setTypingSpeedWPM(wpm);
+            setTypingAccuracy(accuracy);
+            
+            const speedScore = (wpm / 100) + (cpm / 500) + (kps / 10) + (kph / 36000);
+            setOverallScore(Math.floor(speedScore * (accuracy / 100) ** 2 * 250));
         }
     }
 
