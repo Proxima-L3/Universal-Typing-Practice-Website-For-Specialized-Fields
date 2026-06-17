@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 
 import { useLocation } from 'react-router-dom';
 
+import { pathToTestResultsTable, testResultsLeaderboardFilterQuery } from '/src/utils/constants.jsx';
+import api from '/src/utils/api.js';
 import '/src/App.css';
 
 
@@ -38,6 +40,11 @@ function LeaderboardTab () {
     const [leaderboardRows, setLeaderboardRows] = useState([])
 
 
+    useEffect(() => {
+        retrieveTestLeaderboardData();
+    }, []);
+
+
     const retrieveTestLeaderboardData = function () {
         // function that will setLeaderboardRows state var into a list of objects representing 51 rows of test entries (the user's entry along with 25 entries above and 25 entries below the user's.. with certain exceptions)
         // algorithm:
@@ -46,6 +53,22 @@ function LeaderboardTab () {
         // if user overall_score 25th or higher overall_score entries then show top 51 rows (ie user is near top of leaderboard therefore cannot be centered)
         // else if user overall_score < bottom 25 overall_score entries then show bottom 51 rows (ie user is near bottom of leaderboard therefore cannot be centered)
         // otherwise (else) get 25 entries above user entry and 25 below (user centered at relative row 26)
+
+        api.get(`${pathToTestResultsTable}${testResultsLeaderboardFilterQuery}`, {
+            params: {
+                // leaderboard: true,
+                specialization_field: specializationField,
+                test_type: testType,
+                entry_id: entryId
+            }
+        })
+        .then(response => {
+            console.log('Leaderboard data retrieved successfully:', response.data);
+            setLeaderboardRows(response.data);
+        })
+        .catch(error => {
+            console.log('Error retrieving leaderboard data:', error);
+        })
     }
 
     const displayTestLeaderboardCaption = function () {
@@ -75,13 +98,13 @@ function LeaderboardTab () {
                     {leaderboardRows.map((entry, i) => (
                         <tr key={entry.id} className={entry.id === entryId ? 'userRow' : ''}>
                             <td>{entry.rank}</td>
-                            <td>{entry.username}</td>
-                            <td>{entry.overallScore}</td>
-                            <td>{entry.accuracy}%</td>
-                            <td>{entry.wpm}</td>
-                            <td>{entry.cpm}</td>
-                            <td>{entry.kps}</td>
-                            <td>{entry.kph}</td>
+                            <td>{entry.username_tag}</td>
+                            <td>{entry.test_overall_score}</td>
+                            <td>{entry.test_typing_accuracy}%</td>
+                            <td>{entry.test_typing_speed_wpm}</td>
+                            <td>{entry.test_typing_speed_cpm}</td>
+                            <td>{entry.test_typing_speed_kps}</td>
+                            <td>{entry.test_typing_speed_kph}</td>
                         </tr>
                     ))}
                 </tbody>

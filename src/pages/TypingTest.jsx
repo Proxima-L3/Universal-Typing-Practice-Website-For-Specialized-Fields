@@ -86,6 +86,13 @@ function TypingTest({typingTestChoice}) {
     const [customTextBool, setCustomTextBool] = useState(false);
     const [testDateTimeTaken, setTestDateTimeTaken] = useState(new Date().toISOString());
 
+    const [typingSpeedKPS, setTypingSpeedKPS] = useState(null);
+    const [typingSpeedKPH, setTypingSpeedKPH] = useState(null);
+    const [typingSpeedCPM, setTypingSpeedCPM] = useState(null);
+    const [typingSpeedWPM, setTypingSpeedWPM] = useState(null);
+    const [typingAccuracy, setTypingAccuracy] = useState(null);
+    const [overallScore, setOverallScore] = useState(null);
+
     // use navigate hook used to save all the test data to be used in the next page TestResults which is navigated to
     const navigateTo = useNavigate();
 
@@ -232,6 +239,20 @@ function TypingTest({typingTestChoice}) {
     }
 
 
+    const finalizeTypingStats = function () {
+        if (timerExpired || wordCountReached) {
+            setTypingSpeedKPS(null);
+            setTypingSpeedKPH(null);
+            setTypingSpeedCPM(null);
+            setTypingSpeedWPM(timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0);
+            setTypingAccuracy(totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0);
+            
+            const speedScore = (typingSpeedWPM / 100) + (typingSpeedCPM / 500) + (typingSpeedKPS / 10) + (typingSpeedKPH / 36000)
+            setOverallScore(speedScore * (typingAccuracy / 100) ** 2 * 250)
+        }
+    }
+
+
     const navigateToResults = function(entryId) {
 
         // saves current version of test in case user wants to take same test again on next page
@@ -241,11 +262,12 @@ function TypingTest({typingTestChoice}) {
             state: {
                 entryId,
                 testDateTimeTaken,
-                typingSpeedKPS: null,
-                typingSpeedKPH: null,
-                typingSpeedCPM: null,
-                typingSpeedWPM: timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0,
-                typingAccuracy: totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0,
+                typingSpeedKPS,
+                typingSpeedKPH,
+                typingSpeedCPM,
+                typingSpeedWPM,
+                typingAccuracy,
+                overallScore,
                 testWordsCompleted: wordsTyped,
                 testTimeCompletedIn: timeElapsed,
                 basicTestOption,
@@ -275,11 +297,12 @@ function TypingTest({typingTestChoice}) {
             is_private_user: null,
             username_tag: null,
             test_date_time_taken: testDateTimeTaken,
-            test_typing_speed_kps: null,
-            test_typing_speed_kph: null,
-            test_typing_speed_cpm: null,
-            test_typing_speed_wpm: timeElapsed > 0 ? Math.floor(wordsTyped / (timeElapsed / 60)) : 0,
-            test_typing_accuracy: totalCharTyped > 0 ? 100 * (charTypedCorrectly / totalCharTyped) : 0,
+            test_typing_speed_kps: typingSpeedKPS,
+            test_typing_speed_kph: typingSpeedKPH,
+            test_typing_speed_cpm: typingSpeedCPM,
+            test_typing_speed_wpm: typingSpeedWPM,
+            test_typing_accuracy: typingAccuracy,
+            test_overall_score: overallScore,
             test_words_completed: wordsTyped,
             test_time_completed_in: timeElapsed,
             basic_test_option: customTestBool ? null : basicTestOption,
