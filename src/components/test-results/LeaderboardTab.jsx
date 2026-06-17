@@ -75,7 +75,7 @@ function LeaderboardTab () {
         // a function that displays a leaderboard description "caption" signifying which leaderboard the user's test stats were placed on (the leaderboard shown only includes)
 
         // for now only one type of leaderboard will exist (later on leaderboards based on whether a user chose a certain combo of autogenmodifiers, specializationfield, custom text test (no leaderboard entry available for that), range of timed test (1 min increments.. so 1-60sec would be one leaderboard and 1min to 1min 30 or 50 secs would be another leaderboard), and range of word count chosen (similar to how leaderboards would be organized based on 50-100 and 100-200 etc 100 word increments)... other customizations like showing word counter or timer and insertion point style wouldnt be considered when determining which leaderboard test entry will be saved to)
-        return `Leaderboard Placement for Field: ${specializationField}`
+        return `${testType} Test Leaderboard Placement for Field: ${specializationField}`
     }
 
     return (
