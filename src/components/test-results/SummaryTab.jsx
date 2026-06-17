@@ -7,7 +7,7 @@ import api from '/src/utils/api.js';
 import '/src/App.css';
 
 
-function SummaryTab ({setHasSubmittedToLeaderboard }) {
+function SummaryTab ({ setHasSubmittedToLeaderboard, setActiveTab }) {
 
     const navigateTo = useNavigate();
     // page session location object that will be used to retrieve values previously saved to session storage
@@ -114,6 +114,7 @@ function SummaryTab ({setHasSubmittedToLeaderboard }) {
                 console.log('Data updated successfully:', response.data);
                 // below must be in .then so it only runs if patch request is successful (the request is async and setHasSubmittedToLeaderboard(true) is not by default...)
                 setHasSubmittedToLeaderboard(true);
+                setActiveTab('leaderboard')
             })
             .catch(error => {
                 console.log('Error updating data:', error);
@@ -190,7 +191,7 @@ function SummaryTab ({setHasSubmittedToLeaderboard }) {
                                     enterUserToLeaderboard();
                                     }}>
                                     <input className='userNameInputBox' type='text' placeholder='Enter Username' value={username} maxLength={15} required onChange={(e) => setUsername(e.target.value)}/>
-                                    <button className='quickLinkCard smallQuickLinkCard' type='submit'>Submit to Leaderboard</button>
+                                    <button className={`quickLinkCard smallQuickLinkCard ${setHasSubmittedToLeaderboard ? 'tabButtonDisabled' : ''}`} type='submit' disabled={hasSubmittedToLeaderboard}>Submit to Leaderboard</button>
                                 </form>
                                 <button className='quickLinkCard smallQuickLinkCard' 
                                     onClick={() => navigateTo({

@@ -51,7 +51,7 @@ function TestResultsPage () {
     const displayActiveTab = function () {
         if (activeTab === 'summary') {
             return (
-                <SummaryTab setHasSubmittedToLeaderboard={setHasSubmittedToLeaderboard} ></SummaryTab>
+                <SummaryTab setHasSubmittedToLeaderboard={setHasSubmittedToLeaderboard} setActiveTab={setActiveTab} ></SummaryTab>
             )
         }
         else if (activeTab === 'leaderboard'){
