@@ -191,7 +191,7 @@ function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, 
                                     enterUserToLeaderboard();
                                     }}>
                                     <input className='userNameInputBox' type='text' placeholder='Enter Username' value={username} maxLength={15} required onChange={(e) => setUsername(e.target.value)}/>
-                                    <button className={`quickLinkCard smallQuickLinkCard ${hasSubmittedToLeaderboard ? 'tabButtonDisabled' : ''}`} type='submit' disabled={hasSubmittedToLeaderboard}>Submit to Leaderboard</button>
+                                    <button className={`quickLinkCard smallQuickLinkCard ${hasSubmittedToLeaderboard || customTextBool ? 'tabButtonDisabled' : ''}`} type='submit' disabled={hasSubmittedToLeaderboard || customTextBool}>Submit to Leaderboard</button>
                                 </form>
                                 <button className='quickLinkCard smallQuickLinkCard' 
                                     onClick={() => navigateTo({

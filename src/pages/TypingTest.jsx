@@ -124,7 +124,7 @@ function TypingTest({typingTestChoice}) {
 
         const params = new URLSearchParams(locationObject.search)
         let wordCountNum = 2000
-        let customTestWordCountNum = 0
+        let customTextWordCountNum = 0
         let textModifiers = JSON.parse(params.get('autoGenModifiers'))
         // console.log(textModifiers)
         let customText = locationObject.state?.customTextInput
@@ -152,7 +152,13 @@ function TypingTest({typingTestChoice}) {
             setShowStats(params.get('showStats') === 'Show' ? true : false);
             setShowTimer(params.get('showTimer') === 'Show' ? true : false);
             setShowWordCounter(params.get('showWordCounter') === 'Show' ? true : false);
-            setSpecializationField(params.get('selectedFieldThemeFileName'));
+            
+            // only update this state variable only if custom text chosen
+            if (params.get('testTypeSubOption') !== 'Custom Text') {
+                setSpecializationField(params.get('selectedFieldThemeFileName'));
+            }
+            
+
 
 
 
@@ -199,18 +205,22 @@ function TypingTest({typingTestChoice}) {
             }
             // calculate number of words in custom text
             else if (params.get('testTypeSubOption') === 'Custom Text') {
-                customTextWordCountNum = CONSTANTS.calcWordCount(customText)
-                setWordCount(customTextWordCountNum)
+                customTextWordCountNum = parseInt(CONSTANTS.calcWordCount(customText))
+                setWordCount(customTextWordCountNum);
                 setCustomTextBool(true);
+                setProcessedTextString(customText);
             }
 
 
             // insert fetch statement to get requested text file and convert to string, then process text to apply modifiers and slice text to word count choice
-            fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
+            if (params.has('selectedFieldThemeFileName') && params.get('selectedFieldThemeFileName') !== '' && params.get('testTypeSubOption') !== 'Custom Text') {
+                fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
                 .then(response => response.text())
                 .then(text => {
                     setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, text, textModifiers))
+
                 })
+            }
         }
 
 
