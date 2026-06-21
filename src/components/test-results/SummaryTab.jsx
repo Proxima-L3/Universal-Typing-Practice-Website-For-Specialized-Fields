@@ -21,6 +21,7 @@ function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, 
     const typingSpeedCPM = locationObject.state?.typingSpeedCPM
     const typingSpeedWPM = locationObject.state?.typingSpeedWPM
     const typingAccuracy = locationObject.state?.typingAccuracy
+    const overallScore = locationObject.state?.overallScore
     const testWordsCompleted = locationObject.state?.testWordsCompleted
     const testTimeCompletedIn = locationObject.state?.testTimeCompletedIn
     const basicTestOption = locationObject.state?.basicTestOption
@@ -78,6 +79,7 @@ function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, 
         console.log('cpm:' + typingSpeedCPM)
         console.log('wpm:' + typingSpeedWPM)
         console.log('accuracy:' + typingAccuracy)
+        console.log('overall score:' + overallScore)
         console.log('words completed:' + testWordsCompleted)
         console.log('time completed in:' + testTimeCompletedIn)
         console.log('basic test option:' + basicTestOption)
@@ -181,6 +183,10 @@ function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, 
                             <div className='statRow'>
                                 <span className='statLabel'>Chars Typed Correctly: </span>
                                 <span className='statValue'>{Math.floor(typingAccuracy)}%</span>
+                            </div>
+                            <div className='statRow'>
+                                <span className='statLabel'>Overall Score: </span>
+                                <span className='statValue'>{overallScore}</span>
                             </div>
                         </div>
 
