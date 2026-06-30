@@ -52,7 +52,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
             </div>
 
             {/* below dropdown menu is a temporary display placeholder for the initial hardcoded expertise area selection options */}
-            <div>
+            <div className={accordionSectionOpen && selectedTestTypeOption !== 'Custom Text' ? '' : 'contentHidden'}>
                 <span className='genericButtonGroupRow'>
                     <label className='genericButtonGroupLabel'>{'Specialization Field:'}</label>
                     <select name='' id='' onChange={handleDropdownMenuChange}>
@@ -77,6 +77,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                         <option value='social-work'>Social Work</option>
                         <option value='vet-tech'>Vet Tech</option>
                         <option value='web-design'>Web Design</option>
+                        <option value='medical-experimental-autogen-text'>Medical - experimental text auto-generation</option>
                         {/* <option value='debugging-temp'>DEBUG ME</option> */}
                     </select>
                 </span>

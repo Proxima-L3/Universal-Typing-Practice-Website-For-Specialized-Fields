@@ -9,7 +9,7 @@ import TypingPracticeField from '../components/typing-test/TypingPracticeField.j
 import UserTypingStats from '../components/typing-test/UserTypingStats.jsx';
 import SeeResultsButton from '../components/typing-test/SeeResultsButton.jsx';
 import * as CONSTANTS from '/src/utils/constants.jsx';
-import { frontendURL, backendURL, pathToTestResultsTable } from '/src/utils/constants.jsx';
+import { frontendURL, backendURL, pathToTestResultsTable, pathToTextGenApi } from '/src/utils/constants.jsx';
 import api from '/src/utils/api.js';
 
 // This component will manage the shared states of all the other timed typing test components and display them
@@ -214,12 +214,23 @@ function TypingTest({typingTestChoice}) {
 
             // insert fetch statement to get requested text file and convert to string, then process text to apply modifiers and slice text to word count choice
             if (params.has('selectedFieldThemeFileName') && params.get('selectedFieldThemeFileName') !== '' && params.get('testTypeSubOption') !== 'Custom Text') {
-                fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
-                .then(response => response.text())
-                .then(text => {
-                    setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, text, textModifiers))
-
-                })
+                if (params.get('selectedFieldThemeFileName') === 'medical-experimental-autogen-text') {
+                    api.post(`${pathToTextGenApi}`, {
+                        specialization: 'medical - experimental autogen text',
+                        word_count: wordCountNum
+                    })
+                    .then(response => {
+                        setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, response.data.generated_text, textModifiers))
+                    })
+                }
+                else {
+                    fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
+                    .then(response => response.text())
+                    .then(text => {
+                        setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, text, textModifiers))
+    
+                    })
+                }
             }
         }
 
