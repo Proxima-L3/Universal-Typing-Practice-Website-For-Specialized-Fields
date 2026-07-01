@@ -21,17 +21,25 @@ export function calcWordCount(stringOfWords) {
 
     // updatedUserArray.filter(spaces => spaces.props.children === ' ').length
 
-    const userTextArray = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/))
+    // const userTextArray = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/))
     
-    let numberOfWords = userTextArray.length
+    // let numberOfWords = userTextArray.length
 
-    if (stringOfWords.length !== 0) {
-    // if (numberOfWords > 0) {
-        numberOfWords = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length + 1
+    // if (stringOfWords.length !== 0) {
+    // // if (numberOfWords > 0) {
+    //     numberOfWords = (stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length
+    // }
+
+    // // return   ((stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length - 1)
+    // return (numberOfWords)
+
+    const trimmed = stringOfWords.trim();
+    
+    if (trimmed === '') {
+        return 0
     }
 
-    // return   ((stringOfWords.split(/(?<=[a-zA-Z0-9!@#$%^&*()-+_=;:,./<>?'"])\s+/)).length - 1)
-    return (numberOfWords)
+    return trimmed.split(/\s+/).length;
 
 }
 
