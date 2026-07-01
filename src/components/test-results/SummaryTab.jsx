@@ -215,7 +215,7 @@ function SummaryTab ({ hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard, 
     return (
         <>
 
-            {displayTestDataInConsole()}
+            {/* {displayTestDataInConsole()} */}
             {displaySummaryTab()}
         </>
     )
