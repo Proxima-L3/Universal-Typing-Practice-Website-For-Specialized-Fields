@@ -15,7 +15,13 @@ function TestResultsPage () {
     const [hasSubmittedToLeaderboard, setHasSubmittedToLeaderboard] = useState(false);
     
     const snapShotData = JSON.parse(sessionStorage.getItem('typingPracticeFieldSnapshot'));
-    
+
+    if (!snapShotData) {
+        alert('TypingPracticeField is null. Please go back and try again.');
+        navigate(-1);
+        return;
+    }
+
     const typingPracFieldSnapshot = snapShotData.userText.map((item, i) => (
         <span className={item.className} key={i}>{item.char}</span>
     )).concat(snapShotData.practiceText.slice(snapShotData.userText.length).map((char, i) => (
