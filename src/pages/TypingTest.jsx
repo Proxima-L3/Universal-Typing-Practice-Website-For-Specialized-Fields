@@ -222,6 +222,10 @@ function TypingTest({typingTestChoice}) {
                     .then(response => {
                         setProcessedTextString(CONSTANTS.processSpecializedFieldText(params.get('testType'), wordCountNum, response.data.generated_text, textModifiers))
                     })
+                    .catch(error => {
+                        alert('Failed to load text. Please try again.');
+                        navigate(-1);
+                    })
                 }
                 else {
                     fetch(`${import.meta.env.BASE_URL}specialized-field-test-texts/${params.get('selectedFieldThemeFileName')}.txt`)
