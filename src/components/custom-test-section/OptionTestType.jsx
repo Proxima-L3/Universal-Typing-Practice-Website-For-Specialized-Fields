@@ -4,7 +4,6 @@ import GenericRadioButton from './GenericRadioButton';
 import TimerUserInputBox from './TimerUserInputBox';
 import TextAreaUserInputBox from './TextAreaUserInputBox';
 import OptionGeneratedTextModifiers from './OptionGenTextModifiers';
-import * as CONSTANTS from '/src/utils/constants';
 
 import '/src/App.css';
 
@@ -24,11 +23,11 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
         }
     }, [selectedTest])
 
-    useEffect ( () => {
-        if (selectedTestTypeOption === '') {
-            console.log('idk')
-        }
-    })
+    // useEffect ( () => {
+    //     if (selectedTestTypeOption === '') {
+    //         console.log('idk what happened')
+    //     }
+    // })
 
     const handleDropdownMenuChange = function(event) {
         setSelectedSpecializedFieldTheme(event.target.value)
