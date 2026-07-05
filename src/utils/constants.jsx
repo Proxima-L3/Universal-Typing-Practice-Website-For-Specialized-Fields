@@ -1,9 +1,9 @@
 // import {useRef, useEffect} from 'react';
 
 
-export const frontendURL = 'http://localhost:5173';
+export const frontendURL = import.meta.env.VITE_FRONTEND_URL;
 
-export const backendURL = 'http://localhost:8000';
+export const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export const pathToTestResultsTable = '/api/test_results_entries/';
 
