@@ -4,7 +4,6 @@ import GenericRadioButton from './GenericRadioButton';
 import TimerUserInputBox from './TimerUserInputBox';
 import TextAreaUserInputBox from './TextAreaUserInputBox';
 import OptionGeneratedTextModifiers from './OptionGenTextModifiers';
-import * as CONSTANTS from '/src/utils/constants';
 
 import '/src/App.css';
 
@@ -24,11 +23,11 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
         }
     }, [selectedTest])
 
-    useEffect ( () => {
-        if (selectedTestTypeOption === '') {
-            console.log('idk')
-        }
-    })
+    // useEffect ( () => {
+    //     if (selectedTestTypeOption === '') {
+    //         console.log('idk what happened')
+    //     }
+    // })
 
     const handleDropdownMenuChange = function(event) {
         setSelectedSpecializedFieldTheme(event.target.value)
@@ -52,7 +51,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
             </div>
 
             {/* below dropdown menu is a temporary display placeholder for the initial hardcoded expertise area selection options */}
-            <div>
+            <div className={accordionSectionOpen && selectedTestTypeOption !== 'Custom Text' ? '' : 'contentHidden'}>
                 <span className='genericButtonGroupRow'>
                     <label className='genericButtonGroupLabel'>{'Specialization Field:'}</label>
                     <select name='' id='' onChange={handleDropdownMenuChange}>
@@ -77,6 +76,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                         <option value='social-work'>Social Work</option>
                         <option value='vet-tech'>Vet Tech</option>
                         <option value='web-design'>Web Design</option>
+                        <option value='medical-experimental-autogen-text'>Medical - experimental text auto-generation</option>
                         {/* <option value='debugging-temp'>DEBUG ME</option> */}
                     </select>
                 </span>

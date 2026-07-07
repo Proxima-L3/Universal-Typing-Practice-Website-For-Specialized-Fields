@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from '/src/pages/HomePage.jsx';
 import BasicTypingTestsPage from '/src/pages/BasicTypingTestsPage.jsx'
 import TypingTest from '/src/pages/TypingTest.jsx';
+import TestResultsPage from './pages/TestResultsPage';
 import LeaderboardsPage from '/src/pages/LeaderboardsPage.jsx'
 import AboutPage from '/src/pages/AboutPage.jsx'
 import ContactPage from '/src/pages/ContactPage.jsx'
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element={<HomePage/>} />
           <Route path='/BasicTypingTests' element={<BasicTypingTestsPage/>} />
           <Route path='/BasicTypingTests/TypingTest' element={<TypingTest/>} />
+          <Route path='/BasicTypingTests/TypingTest/TestResults' element={<TestResultsPage/>} />
           <Route path='/Leaderboards' element={<LeaderboardsPage/>} />
           <Route path='/About' element={<AboutPage/>} />
           <Route path='/Contact' element={<ContactPage/>} />

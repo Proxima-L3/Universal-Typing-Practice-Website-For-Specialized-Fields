@@ -47,6 +47,19 @@ function TypingPracticeField({setTestStarted, timerExpired, wordCountReached, se
     nextInputCharRef.current?.scrollIntoView({behavior: 'smooth'});
   }, [processedTextString, userTextArray]);
 
+  // a useEffect statement that saves typing practice field component to session storage to be retrieved later by test results page
+  useEffect(() => {
+    if (timerExpired || wordCountReached) {
+      sessionStorage.setItem('typingPracticeFieldSnapshot', JSON.stringify({
+        userText: userTextArray.map(span => ({
+          char: span.props.children,
+          className: span.props.className
+        })),
+        practiceText: typingPracTextArray
+      }));
+    }
+  }, [timerExpired, wordCountReached]);
+
 
   // Function that checks currently typed char and: if timerExpired or wordCountReached (depending on which test the user chose) is true stop receiving input from user and make see results button visible and "exit" (ie will later add code finalize results, unfocus typing practice field component?, & display see results button); else if backspace then decrement counter by 1, remove last item from userTextArray, and update UserTypingStats state variables; else if input is alphanumeric or a symbol, then check if it is first input, check if user's currently typed char is same value as current index of typePracTextArray and if so add current letter to end of userTextArray but as green and if not add it as red, and then update UserTypingStats state variables. ...(!!! IM REALIZING THIS FUNCTION DOCUMENTATION IS REDUNDANT BC IT JUST REHASHES ONTYPE'S CODE RATHER THAN STATING WHAT IT DOES/IS RESPONSIBLE FOR.. CHANGE LATER.)
   const onType = function(currentInputEvent) {
