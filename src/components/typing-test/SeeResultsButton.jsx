@@ -3,16 +3,11 @@
 import '../../App.css';
 
 
-function SeeResultsButton({timerExpired, wordCountReached}) {
-
-
-    const showResults = function() {
-        // insert action to do when button is clicked here?
-    }
+function SeeResultsButton({timerExpired, wordCountReached, handleSeeResults}) {
 
     const displayButton = function() {
         if (timerExpired || wordCountReached) {
-            return <button className='resultsButton' tabIndex='4'>See Results</button>
+            return <button className='resultsButton' tabIndex='4' onClick={handleSeeResults}>See Results</button>
         }
         else {
             return null
