@@ -38,6 +38,19 @@
   font-size: 1.5rem;
 }
 
+.genericSectionComment {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  /* margin-block: 30px; */
+  margin-top: 40px;
+  text-align: center;
+  font-family: 'lexend deca', 'lexend exa', sans-serif;
+  font-size: 1.2rem;
+}
+
 .genericTextBlock {
   width: 40%;
   display: flex;
@@ -130,6 +143,10 @@
 
 .quickStartTestRowHome {
   margin-block: 5%;
+}
+
+.quickStartTestRowLeaderboards {
+  gap: 2%;
 }
 
 
