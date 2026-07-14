@@ -984,6 +984,28 @@ input[type="number"] {
 }
 
 
+.leaderboardCaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  min-width: 1200px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #00dd00;
+}
+
+.leaderboardCaption select {
+  background: transparent;
+  border: 1px solid #606060;
+  color: #00dd00;
+  font-size: 1.2rem;
+  width: fit-content;
+}
+
+
 
 
 
