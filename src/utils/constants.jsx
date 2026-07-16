@@ -11,7 +11,7 @@ export const pathToTextGenApi = '/api/text_generator/generate/';
 
 export const testResultsLeaderboardFilterQuery = 'return_test_results_page_leaderboard/';
 
-export const pathToLeaderboardEntriesTable = '/api/test_results_entries/';
+export const pathToLeaderboardDjangoApp = '/leaderboards_app/';
 
 export const leaderboardFilterQuery = 'return_requested_leaderboard_page_leaderboard/';
 

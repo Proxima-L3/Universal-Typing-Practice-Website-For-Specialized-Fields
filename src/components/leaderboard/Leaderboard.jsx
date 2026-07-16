@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { pathToLeaderboardEntriesTable, leaderboardFilterQuery } from '/src/utils/constants.jsx';
+import { pathToLeaderboardDjangoApp, leaderboardFilterQuery } from '/src/utils/constants.jsx';
 import api from '/src/utils/api.js';
 
 import '/src/App.css';
@@ -8,16 +8,19 @@ import '/src/App.css';
 
 function Leaderboard ({ displayLeaderboardTrigger, selectedTestType, selectedSpecializedFieldTheme }) {
 
-    const [leaderboardRows, setLeaderboardRows] = useState([])
+    const [leaderboardRows, setLeaderboardRows] = useState([]);
+    
+    const [currentPage, setCurrentPage] = useState(1);
     
     useEffect(() => {
         retrieveLeaderboardFilterData();
-    }, [displayLeaderboardTrigger])
+    }, [displayLeaderboardTrigger, currentPage])
 
     const retrieveLeaderboardFilterData = function () {
         // insert logic that gets entries for the basic leaderboards as well as for custom user defined leaderboards
-        api.get(`${pathToLeaderboardEntriesTable}${leaderboardFilterQuery}`, {
+        api.get(`${pathToLeaderboardDjangoApp}${leaderboardFilterQuery}`, {
             params: {
+                current_page: currentPage,
                 test_type: selectedTestType,
                 specialization_field: selectedSpecializedFieldTheme,
                 // entry_id: entryId
@@ -25,7 +28,7 @@ function Leaderboard ({ displayLeaderboardTrigger, selectedTestType, selectedSpe
         })
         .then(response => {
             console.log('Leaderboard data retrieved successfully:', response.data);
-            setLeaderboardRows(response.data);
+            setLeaderboardRows(response.data.results);
         })
         .catch(error => {
             console.log('Error retrieving leaderboard data:', error);
