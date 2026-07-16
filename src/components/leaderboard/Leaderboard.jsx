@@ -1,9 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// import { useNavigate, useSearchParams } from 'react-router-dom';
-
-// import { IoIosArrowForward, IoIosArrowBack, IoIosArrowDown } from "react-icons/io";
-
 import { pathToLeaderboardEntriesTable, leaderboardFilterQuery } from '/src/utils/constants.jsx';
 import api from '/src/utils/api.js';
 
@@ -17,30 +13,11 @@ function Leaderboard ({ displayLeaderboardTrigger, selectedTestType, selectedSpe
     useEffect(() => {
         retrieveLeaderboardFilterData();
     }, [displayLeaderboardTrigger])
-    // const customLeaderboardButtonRef = useRef();
-
-    // checks if accordion button is clicked
-    // const updateAccordionArrowStatus = function () {
-    //     if (showArrowIcons) {
-    //         if (accordionButtonOpen) {
-    //             setAccordionButtonOpen(false);
-    //         }
-    //         else {
-    //             setAccordionButtonOpen(true);
-    //         }
-    //     }
-    // }
-
-    // checks which leaderboard option button was clicked and changes its related state var
-    // const updateSelectedLeaderboardOption = function () {
-
-    // }
 
     const retrieveLeaderboardFilterData = function () {
         // insert logic that gets entries for the basic leaderboards as well as for custom user defined leaderboards
         api.get(`${pathToLeaderboardEntriesTable}${leaderboardFilterQuery}`, {
             params: {
-                // leaderboard: true,
                 test_type: selectedTestType,
                 specialization_field: selectedSpecializedFieldTheme,
                 // entry_id: entryId

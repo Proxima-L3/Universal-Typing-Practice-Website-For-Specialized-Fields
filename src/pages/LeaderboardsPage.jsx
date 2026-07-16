@@ -12,26 +12,10 @@ function LeaderboardsPage () {
 
     const [accordionButtonOpen, setAccordionButtonOpen] = useState(false);
 
-    // const [testTypeOptionsList, setTestTypeOptionsList] = useState([]);
-
     const [selectedTestType, setSelectedTestType] = useState('Word-Count Based');
     const [selectedSpecializedFieldTheme, setSelectedSpecializedFieldTheme] = useState('generic');
 
     const [displayLeaderboardTrigger, setDisplayLeaderboardTrigger] = useState(0);
-
-    // useEffect( () => {
-    //     if (selectedTestType === null) {
-    //         console.log('do nothing?')
-    //     }
-    //     else if (selectedTestType === 'word-count-based') {
-    //         setTestTypeOptionsList(['100 Words', '500 Words', '1000 Words', '2000 Words', 'Custom Text'])
-    //         setSelectedTestTypeOption('500 Words')
-    //     }
-    //     else if (selectedTest === 'timer-based') {
-    //         setTestTypeOptionsList(['30 secs', '1 min', '2 mins', '3 mins', '5 mins', 'Custom Time'])
-    //         setSelectedTestTypeOption('1 min')
-    //     }
-    // }, [selectedTest])
 
     const handleDropdownMenuOneChange = function(event) {
         setSelectedTestType(event.target.value)
@@ -102,21 +86,6 @@ function LeaderboardsPage () {
             )
         }
     }
-
-    // const displayLeaderboard = function () {
-    //     if (selectedLeaderboardOption !== '') {
-    //         if (selectedLeaderboardOption === 'CUSTOM') {
-    //             return (
-    //                 <Leaderboard applyLeaderboardFilterButtonRef={applyLeaderboardFilterButtonRef} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />
-    //             )
-    //         }
-    //         else {
-    //             return (
-    //                 <Leaderboard applyLeaderboardFilterButtonRef={applyLeaderboardFilterButtonRef} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />
-    //             )
-    //         }
-    //     }
-    // }
 
 
     return (
