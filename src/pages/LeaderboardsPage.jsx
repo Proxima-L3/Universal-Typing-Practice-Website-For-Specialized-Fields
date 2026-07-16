@@ -14,8 +14,10 @@ function LeaderboardsPage () {
 
     // const [testTypeOptionsList, setTestTypeOptionsList] = useState([]);
 
-    const [selectedTestType, setSelectedTestType] = useState(null);
-    const [selectedSpecializedFieldTheme, setSelectedSpecializedFieldTheme] = useState(null)
+    const [selectedTestType, setSelectedTestType] = useState('Word-Count Based');
+    const [selectedSpecializedFieldTheme, setSelectedSpecializedFieldTheme] = useState('generic');
+
+    const [displayLeaderboardTrigger, setDisplayLeaderboardTrigger] = useState(0);
 
     // useEffect( () => {
     //     if (selectedTestType === null) {
@@ -55,7 +57,7 @@ function LeaderboardsPage () {
             return (
                 <>
                     <span className='leaderboardCaption'>
-                        <div className='leaderboardCaption'>"{selectedLeaderboardOption} Based Test" Leaderboard Placements: </div>
+                        <div className='leaderboardCaption'>"Preset {selectedTestType} Based Test" Leaderboard Placements: </div>
                     </span>
                 </>
             )
@@ -64,12 +66,12 @@ function LeaderboardsPage () {
             return (
                 <>
                     <span className={`leaderboardCaption  ${ accordionButtonOpen ? '' : 'contentHidden'}`}>
-                        <div>"</div>
+                        <div>"Custom </div>
                         <select onChange={handleDropdownMenuOneChange}>
-                            <option value="word-count-based">Word-Count Based</option>
-                            <option value="timer-based">Timer Based</option>
+                            <option value='Word-Count Based'>Word-Count Based</option>
+                            <option value='Timer Based'>Timer Based</option>
                         </select>
-                        <div>Test" Leaderboard Placement for Field: "</div>
+                        <div> Test" Leaderboard Placements for Field: "</div>
                         <select name="" id="" onChange={handleDropdownMenuTwoChange}>
                             <option value='generic'>Generic</option>
                             <option value='accounting'>Accounting</option>
@@ -101,6 +103,21 @@ function LeaderboardsPage () {
         }
     }
 
+    // const displayLeaderboard = function () {
+    //     if (selectedLeaderboardOption !== '') {
+    //         if (selectedLeaderboardOption === 'CUSTOM') {
+    //             return (
+    //                 <Leaderboard applyLeaderboardFilterButtonRef={applyLeaderboardFilterButtonRef} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />
+    //             )
+    //         }
+    //         else {
+    //             return (
+    //                 <Leaderboard applyLeaderboardFilterButtonRef={applyLeaderboardFilterButtonRef} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />
+    //             )
+    //         }
+    //     }
+    // }
+
 
     return (
         <>
@@ -109,16 +126,22 @@ function LeaderboardsPage () {
             <div className='genericSectionComment'>(Click generic preset test buttons to see leaderboards or define the custom test leaderboard you want to see)</div>
 
             <span className='quickStartTestRow quickStartTestRowLeaderboards'>
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'100 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'500 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'1000 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'1 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'2 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'3 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
-                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'CUSTOM'} showArrowIcons={true} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'100 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'500 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'1000 WORDS'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'1 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'2 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'3 MINUTES'} showArrowIcons={false} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
+                <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'CUSTOM'} showArrowIcons={true} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
             </span>
 
             <div className='genericSectionTitle'>{displayTestLeaderboardCaption()}</div>
+
+            <button className={` ${ selectedLeaderboardOption !== '' ? '' : 'contentHidden'}`} onClick={() => setDisplayLeaderboardTrigger(_ => _ + 1)}>Apply Leaderboard Filter</button>
+
+            {displayLeaderboardTrigger > 0 && (
+                <Leaderboard displayLeaderboardTrigger={displayLeaderboardTrigger} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />
+            )}
 
         </>
     )

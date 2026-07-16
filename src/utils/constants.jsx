@@ -11,6 +11,10 @@ export const pathToTextGenApi = '/api/text_generator/generate/';
 
 export const testResultsLeaderboardFilterQuery = 'return_test_results_page_leaderboard/';
 
+export const pathToLeaderboardEntriesTable = '/api/test_results_entries/';
+
+export const leaderboardFilterQuery = 'return_requested_leaderboard_page_leaderboard/';
+
 // A simple regex function that checks if a string has any characters that are alphanumeric or a commonly typed symbol and returns a truthy value. (Less noticeably the function also checks if the string is only 1 character long.. this was done to avoid other func keys like backspace from being considered input text.)
 export function isAlphNumSym(str) {
     return /^[a-zA-Z0-9 !@#$%^&*()+_=;:,./<>?'"-]{1}$/.test(str);
