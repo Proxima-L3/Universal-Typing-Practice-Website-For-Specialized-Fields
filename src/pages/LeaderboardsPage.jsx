@@ -106,7 +106,7 @@ function LeaderboardsPage () {
 
             <div className='genericSectionTitle'>{displayTestLeaderboardCaption()}</div>
 
-            <button className={` ${ selectedLeaderboardOption !== '' ? '' : 'contentHidden'}`} onClick={() => setDisplayLeaderboardTrigger(_ => _ + 1)}>Apply Leaderboard Filter</button>
+            <button className={` ${ selectedLeaderboardOption !== '' ? 'leaderboardApplyFilterButton' : 'contentHidden'}`} onClick={() => setDisplayLeaderboardTrigger(_ => _ + 1)}>Apply Leaderboard Filter</button>
 
             {displayLeaderboardTrigger > 0 && (
                 <Leaderboard displayLeaderboardTrigger={displayLeaderboardTrigger} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />

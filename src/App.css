@@ -1006,6 +1006,45 @@ input[type="number"] {
 }
 
 
+.leaderboardApplyFilterButton {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  /* justify-self: start; */
+  height: fit-content;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:600;
+  line-height: 2.2;
+  background-color: #00dd00;
+  border-color: #009900;
+  border-radius: 15px;
+  border-style: outset;
+  border-width: 5px;
+}
+
+.leaderboardPaginationRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaderboardPaginationButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  /* font-size: 1rem; */
+  color: #00dd00;
+}
+
+.leaderboardPaginationButtonDisabled {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  /* font-size: 1rem; */
+}
+
+
 
 
 
