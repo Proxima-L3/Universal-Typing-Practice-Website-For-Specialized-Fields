@@ -44,6 +44,10 @@ function LeaderboardFilterButton ({ className, cardText, showArrowIcons, accordi
             setSelectedTestType('timed');
             setSelectedSpecializedFieldTheme('generic');
         }
+        else if (cardText === 'CUSTOM') {
+            setSelectedTestType('Word-Count Based');
+            setSelectedSpecializedFieldTheme('generic');
+        }
     }
 
     return (
