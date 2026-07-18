@@ -40,7 +40,7 @@ function LeaderboardsPage () {
         else if (['100 WORDS', '500 WORDS', '1000 WORDS', '1 MINUTES', '2 MINUTES', '3 MINUTES'].includes(selectedLeaderboardOption)) {
             return (
                 <>
-                    <span className='leaderboardCaption'>
+                    <span>
                         <div className='leaderboardCaption'>"Preset {selectedTestType} Based Test" Leaderboard Placements: </div>
                     </span>
                 </>
@@ -104,9 +104,9 @@ function LeaderboardsPage () {
                 <LeaderboardFilterButton className='quickLinkCardSmall' cardText={'CUSTOM'} showArrowIcons={true} accordionButtonOpen={accordionButtonOpen} setAccordionButtonOpen={setAccordionButtonOpen} selectedLeaderboardOption={selectedLeaderboardOption} setSelectedLeaderboardOption={setSelectedLeaderboardOption} setSelectedTestType={setSelectedTestType} setSelectedSpecializedFieldTheme={setSelectedSpecializedFieldTheme} />
             </span>
 
-            <div className='genericSectionTitle'>{displayTestLeaderboardCaption()}</div>
+            <div className={`${ selectedLeaderboardOption === 'CUSTOM' && !accordionButtonOpen ? 'contentHidden' : 'genericSectionTitle' }`}>{displayTestLeaderboardCaption()}</div>
 
-            <button className={` ${ selectedLeaderboardOption !== '' ? 'leaderboardApplyFilterButton' : 'contentHidden'}`} onClick={() => setDisplayLeaderboardTrigger(_ => _ + 1)}>Apply Leaderboard Filter</button>
+            <button className={`${ selectedLeaderboardOption !== '' ? 'leaderboardApplyFilterButton' : 'contentHidden' }`} onClick={() => setDisplayLeaderboardTrigger(_ => _ + 1)}>Apply Leaderboard Filter</button>
 
             {displayLeaderboardTrigger > 0 && (
                 <Leaderboard displayLeaderboardTrigger={displayLeaderboardTrigger} selectedTestType={selectedTestType} selectedSpecializedFieldTheme={selectedSpecializedFieldTheme} />

@@ -984,6 +984,10 @@ input[type="number"] {
 }
 
 
+.leaderboardSelectedOption {
+  color: #00dd00;
+}
+
 .leaderboardCaption {
   display: flex;
   justify-content: center;
