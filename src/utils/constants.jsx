@@ -15,6 +15,8 @@ export const pathToLeaderboardDjangoApp = '/leaderboards_app/';
 
 export const leaderboardFilterQuery = 'return_requested_leaderboard_page_leaderboard/';
 
+export const listOfSpecializedFields = ['generic', 'accounting', 'architecture', 'auto mechanics', 'business law', 'carpentry', 'computer science', 'data entry', 'ems', 'event planning', 'executive assistance', 'financial analysis', 'graphic design', 'marketing', 'medical transcription', 'phlebotomy', 'psychology', 'rf cable design technician', 'social work', 'vet tech', 'web design', 'medical - experimental autogen text'];
+
 // A simple regex function that checks if a string has any characters that are alphanumeric or a commonly typed symbol and returns a truthy value. (Less noticeably the function also checks if the string is only 1 character long.. this was done to avoid other func keys like backspace from being considered input text.)
 export function isAlphNumSym(str) {
     return /^[a-zA-Z0-9 !@#$%^&*()+_=;:,./<>?'"-]{1}$/.test(str);

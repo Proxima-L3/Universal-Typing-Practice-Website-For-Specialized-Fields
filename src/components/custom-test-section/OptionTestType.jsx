@@ -76,7 +76,7 @@ function OptionTestType ({accordionSectionOpen, selectedTest, setSelectedTest, s
                         <option value='social work'>Social Work</option>
                         <option value='vet tech'>Vet Tech</option>
                         <option value='web design'>Web Design</option>
-                        <option value='medical experimental autogen text'>Medical - experimental text auto-generation</option>
+                        <option value='medical - experimental autogen text'>Medical - experimental text auto-generation</option>
                         {/* <option value='debugging-temp'>DEBUG ME</option> */}
                     </select>
                 </span>
