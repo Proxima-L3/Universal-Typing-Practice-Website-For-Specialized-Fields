@@ -214,9 +214,9 @@ function TypingTest({typingTestChoice}) {
 
             // insert fetch statement to get requested text file and convert to string, then process text to apply modifiers and slice text to word count choice
             if (params.has('selectedFieldThemeFileName') && params.get('selectedFieldThemeFileName') !== '' && params.get('testTypeSubOption') !== 'Custom Text') {
-                if (params.get('selectedFieldThemeFileName') === 'medical-experimental-autogen-text') {
+                if (params.get('selectedFieldThemeFileName') in ['generic', 'accounting', 'architecture', 'auto mechanics', 'business law', 'carpentry', 'computer science', 'data entry', 'ems', 'event planning', 'executive assistance', 'financial analysis', 'graphic design', 'marketing', 'medical transcription', 'phlebotomy', 'psychology', 'rf cable design technician', 'social work', 'vet tech', 'web design', 'medical experimental autogen text']) {
                     api.post(`${pathToTextGenApi}`, {
-                        specialization: 'medical - experimental autogen text',
+                        specialization: params.get('selectedFieldThemeFileName'),
                         word_count: wordCountNum
                     })
                     .then(response => {
